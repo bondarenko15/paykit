@@ -1,0 +1,119 @@
+.btn {
+    display: block;
+    height: 49px;
+    background: $Color_orange;
+    border-radius: 30px;
+    color: $Text_black;
+    font-family: "Exo 2";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    width: 335px;
+    margin: 29px auto 0;
+    text-align: center;
+    padding: 16px 0;
+
+    &-order_demo {
+        margin-top: 30px;
+        background: transparent;
+        border: 1px solid $Color_orange;
+        color: $Color_orange;
+        padding: 16px 25px;
+        width: 304px;
+
+    }
+    &_offers {
+        background: transparent;
+        height: 45px;
+        width: 142px;
+        color: $Color_orange;
+        border: 1px solid $Color_orange;
+        margin: 30px 0 0;
+
+    }
+    &_form {
+        width: 305px;
+        height: 49px;
+        margin: 20px 0 0;
+        border: none;   
+    }
+}
+
+@media (min-width: 648px) {
+    .btn {
+        width: 174px;
+        &-order_demo {
+            margin: 30px 0 0;
+        }
+        &_offers {
+            width: 142px;
+            margin: 10px 0 0;
+        }
+        &_form {
+            order: 4;
+            width: 184px;
+            margin: 22px 0 0;
+
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .btn {
+        width: 192px;
+        margin: 27px auto 0;
+        font-size: 16px;
+        letter-spacing: 0.48px;
+        &-order_demo {
+            margin: 38px 0 0;
+            padding: 16px 10px;
+            width: 173px;
+            font-size: 14px;
+            letter-spacing: 0.42px;
+        }
+        &_offers {
+            margin: 0;
+            width: 138px;
+            font-size: 14px;
+            letter-spacing: 0.42px;
+        }
+        &_form {
+            order: 3;
+            margin: 37px 0 0;
+            font-size: 14px;
+            letter-spacing: 0.42px;
+            width: 187px;
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .btn {
+        margin: 0 50px 0 0;
+        &_form {
+            
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .btn {
+        &-order_demo {
+            width: 192px;
+            font-size: 16px;
+            letter-spacing: 0.48px;
+            margin-right: 60px;
+        }
+        &_offers {
+            margin-top: 125px;
+            width: 155px;
+        }
+        &_form {
+            margin-right: 350px;
+            width: 250px;
+        }
+        
+    }
+}
+
+

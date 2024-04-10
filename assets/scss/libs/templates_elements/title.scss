@@ -1,0 +1,89 @@
+.title {
+    color: $Text_black;
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 118%; 
+    letter-spacing: 0.78px;
+    &-order_demo {
+        text-align: left;
+        i {
+            display: block;
+            color: $Color_orange;
+            font-weight: 500;
+            
+            &:last-child {
+                display: inline;
+            }
+        }
+    }
+    &_footer {
+        color: $Color_grey_light;
+        text-align: left;
+        margin-top: 40px;
+        
+    }
+}
+@media (min-width: 648px) { 
+    .title {
+        font-size: 38px;
+        line-height: 118%;
+        letter-spacing: 1.44px;
+        &-order_demo {
+            display: block;
+            width: 480px;
+            i {
+                display: inline;
+            }
+        }
+        &_footer {
+            letter-spacing: 1.14px;
+        }
+    }
+}
+
+@media (min-width: 1024px) { 
+    .title {
+        font-size: 48px;
+        letter-spacing: 1.44px;
+        &-order_demo {
+            width: 595px;
+        }
+    }
+}
+
+
+@media (min-width: 1366px) { 
+    .title {
+        font-size: 52px;
+        letter-spacing: 1.44px;
+        &-order_demo {
+            width: 645px;
+        }
+        &_advantages {
+            width: 1000px;
+            display: block;
+            margin: 0  auto;
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .title {
+        font-size: 58px;
+        letter-spacing: 1.74px;
+        &-order_demo {
+            width: 730px;
+        }
+        &_advantages {
+            width: 1430px;
+        }
+        &_footer {
+            margin-top: 80px;
+        }
+    }
+}
+
+
+

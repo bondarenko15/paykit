@@ -1,0 +1,564 @@
+.footer {
+    padding: 52px 0 20px;
+
+    .container {
+        .footer_wrapper {
+            background: url('../img/background_footer-320.png') center center/cover no-repeat;
+            padding: 28px 16px;
+            border-radius: 30px;
+
+            .footer_head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .footer_logo {
+                    width: 85px;
+                    height: 21px;
+
+                    img {
+                        width: 85px;
+                        height: 21px;
+                    }
+                }
+
+                .footer_questions {
+                    color: $Color_white_light;
+                    font-family: "Exo 2";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 118%;
+                    letter-spacing: 0.42px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 2px;
+                        left: -15px;
+                        background: url('../img/questions.svg') center center/cover no-repeat;
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+
+            .social_wrapper {
+                margin-top: 53px;
+
+                .footer_actions-social {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    li {
+                        display: block;
+                        margin-left: 8px;
+
+                        a {
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .footer_contacts {
+                display: flex;
+                flex-direction: column;
+                height: 83px;
+                flex-wrap: wrap;
+                margin: 17px auto 0;
+
+                &-item {
+                    color: $Color_grey_light;
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.24px;
+                    display: block;
+                    margin: 0 50px 10px 0;
+                    width: 127px;
+
+                }
+            }
+
+            .footer_flex {
+                .footer_app {
+                    &-text {
+                        color: $Color_white_grey;
+                        font-family: "Exo 2";
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 140%;
+                        letter-spacing: 0.36px;
+                        display: block;
+                        margin: 36px 0 0;
+                    }
+
+                    &-wrapper {
+                        margin: 16px 0 0;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        div {
+                            display: inline-block;
+
+                            .footer_app__item {
+                                width: 115px;
+                                height: 38px;
+                                display: block;
+                                margin: 0 13px 1px 0;
+                                position: relative;
+                                border: 1px solid $Color_white_grey;
+                                border-radius: 5px;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    inset: 0;
+                                    z-index: -1;
+                                    background: transparent;
+                                }
+
+                                img {
+                                    width: 120px;
+                                    height: 40px;
+                                    padding: 8px;
+
+                                }
+
+                            }
+
+                            .box {
+                                span {
+                                    display: block;
+                                    color: $Color_white_grey;
+                                    font-family: "Exo 2";
+                                    font-size: 10px;
+                                    font-weight: 300;
+                                    line-height: 140%;
+                                    letter-spacing: 0.36px;
+                                }
+
+                                .flex-box {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    margin: 2px 0 15px;
+
+                                    img {}
+
+                                    p {
+                                        color: $Color_grey_dark;
+                                        font-family: "Exo 2";
+                                        font-size: 10px;
+                                        font-weight: 300;
+                                        line-height: 140%;
+                                        letter-spacing: 0.3px;
+                                        display: inline-block;
+
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer_navigation {
+                    column-count: 2;
+                    height: 175px;
+                    margin-top: 30px;
+
+                    li {
+
+                        a {
+                            color: $Color_grey_light;
+                            font-family: Montserrat;
+                            font-size: 12px;
+                            font-style: normal;
+                            line-height: 140%;
+                            letter-spacing: 0.24px;
+                            display: block;
+                            margin: 0 5px 13px 0;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .footer {
+        padding: 48px 0 20px;
+
+        .container {
+            .footer_wrapper {
+                padding: 30px;
+
+                .footer_head {
+                    .footer_logo {
+                        width: 122px;
+                        height: 37px;
+
+                        img {
+                            width: 122px;
+                            height: 37px;
+                        }
+                    }
+
+                    .footer_questions {
+                        font-size: 16px;
+                        letter-spacing: 0.48px;
+
+                        &::before {
+                            left: -22px;
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                }
+
+                .social_wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 69px;
+
+                    .footer_actions-social {
+                        order: 2;
+
+                        li {
+                            width: 30px;
+                            height: 30px;
+
+                            a {
+                                width: 30px;
+                                height: 30px;
+
+                                img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer_contacts {
+                    flex-direction: row;
+                    height: 70px;
+                    margin: 23px auto 0;
+
+                    &-item {
+                        font-size: 14px;
+                        letter-spacing: 0.28px;
+                        width: 153px;
+                        margin: 0 18px 10px 0;
+
+                        &:last-child {
+                            width: 210px;
+                        }
+                    }
+                }
+
+                .footer_flex {
+                    .footer_app {
+                        &-text {
+                            font-size: 14px;
+                            letter-spacing: 0.42px;
+                            margin: 55px 0 0;
+                        }
+
+                        &-wrapper {
+                            margin: 15px 0 0;
+
+                            div {
+
+                                .footer_app__item {
+                                    width: 130px;
+                                    height: 42px;
+                                    margin: 0 25px 0px 0;
+
+                                    img {
+                                        width: 130px;
+                                        height: 42px;
+                                    }
+                                }
+
+                                .box {
+                                    span {
+                                        font-size: 12px;
+                                        letter-spacing: 0.36px;
+                                    }
+
+                                    .flex-box {
+                                        margin: 5px 0 0;
+
+                                        p {
+                                            font-size: 12px;
+                                            letter-spacing: 0.36px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .footer_navigation {
+                        height: 150px;
+                        margin-top: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+
+                        li {
+                            width: 114px;
+                            margin: 0 45px 17px 0;
+
+                            a {
+                                font-size: 14px;
+                                letter-spacing: 0.28px;
+                                display: inline-block;
+                                margin: 0;
+                            }
+
+                            &:nth-child(n+8) {
+                                width: 303px;
+                                margin: 0 0 17px 0;
+
+                                a {
+                                    margin: 0 0 4px;
+                                }
+                            }
+
+                        }
+
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        padding: 97px 0 20px;
+
+        .container {
+            .footer_wrapper {
+                .footer_contacts {
+                    &-item {
+                        margin: 0 8px 10px 0;
+                    }
+                }
+
+                .footer_flex {
+                    .footer_app {
+                        &-text {
+                            margin: 22px 0 0;
+                        }
+
+                        &-wrapper {
+                            margin: 15px 0 0;
+
+                            div {
+                                .footer_app__item {
+                                    width: 149px;
+                                    height: 49px;
+
+                                    img {
+                                        width: 149px;
+                                        height: 49px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .footer_navigation {
+                        height: 60px;
+
+                        li {
+                            margin: 0 0px 10px 0;
+                            width: 127px;
+
+                            a {
+                                margin: 0;
+                            }
+
+                            &:nth-child(8) {
+                                width: 127px;
+                            }
+
+                            &:nth-child(n+8) {
+                                margin: 0 0 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .footer {
+        .container {
+            .footer_wrapper {
+                .footer_contacts {
+                    height: 40px;
+
+                    &-item {
+                        margin: 0 40px 10px 0;
+                    }
+                }
+
+                .social_wrapper {
+                    width: 100%;
+
+                    .footer_actions-social {
+                        li {
+                            margin-right: -15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .footer {
+        padding: 70px 0 20px;
+
+        .container {
+            .footer_wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                padding: 37px 42px;
+
+                .footer_head {
+                    width: 100%;
+
+                    .footer_logo {
+                        width: 197px;
+                        height: 50px;
+
+                        img {
+                            width: 197px;
+                            height: 50px;
+                        }
+                    }
+
+                    .footer_questions {
+                        font-size: 18px;
+                        letter-spacing: 0.54px;
+
+                        &:before {
+                            width: 17px;
+                            height: 17px;
+                        }
+                    }
+                }
+
+                .social_wrapper {
+                    width: 100%;
+
+                    .footer_actions-social {
+                        li {
+                            margin-right: -15px;
+                        }
+                    }
+                }
+
+                .footer_contacts {
+                    margin: 20 0 0 0;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    &-item {
+                        font-size: 16px;
+                        letter-spacing: 0.32px;
+                        width: auto;
+                        margin-right: 0;
+
+                        &:last-child {
+                            width: auto;
+                        }
+
+                    }
+                }
+
+                .footer_flex {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .footer_app {
+                        margin: 0 35px 0 0;
+                        width: 555px;
+                        &-text {
+                            font-size: 16px;
+                            letter-spacing: 0.48px;
+                        }
+
+                        &-wrapper {
+                            div {
+                                .footer_app__item {
+                                    width: 160px;
+                                    height: 52px;
+                                    margin: 0 13px 0 0;
+                                    img {
+                                        width: 160px;
+                                        height: 52px;
+                                    }
+                                }
+
+                                .box {
+                                    span {
+                                        font-size: 14px;
+                                        letter-spacing: 0.42px;
+                                    }
+                                    .flex-box {
+                                        p {
+                                            font-size: 14px;
+                                            letter-spacing: 0.42px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .footer_navigation {
+                        height: 96px;
+                        width: 1162px;
+                        li {
+                            width: auto;
+                            a {
+                                font-size: 16px;
+                                letter-spacing: 0.32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

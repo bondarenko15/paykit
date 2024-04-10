@@ -1,0 +1,278 @@
+.advantages {
+    padding: 90px 0 0;
+    .container {
+        .wrapper {
+            .advantages_item {
+                margin-top: 40px;
+                li {
+                    color: $Text_grey_dark;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.28px;
+                    border-bottom: 1px solid $Color_orange;
+                    padding: 0 15px 10px 10px;
+                    display: block;
+                    margin-bottom: 30px;
+                    i {
+                        font-weight: 500;
+                    }
+                }
+            }
+            .advantages_img {
+                margin-top:  58px;
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 648px) {
+    .advantages {
+        padding: 120px 0 0;
+        .container {
+            .wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                margin: 0 auto;
+                .advantages_item {
+                    width: 324px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    li {
+                        
+                        font-size: 16px;
+                        letter-spacing: 0.32px;
+                        padding: 0 0 10px 4px;
+                        margin-bottom: 30px;
+                    }
+                    .one-left, .one-right {
+                        height: 100px;
+                    }
+                    .two-left, .two-right {
+                        height: 75px;
+                    }
+                    .three-left, .three-right {
+                        height: 53px;
+                    }
+                    .four-left, .four-right {
+                        height: 120px;
+                    }
+                    .five-left, .five-right {
+                        height: 120px;
+                    }
+                    &:nth-child(1) {
+                        margin-right: 20px;
+                    }
+                }
+                .advantages_img {
+                    order: 3;
+                    margin-top: 10px;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .advantages {
+        padding: 160px 0 0;
+        .container {
+            .wrapper {
+                justify-content: space-between;
+                .advantages_item {
+                    width: 452px;
+                    margin-top: 61px;
+                    li {
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        margin-bottom: 41px;
+                    }
+                    .one-left, .one-right {
+                        height: 84px;
+                    }
+                    .two-left, .two-right {
+                        height: 60px;
+                    }
+                    .three-left, .three-right {
+                        height: 60px;
+                    }
+                    .four-left, .four-right {
+                        height: 107px;
+                    }
+                }
+                .advantages_img {
+                    margin: 20px auto 0;
+                    width: 71%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .advantages {
+        .container {
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                align-items: center;
+                .advantages_item {
+                    &:last-child {
+                        order: 3;
+                        margin-left: 20px;
+                    }
+                    li {
+                        margin-bottom: 24px;
+
+                    }
+                    .one-left, .one-right {
+                        height: 135px;
+                    }
+                    .two-left, .two-right {
+                        height: 80px;
+                    }
+                    .three-left, .three-right {
+                        height: 90px;
+                    }
+                    .four-left, .four-right {
+                        height: 160px;
+                    }
+                    .five-left, .five-right {
+                        height: 160px;
+                    }
+                }
+                .advantages_img {
+                    order: 2;
+                    width: 65%;
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .advantages {
+        padding: 200px 0 0;
+        .container {
+            .wrapper {
+                justify-content: center;
+                margin-top: 20px;
+                .advantages_item {
+                    .one-left {
+                        text-align: right;
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        margin-left: 40px;
+                        width: 430px;
+                        height: 95px;
+                        margin-bottom: 40px;
+                    }
+                    .one-right {
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        margin-left: -20px;
+                        width: 430px;
+                        height: 95px;
+                        margin-bottom: 40px;
+                    }
+                    .two-left {
+                        text-align: right;
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        height: 75px;
+                        margin-bottom: 40px;
+                        margin-left: -24px;
+                        height: 60px;
+
+                    }
+                    .two-right {
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        height: 75px;
+                        margin-bottom: 40px;
+                        margin-left: 43px;
+                        height: 60px;
+                    }
+                    .three-left {
+                        text-align: right;
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        margin-bottom: 40px;
+                        height: 44px;
+                        margin-left: -64px;
+                    }
+                    .three-right {
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        margin-bottom: 40px;
+                        height: 44px;
+                        margin-left: 81px;
+                    }
+                    .four-left {
+                        text-align: right;
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        margin-bottom: 40px;
+                        margin-left: -25px;
+                        height: 120px;
+                    }
+                    .four-right {
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        margin-bottom: 40px;
+                        margin-left: 42px;
+                        height: 120px;
+                    }
+                    .five-left {
+                        text-align: right;  
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        margin-bottom: 40px;
+                        margin-left: 40px;
+                        height: 120px;
+                    }
+                    .five-right {
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        margin-bottom: 40px;
+                        margin-left: -20px;
+                        height: 120px;
+                    }
+                }
+                .advantages_img {
+                    width: 33%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+

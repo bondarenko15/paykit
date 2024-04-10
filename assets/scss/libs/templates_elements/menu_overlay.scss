@@ -1,0 +1,258 @@
+.menu_overlay {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: .3s ease all;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        background: url('../img/menu_overlay-320.png') center center/cover no-repeat;
+        z-index: -1;
+    }
+
+    .wrapper {
+        padding: 50px 20px 30px;
+
+        .menu_overlay-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .menu_overlay-logo {
+                width: 127px;
+                height: 73px;
+
+                img {
+                    width: 127px;
+                    height: 73px;
+                }
+            }
+        }
+
+        .menu_overlay-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .menu_overlay-user {
+                padding: 12px 14px 12px 32px;
+                border-radius: 30px;
+                background: $Text_black;
+                color: $Color_grey_light;
+                font-family: "Exo 2";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.42px;
+                width: 180px;
+                height: 44px;
+                position: relative;
+                border: none;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 13px;
+                    left: 13px;
+                    background: url('../img/user.svg') center center/cover no-repeat;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            .menu_overlay-lang {
+                border-radius: 20px;
+                border: 1px solid var(--text-icon-700, #ADAFB8);
+                min-height: 42px;
+                display: flex;
+                flex-direction: column;
+                width: 87px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 13px;
+                    right: 14px;
+                    background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                    width: 12px;
+                    height: 12px;
+                    transform: rotate(90deg);
+                }
+
+                .lang {
+                    display: none;
+                    padding: 10px 16px;
+
+                    a {
+                        color: $Text_gray_medium;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        span {
+                            display: block;
+                            margin-left: 5px;
+                            color: $Text_gray_medium;
+                            font-family: "Exo 2";
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 140%;
+                            letter-spacing: 0.42px;
+                        }
+                    }
+                }
+
+                .lang-active {
+                    display: block;
+                }
+            }
+
+        }
+
+        nav {
+            width: 325px;
+
+            .menu_overlay-navigation {
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+
+                li {
+                    text-align: left;
+                    margin-bottom: 30px;
+
+                    a {
+                        color: $Text_black;
+                        font-family: "Exo 2";
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 145%;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+
+                    .solutions {
+                        display: none;
+
+                        .tabs {
+                            display: none;
+                            li {
+                                margin-top: 20px;
+                                margin-bottom: 0;
+                                position: relative;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 24%;
+                                    background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                                    width: 12px;
+                                    height: 12px;
+                                    transform: rotate(90deg);
+                                }
+                            }
+
+
+                        }
+                        .main_level {
+                            display: none;
+                            .item_list {
+                                display: block;
+                                li {
+                                    &::after {
+                                        display: none;
+                                    }
+                                    a {
+                                        font-family: "Exo 2";
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 140%;
+                                        letter-spacing: 0.42px;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu_overlay-footer {
+            .menu_overlay-questions {
+                position: relative;
+                color: $Text_gray_medium;
+                font-family: "Exo 2";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 118%;
+                letter-spacing: 0.42px;
+                display: block;
+                margin: 9px auto 0;
+                padding: 0 0 0 15px;
+                width: 92px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/questions-grey.svg') center center/cover no-repeat;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            p {
+                color: $Text_gray_medium;
+                font-family: "Exo 2";
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 140%;
+                letter-spacing: 0.36px;
+                text-align: center;
+                display: block;
+                margin-top: 20px;
+            }
+
+            .menu_overlay-social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px auto 0;
+
+                li {
+                    margin-right: 6px;
+
+                    a {
+                        width: 20px;
+                        height: 20px;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu_overlay-active {
+    top: -30px;
+}

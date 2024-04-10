@@ -1,0 +1,59 @@
+.subtitle {
+    color: $Text_grey_dark;
+    font-family: "Exo 2";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 145%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 44px;
+    &_grey_light {
+        color: $Color_grey_light;
+        margin-bottom: 15px;
+    }
+    &_footer {
+        color: $Color_grey_light;
+        margin: 10px 0 0;
+    }
+}
+
+@media (min-width: 648px) {
+    .subtitle {
+        font-size: 26px;
+        line-height: 145%;
+        letter-spacing: 1.3px;
+        margin-bottom: 58px;
+        &_grey_light {
+            width: 465px;
+            margin-bottom: 16px;
+        }
+        &_footer {
+            margin: 0;
+            order: 1;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .subtitle {
+        font-size: 28px;
+        letter-spacing: 1.4px;
+    }
+}
+
+@media (min-width: 1880px) {
+    .subtitle {
+        margin-bottom: 102px;
+        &_grey_light {
+            margin-bottom: 63px;
+        }
+        &_footer {
+            margin: 0;
+        }
+    }
+
+}
+
+
+

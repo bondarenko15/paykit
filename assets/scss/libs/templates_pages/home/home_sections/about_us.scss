@@ -1,0 +1,370 @@
+.about_us {
+    padding: 57px 0 0;
+
+    .container {
+        .wrapper {
+            .our_results {
+                border-radius: 30px;
+                background: $Color_grey_light;
+                padding: 20px 15px;
+
+                &__img {
+                    display: none;
+                }
+
+                .flex-box {
+
+                    .our_results-item {
+
+
+                        span {
+                            color: $Color_orange;
+                            font-family: "Exo 2";
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 145%;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+
+                        &_text {
+                            color: $Text_black;
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 140%;
+                            letter-spacing: 0.28px;
+                            display: block;
+                            margin-bottom: 20px;
+
+                            i {
+                                font-weight: 500;
+                            }
+                        }
+
+                        &:last-child {
+                            p {
+                                margin: 0;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .stages_work {
+                padding: 20px 15px;
+                height: 581px;
+                margin-top: 15px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: url('../img/stages_work-320.png') center center/cover no-repeat;
+                    border-radius: 30px;
+                    z-index: -1;
+                }
+
+                &-item {
+                    span {
+                        color: $Color_orange;
+                        font-family: "Exo 2";
+                        font-size: 26px;
+                        font-weight: 400;
+                        line-height: 145%;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        color: $Color_grey_light;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 140%;
+                        letter-spacing: 0.28px;
+                        display: block;
+                        margin-bottom: 20px;
+                        width: 270px;
+
+                        i {
+                            font-weight: 500;
+                            display: block;
+                        }
+                    }
+
+                    &:last-child {
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 648px) {
+    .about_us {
+        padding: 100px 0 0;
+
+        .container {
+            .wrapper {
+                .our_results {
+                    padding: 40px 30px;
+                    position: relative;
+                    overflow: hidden;
+
+                    .our_results-item__img {
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        z-index: 1;
+                    }
+
+                    .flex-box {
+                        .our_results-item {
+                            z-index: 2;
+
+                            span {
+                                font-size: 26px;
+                                letter-spacing: 1.3px;
+                                margin-bottom: 8px;
+                            }
+
+                            &_text {
+                                font-size: 16px;
+                                letter-spacing: 0.32px;
+                            }
+
+                            .one {
+                                width: 500px;
+                            }
+
+                            .two {
+                                width: 500px;
+                            }
+
+                            .three {
+                                width: 372px;
+                            }
+
+                            .four {
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+
+                .stages_work {
+                    padding: 40px 30px;
+                    height: 591px;
+
+                    &-item {
+                        p {
+                            width: 402px;
+                            font-size: 16px;
+                            letter-spacing: 0.32px;
+                            margin-bottom: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about_us {
+        .container {
+            .wrapper {
+                .our_results {
+                    position: relative;
+                    &__img {
+                        position: absolute;
+                        right: -9px;
+                        bottom: 1px;
+                    }
+
+                    .flex-box {
+                        .our_results-item {
+                            span {
+                                font-size: 28px;
+                                letter-spacing: 1.4px;
+                                margin-bottom: 5px;
+                            }
+
+                            &_text {
+                                font-size: 18px;
+                                letter-spacing: 0.36px;
+                            }
+
+                            .one {
+                                width: 530px;
+                            }
+
+                            .two {
+                                width: 407px;
+                            }
+
+                            .four {
+                                width: 316px;
+                            }
+                        }
+                    }
+                }
+
+                .stages_work {
+                    margin-top: 20px;
+                    height: 620px;
+
+                    &-item {
+                        span {
+                            font-size: 28px;
+                            letter-spacing: 1.4px;
+                            margin-bottom: 7px;
+                        }
+
+                        p {
+                            font-size: 18px;
+                            letter-spacing: 0.36px;
+                            width: 460px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .about_us {
+        .container {
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+
+                .our_results {
+                    order: 2;
+                    width: 605px;
+
+                    &__img {
+                        display: block;
+                        width: 300px;
+                    }
+
+                    .flex-box {
+                        .our_results-item {
+
+                            span {}
+
+                            &_text {}
+
+                            .two {
+                                width: 300px;
+                            }
+
+                            .three {
+                                width: 326px;
+                            }
+
+                            .four {
+                                width: 296px;
+                            }
+
+                            .five {
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+
+                .stages_work {
+                    order: 1;
+                    margin: 0;
+                    height: 790px;
+
+                    &-item {
+                        span {
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1880px) {
+    .about_us {
+        padding: 200px 0 0;
+
+        .container {
+            .wrapper {
+                justify-content: flex-start;
+
+                .our_results {
+                    padding: 50px 40px;
+                    width: 67%;
+                    &__img {
+                        width: 400px;
+                    }
+                    .flex-box {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        width: 700px;
+
+                        .our_results-item {
+                            span {
+                                margin-bottom: 7px;
+                            }
+
+                            &_text {
+                                margin-bottom: 45px;
+                            }
+
+                            .one {
+                                width: 700px;
+                            }
+
+                            .two,
+                            .three,
+                            .four,
+                            .five {
+                                width: 330px;
+                            }
+                        }
+                    }
+                }
+
+                .stages_work {
+                    height: 735px;
+                    width: 33%;
+                    margin-right: 20px;
+                    padding: 50px 40px;
+
+                    p {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
