@@ -79,6 +79,11 @@
                 padding: 6px 0 0 22px;
                 margin: 0;
                 color: $Color_grey_dark;
+                a {
+                    color: $Color_grey_dark;
+                    text-decoration: underline;
+                    display: inline-block;
+                }
             }
             
     
