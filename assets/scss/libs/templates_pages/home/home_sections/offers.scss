@@ -244,7 +244,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
     .offers {
         padding: 280px 0 0;
         .container {
@@ -294,6 +294,34 @@
                         border: 3px solid $Color_orange;
                     }
                 }
+                .swiper-button-prev {
+                    outline: 1px solid transparent;
+                    &:hover {
+                        background: $Color_grey_light;
+                        opacity: 0.6;
+                        backdrop-filter: blur(2px);
+                        outline: 1px solid $Color_orange;
+                        border-radius: 100px;
+                        &::after {
+                            background: url('../img/chevron-hover.svg') center center/cover no-repeat;
+                        }   
+                    }
+                    
+                }
+                .swiper-button-next {
+                    outline: 1px solid transparent;
+                    &:hover {
+                        background: $Color_grey_light;
+                        
+                        opacity: 0.6;
+                        backdrop-filter: blur(2px);
+                        outline: 1px solid $Color_orange;
+                        border-radius: 100px;
+                        &::after {
+                            background: url('../img/chevron-hover.svg') center center/cover no-repeat;
+                        }   
+                    }
+                }
             }
         }
     }
@@ -308,7 +336,7 @@
                 .swiper-wrapper {
                     padding-left: 5px;
                     .swiper-slide {
-                        width: 560px;
+                        width: 563px;
                         padding: 50px 35px;
                         transition: .2s all ease;
                         border: 1px solid transparent;
@@ -348,6 +376,12 @@
                             }
                         }
                     }
+                }
+                .swiper-button-prev {
+                    left: 64px;
+                }
+                .swiper-button-next {
+                    right: 28px;
                 }
             }
         }

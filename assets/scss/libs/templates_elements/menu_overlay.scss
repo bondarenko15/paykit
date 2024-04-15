@@ -1,10 +1,12 @@
 .menu_overlay {
-    position: absolute;
-    top: -1000px;
+    position: fixed;
+    top: -2000px;
     left: 0;
-    right: 0;
+    right: -10px;
     z-index: 99;
     transition: .3s ease all;
+    min-height: 70vh;
+    filter: drop-shadow(-2px 7px 10px rgba(0, 0, 0, 0.25));
 
     &::before {
         content: '';
@@ -15,11 +17,12 @@
         bottom: -30px;
         background: url('../img/menu_overlay-320.png') center center/cover no-repeat;
         z-index: -1;
+        border-radius: 30px;
+        min-height: 550px;
     }
 
     .wrapper {
-        padding: 50px 20px 30px;
-
+        padding: 0 30px 30px 10px;
         .menu_overlay-head {
             display: flex;
             justify-content: space-between;
@@ -34,89 +37,148 @@
                     height: 73px;
                 }
             }
+
+            .menu_overlay-close {
+                display: block;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -28px;
+                    right: -27px;
+
+                    background: url('../img/close_background.svg') center center/cover no-repeat;
+                    width: 277px;
+                    height: 216px;
+                    z-index: -1;
+                }
+            }
         }
 
         .menu_overlay-actions {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 10px 10px 0 10px;
 
-            .menu_overlay-user {
-                padding: 12px 14px 12px 32px;
-                border-radius: 30px;
-                background: $Text_black;
-                color: $Color_grey_light;
-                font-family: "Exo 2";
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 140%;
-                letter-spacing: 0.42px;
-                width: 180px;
-                height: 44px;
-                position: relative;
-                border: none;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 13px;
-                    left: 13px;
-                    background: url('../img/user.svg') center center/cover no-repeat;
-                    width: 12px;
-                    height: 12px;
-                }
-            }
-
-            .menu_overlay-lang {
-                border-radius: 20px;
-                border: 1px solid var(--text-icon-700, #ADAFB8);
-                min-height: 42px;
+            .flex-box {
                 display: flex;
-                flex-direction: column;
-                width: 87px;
-                position: relative;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+                height: 82px;
+                .menu_overlay-user {
+                    padding: 12px 14px 12px 32px;
+                    border-radius: 30px;
+                    background: $Text_black;
+                    color: $Color_grey_light;
+                    font-family: "Exo 2";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.42px;
+                    width: 218px;
+                    height: 44px;
+                    position: relative;
+                    border: none;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 13px;
-                    right: 14px;
-                    background: url('../img/chevron_grey.svg') center center/cover no-repeat;
-                    width: 12px;
-                    height: 12px;
-                    transform: rotate(90deg);
-                }
-
-                .lang {
-                    display: none;
-                    padding: 10px 16px;
-
-                    a {
-                        color: $Text_gray_medium;
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        img {
-                            width: 16px;
-                            height: 16px;
-                        }
-
-                        span {
-                            display: block;
-                            margin-left: 5px;
-                            color: $Text_gray_medium;
-                            font-family: "Exo 2";
-                            font-size: 14px;
-                            font-weight: 400;
-                            line-height: 140%;
-                            letter-spacing: 0.42px;
-                        }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 16px;
+                        left: 35px;
+                        background: url('../img/user.svg') center center/cover no-repeat;
+                        width: 12px;
+                        height: 12px;
                     }
                 }
 
-                .lang-active {
-                    display: block;
+                .menu_overlay-lang {
+                    border-radius: 20px;
+                    border: 1px solid var(--text-icon-700, #ADAFB8);
+                    min-height: 42px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 87px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 13px;
+                        right: 9px;
+                        background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                        width: 12px;
+                        height: 12px;
+                        transform: rotate(90deg);
+                    }
+
+                    .lang {
+                        display: none;
+                        padding: 10px 16px;
+
+                        a {
+                            color: $Text_gray_medium;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
+
+                            span {
+                                display: block;
+                                margin-left: 5px;
+                                color: $Text_gray_medium;
+                                font-family: "Exo 2";
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 140%;
+                                letter-spacing: 0.42px;
+                            }
+                        }
+                    }
+
+                    .lang-active {
+                        display: block;
+                    }
+                    .lang-all {
+                        display: block;
+                    }
+                }
+                .active {
+                    &::after {
+                        transform: rotate(-90deg);
+                        transition: .4s all ease;
+                    }
+                }
+            }
+
+            .menu_overlay-questions {
+                position: relative;
+                color: $Text_gray_medium;
+                font-family: "Exo 2";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 118%;
+                letter-spacing: 0.42px;
+                display: block;
+                padding: 0 0 0 15px;
+                width: 92px;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    background: url('../img/questions-grey.svg') center center/cover no-repeat;
+                    width: 12px;
+                    height: 12px;
+                    transition: .2s all ease;
                 }
             }
 
@@ -124,15 +186,16 @@
 
         nav {
             width: 325px;
-
+            
             .menu_overlay-navigation {
                 display: flex;
                 flex-direction: column;
-                margin-top: 40px;
+                padding: 0 0 0 12px;
+                margin-top: 50px;
 
                 li {
                     text-align: left;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
 
                     a {
                         color: $Text_black;
@@ -145,47 +208,59 @@
                     }
 
                     .solutions {
-                        display: none;
+                        display: block;
 
                         .tabs {
                             display: none;
+
                             li {
                                 margin-top: 20px;
                                 margin-bottom: 0;
                                 position: relative;
-
+                                color: $Text_black;
+                                font-family: "Exo 2";
+                                font-size: 20px;
+                                font-weight: 400;
+                                line-height: 145%;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
                                 &::after {
                                     content: '';
                                     position: absolute;
                                     top: 10px;
-                                    right: 24%;
+                                    right: 20%;
                                     background: url('../img/chevron_grey.svg') center center/cover no-repeat;
                                     width: 12px;
                                     height: 12px;
                                     transform: rotate(90deg);
                                 }
+                                .item_list {
+                                    display: none;
+    
+                                    li {
+                                        &::after {
+                                            display: none;
+                                        }
+    
+                                        a {
+                                            font-family: "Exo 2";
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                            line-height: 140%;
+                                            letter-spacing: 0.42px;
+    
+                                        }
+                                    }
+                                }
+                                ._active {
+                                    display: block;
+                                }
                             }
 
 
                         }
-                        .main_level {
-                            display: none;
-                            .item_list {
-                                display: block;
-                                li {
-                                    &::after {
-                                        display: none;
-                                    }
-                                    a {
-                                        font-family: "Exo 2";
-                                        font-size: 14px;
-                                        font-weight: 400;
-                                        line-height: 140%;
-                                        letter-spacing: 0.42px;
-                                        
-                                    }
-                                }
-                            }
+                        .active {
+                            display: block;
                         }
                     }
                 }
@@ -193,29 +268,7 @@
         }
 
         .menu_overlay-footer {
-            .menu_overlay-questions {
-                position: relative;
-                color: $Text_gray_medium;
-                font-family: "Exo 2";
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 118%;
-                letter-spacing: 0.42px;
-                display: block;
-                margin: 9px auto 0;
-                padding: 0 0 0 15px;
-                width: 92px;
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background: url('../img/questions-grey.svg') center center/cover no-repeat;
-                    width: 12px;
-                    height: 12px;
-                }
-            }
 
             p {
                 color: $Text_gray_medium;
@@ -227,18 +280,21 @@
                 text-align: center;
                 display: block;
                 margin-top: 20px;
+                display: none;
             }
 
             .menu_overlay-social {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-                margin: 10px auto 0;
+                margin: 0 auto;
+                padding: 30px 0 0 10px;
 
                 li {
-                    margin-right: 6px;
+                    margin-right: 8px;
 
                     a {
+                        display: block;
                         width: 20px;
                         height: 20px;
 
@@ -254,5 +310,187 @@
 }
 
 .menu_overlay-active {
-    top: -30px;
+    top: 0;
+    left: 10px;
+
+    &::before {}
+}
+
+@media (min-width: 648px) {
+    .menu_overlay {
+
+
+        .wrapper {
+            padding: 4px 85px 30px 44px;
+
+            .menu_overlay-head {
+                .menu_overlay-logo {
+                    width: 175px;
+                    height: 95px;
+
+                    img {
+                        width: 175px;
+                        height: 95px;
+                    }
+                }
+
+                .menu_overlay-close {
+                    &::before {
+                        top: -37px;
+                        right: -49px;
+                    }
+                }
+            }
+
+            .menu_overlay-actions {
+                padding: 6px 0px 0;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .flex-box {
+                    justify-content: flex-start;
+                    width: 50%;
+
+                    .menu_overlay-user {
+                        width: 181px;
+                        margin-right: 20px;
+
+                        &::before {
+                            left: 17px;
+                        }
+                    }
+
+                    .menu_overlay-lang {}
+                }
+
+                .menu_overlay-questions {
+                    font-size: 16px;
+                    line-height: 118%;
+                    letter-spacing: 0.48px;
+                    margin: 0;
+                    width: 105px;
+
+                    &::before {
+                        width: 17px;
+                        height: 17px;
+                        top: 1px;
+                        left: -4px;
+                    }
+                }
+            }
+
+            nav {
+                .menu_overlay-navigation {
+                    margin-top: 60px;
+                    padding: 0;
+
+                    li {
+                        margin-bottom: 25px;
+
+                        a {
+                            font-size: 26px;
+                            letter-spacing: 1.3px;
+                        }
+                    }
+                }
+            }
+
+            .menu_overlay-footer {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 76px 0 0;
+
+                .menu_overlay-social {
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        a {
+                            width: 30px;
+                            height: 30px;
+
+                            img {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    display: block;
+                    margin: 0;
+                    color: $Text_gray_medium;
+                    font-family: "Exo 2";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.42px;
+                }
+            }
+        }
+    }
+
+    .menu_overlay-active {
+        top: 25px;
+        left: 9px;
+        right: -36px;
+    }
+}
+
+
+@media (min-width: 960px) {
+    .menu_overlay {
+        .wrapper {
+            .menu_overlay-actions {
+                .flex-box {
+                    .menu_overlay-user {
+                        &:hover {
+                            outline: 1px solid $Color_orange;
+                            color: $Color_orange;
+                            &::before {
+                                background: url('../img/user-hover.svg') center center/cover no-repeat;
+                            }
+                        }
+                        &:focus {
+                            background: $Color_orange;
+                            color: $Text_black;
+                            &::before {
+                                background: url('../img/user-press.svg') center center/cover no-repeat;
+                            }
+                        }
+                    }
+                    .menu_overlay-lang {
+                        &:hover {
+                            border: 1px solid $Color_orange;
+                        }
+                    }
+                }
+                
+            }
+
+            nav {
+                .menu_overlay-navigation {
+                    li {
+                        &:hover {
+                            a {
+                                color: $Color_orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu_overlay-active {
+        left: 22px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .menu_overlay {
+        display: none;
+    }
 }

@@ -128,13 +128,19 @@
                                     z-index: -1;
                                     background: transparent;
                                 }
-
-                                img {
+                                .basic {
                                     width: 120px;
                                     height: 40px;
                                     padding: 8px;
-
                                 }
+                                .hover {
+                                    overflow: hidden;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    display: none;
+                                    padding: 8px;
+                                }
+                                
 
                             }
 
@@ -354,7 +360,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
     .footer {
         padding: 97px 0 20px;
 
@@ -363,6 +369,9 @@
                 .footer_contacts {
                     &-item {
                         margin: 0 8px 10px 0;
+                        &:hover {
+                            color: $Color_orange;
+                        }
                     }
                 }
 
@@ -379,10 +388,52 @@
                                 .footer_app__item {
                                     width: 149px;
                                     height: 49px;
-
-                                    img {
+                                    .basic {
                                         width: 149px;
                                         height: 49px;
+                                    }
+                                    .hover {
+                                        display: none;
+                                        transition-delay: .3s;
+                                        overflow: hidden;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        width: 149px;
+                                        height: 49px;
+                                        color: $Text_black;
+                                        font-family: "Exo 2";
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        letter-spacing: 0.48px;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                    }
+                                    
+                                }
+                                &:hover {
+                                    &:last-child {
+                                        .footer_app__item {
+                                            .hover {
+                                                padding: 15px 25px;
+                                            }
+                                        }
+                                        
+                                    }
+                                    .footer_app__item {
+                                        background: $Color_grey_light;
+                                        .basic {
+                                            visibility: hidden;
+                                            display: none;
+                                        }
+                                        .hover {
+                                            display: block;
+                                            overflow: visible;
+                                            visibility: visible;
+                                            opacity: 1;
+                                            
+                                            
+                                        }
+                                        
                                     }
                                 }
                             }
@@ -406,6 +457,11 @@
 
                             &:nth-child(n+8) {
                                 margin: 0 0 6px;
+                            }
+                            &:hover {
+                                a {
+                                    color: $Color_orange;
+                                }
                             }
                         }
                     }
@@ -433,6 +489,25 @@
                     .footer_actions-social {
                         li {
                             margin-right: -15px;
+                            a {
+                                outline: 1px solid transparent;
+                                border-radius: 100px;
+                                width: 30px;
+                                height: 30px;
+                                display: block;
+                                position: relative;
+                            }
+                        }
+                        &:hover {
+                            li {
+                                margin-right: 10px;
+                                &:hover {
+                                    
+                                    a {
+                                        outline: 1px solid $Color_orange;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -520,26 +595,29 @@
                         }
 
                         &-wrapper {
-                            div {
+                             div {
                                 .footer_app__item {
-                                    width: 160px;
-                                    height: 52px;
-                                    margin: 0 13px 0 0;
-                                    img {
-                                        width: 160px;
-                                        height: 52px;
+                                    width: 150px;
+                                    height: 49px;
+                                    margin: 0 15px 6px 0;
+                                    .basic {
+                                        width: 150px;
+                                        height: 49px;
+                                    }
+                                    .hover {
+                                        width: 150px;
+                                        height: 49px;
                                     }
                                 }
-
                                 .box {
                                     span {
                                         font-size: 14px;
                                         letter-spacing: 0.42px;
+                                        
                                     }
                                     .flex-box {
                                         p {
-                                            font-size: 14px;
-                                            letter-spacing: 0.42px;
+                                            padding: 1px 0 0 9px;
                                         }
                                     }
                                 }
@@ -548,14 +626,24 @@
                     }
                     .footer_navigation {
                         height: 96px;
-                        width: 1162px;
+                        width: 1090px;
                         li {
+                            display: inline;
                             width: auto;
                             a {
                                 font-size: 16px;
                                 letter-spacing: 0.32px;
+                                
                             }
+                            &:nth-child(8) {
+                            }
+
+                            &:nth-child(n+8) {
+                                width: auto;
+                            }  
+                            
                         }
+                        
                     }
                 }
             }

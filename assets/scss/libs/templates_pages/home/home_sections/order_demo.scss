@@ -100,13 +100,17 @@
                                     background: $Color_grey_light;
                                 }
     
-                                img {
+                                .basic {
                                     width: 120px;
                                     height: 40px;
                                     padding: 8px;
-                                    
-                                    
-    
+                                }
+                                .hover {
+                                    overflow: hidden;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    display: none;
+                                    padding: 8px;
                                 }
     
                             }
@@ -245,7 +249,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
     .order_demo {
         padding: 167px 0 0;
         .container {
@@ -278,9 +282,52 @@
                                 .order_demo__item {
                                     width: 149px;
                                     height: 49px;
-                                    img {
+                                    .basic {
                                         width: 149px;
                                         height: 49px;
+                                    }
+                                    .hover {
+                                        display: none;
+                                        transition-delay: .3s;
+                                        overflow: hidden;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        width: 149px;
+                                        height: 49px;
+                                        color: $Color_grey_light;
+                                        font-family: "Exo 2";
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        letter-spacing: 0.48px;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                    }
+                                    
+                                }
+                                &:hover {
+                                    &:last-child {
+                                        .order_demo__item {
+                                            .hover {
+                                                padding: 15px 25px;
+                                            }
+                                        }
+                                        
+                                    }
+                                    .order_demo__item {
+                                        background: $Text_black;
+                                        .basic {
+                                            visibility: hidden;
+                                            display: none;
+                                        }
+                                        .hover {
+                                            display: block;
+                                            overflow: visible;
+                                            visibility: visible;
+                                            opacity: 1;
+                                            
+                                            
+                                        }
+                                        
                                     }
                                 }
                             }
@@ -359,20 +406,30 @@
                         &-text {
                             margin: 5px 0 0;
                         }
-                        div {
-                            .order_demo__item {
-                                width: 150px;
-                                height: 49px;
-                                margin: 0 28px 5px 0;
-                            }
-                            .box {
-                                span {
-                                    font-size: 14px;
-                                    letter-spacing: 0.42px;
+                        &-wrapper {
+                            div {
+                                .main_app__item {
+                                    width: 150px;
+                                    height: 49px;
+                                    margin: 0 15px 6px 0;
+                                    .basic {
+                                        width: 150px;
+                                        height: 49px;
+                                    }
+                                    .hover {
+                                        width: 150px;
+                                        height: 49px;
+                                    }
+                                }
+                                .box {
+                                    span {
+                                        font-size: 14px;
+                                        letter-spacing: 0.42px;
+                                        
+                                    }
                                     .flex-box {
                                         p {
-                                            font-size: 14px;
-                                            letter-spacing: 0.42px;
+                                            padding: 1px 0 0 9px;
                                         }
                                     }
                                 }
@@ -391,3 +448,4 @@
         }
     }
 }
+

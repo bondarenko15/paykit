@@ -1,4 +1,4 @@
-<div class="menu_overlay">
+<div class="menu_overlay ">
     <div class="wrapper">
         <div class="menu_overlay-head">
             <a href="javascript:void(0)" class="menu_overlay-logo">
@@ -9,40 +9,38 @@
             </a>
         </div>
         <div class="menu_overlay-actions">
-            <button class="menu_overlay-user">Особистий кабінет</button>
-            <ul class="menu_overlay-lang">
-                <li class="lang lang-active">
-                    <a href="javascript:void(0)">
-                        <img src="img/ua.svg" alt="UA">
-                        <span>UA</span>
-                    </a>
+            <div class="flex-box">
+                <button class="menu_overlay-user">Особистий кабінет</button>
+                <ul class="menu_overlay-lang">
+                    <li class="lang lang-active">
+                        <a href="javascript:void(0)">
+                            <img src="img/ua.svg" alt="UA">
+                            <span>UA</span>
+                        </a>
 
-                </li>
-                <li class="lang ">
-                    <a href="javascript:void(0)">
-                        <img src="img/us.svg" alt="ENG">
-                        <span>ENG</span>
-                    </a>
+                    </li>
+                    <li class="lang ">
+                        <a href="javascript:void(0)">
+                            <img src="img/us.svg" alt="ENG">
+                            <span>ENG</span>
+                        </a>
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="menu_overlay-questions">База знань</a>
         </div>
         <nav>
             <ul class="menu_overlay-navigation">
                 <li>
                     <a href="javascript:void(0)">Про продукт</a>
                 </li>
-                <li>
-                    <a href="javascript:void(0)">Готові рішення</a>
+                <li class="order">
+                    <a href="javascript:void(0)" >Готові рішення</a>
                     <div class="solutions">
                         <ul class="tabs">
-                            <li>Рішення для Retail</li>
-                            <li>Рішення для Horeka</li>
-                            <li>Рішення для Service</li>
-                        </ul>
-                        <ul class="main_level">
-                            <li>
-                                <ul class="item_list">
+                            <li data-tab="tab_1">Рішення для Retail
+                                <ul class="item_list" id="tab_1">
                                     <li>
                                         <a href="javascript:void(0)">Невелика торгова точка</a>
                                     </li>
@@ -86,19 +84,19 @@
                                         <a href="javascript:void(0)"></a>
                                     </li>
                                     <li>
-                                        
+
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <ul class="item_list">
-                                    <li>
+                            <li data-tab="tab_2">Рішення для Horeka
+                                <ul class="item_list" id="tab_2">
+                                    <li >
                                         <a href="javascript:void(0)">Фаст-фуд (фуд-трак)</a>
                                     </li>
-                                    <li>
+                                    <li >
                                         <a href="javascript:void(0)">Кафетерій</a>
                                     </li>
-                                    <li>
+                                    <li >
                                         <a href="javascript:void(0)">Кав’ярня</a>
                                     </li>
                                     <li>
@@ -118,8 +116,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <ul class="item_list">
+                            <li data-tab="tab_3">Рішення для Service
+                                <ul class="item_list" id="tab_3">
                                     <li>
                                         <a href="javascript:void(0)">Перукарня</a>
                                     </li>
@@ -133,7 +131,8 @@
                                         <a href="javascript:void(0)">Продаж білетів (атракціони)</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)">Побутові послуги (хімчистка, ремонт одягу, ремонт техніки)</a>
+                                        <a href="javascript:void(0)">Побутові послуги (хімчистка, ремонт одягу, ремонт
+                                            техніки)</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">Парковка</a>
@@ -164,8 +163,6 @@
             </ul>
         </nav>
         <div class="menu_overlay-footer">
-            <span class="menu_overlay-questions">База знань</span>
-            <p>Наші соцмережі</p>
             <ul class="menu_overlay-social">
                 <li>
                     <a href="javascript:void(0)">
@@ -188,13 +185,7 @@
                     </a>
                 </li>
             </ul>
+            <p>Наші соцмережі</p>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-

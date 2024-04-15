@@ -31,7 +31,7 @@ if (swiperOffers) {
       prevEl: '.swiper-button-prev'
     },
     breakpoints: {
-      1024: {
+      960: {
         loop: true,
         slidesPerView: 'auto',
         spaceBetween: 20,
@@ -49,6 +49,7 @@ if (swiperOffers) {
 const mobileNav = document.querySelector('.menu_overlay');
 const mobileMenuActive = document.querySelector('.header_menu');
 const closeBtn = document.querySelector('.menu_overlay-close');
+const body = document.querySelector('body')
 mobileMenuActive.addEventListener('click', () => {
   mobileNav.classList.add('menu_overlay-active');
   closeBtn.addEventListener('click', () => {
@@ -56,6 +57,11 @@ mobileMenuActive.addEventListener('click', () => {
   });
 
 });
+
+
+
+
+
 
 
 
@@ -69,3 +75,48 @@ window.addEventListener('scroll', function () {
     element.classList.remove("fixed");
   }
 });
+
+
+function toShow() {
+  const lang = document.querySelectorAll('.lang');
+  lang.forEach((item)  => {
+    item.classList.toggle('lang-all');
+  })
+}
+
+const langMenu = document.querySelector('.header_language');
+langMenu.addEventListener('click', toShow);
+
+const menu = document.querySelector('.menu_overlay-lang');
+menu.addEventListener('click', toShow);
+
+
+
+const navBtn = document.querySelector('.order');
+const tabsBtn = document.querySelector('.menu_overlay-navigation .tabs');
+const tabsBtn1 = document.querySelectorAll('.menu_overlay-navigation .tabs li');
+const test1 = document.querySelectorAll('.menu_overlay-navigation .item_list');
+navBtn.addEventListener('click', function () {
+  tabsBtn.classList.add('active');
+  tabsBtn1.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const prevActiveItem = document.querySelector('.tabs ._active');
+      const prevActiveButton = document.querySelector('.menu_overlay-navigation .tabs ._active');
+      
+      if (prevActiveButton) {
+        prevActiveButton.classList.remove('_active');
+      }
+      if (prevActiveItem) {
+        prevActiveItem.classList.remove('_active');
+      }
+      const nextActiveItemId = `#${btn.getAttribute('data-tab')}`;
+
+      const nextActiveItem = document.querySelector(nextActiveItemId);
+      
+
+      btn.classList.add('_active');
+      nextActiveItem.classList.add('_active');
+    });
+  })
+    
+  });

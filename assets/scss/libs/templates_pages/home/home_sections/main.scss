@@ -106,13 +106,18 @@
                                     background: $Color_grey_light;
                                 }
 
-                                img {
+                                .basic {
                                     width: 120px;
                                     height: 40px;
                                     padding: 8px;
-
                                 }
-
+                                .hover {
+                                    overflow: hidden;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    display: none;
+                                    padding: 8px;
+                                }
                             }
 
                             .box {
@@ -131,8 +136,6 @@
                                     justify-content: flex-start;
                                     align-items: center;
                                     margin: 2px 0 15px;
-
-                                    img {}
 
                                     p {
                                         color: $Text_gray_medium;
@@ -260,7 +263,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
     .main {
         .container {
             .wrapper {
@@ -296,9 +299,52 @@
                                 .main_app__item {
                                     width: 149px;
                                     height: 49px;
-                                    img {
+                                    .basic {
                                         width: 149px;
                                         height: 49px;
+                                    }
+                                    .hover {
+                                        display: none;
+                                        transition-delay: .3s;
+                                        overflow: hidden;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        width: 149px;
+                                        height: 49px;
+                                        color: $Color_grey_light;
+                                        font-family: "Exo 2";
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        letter-spacing: 0.48px;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                    }
+                                    
+                                }
+                                &:hover {
+                                    &:last-child {
+                                        .main_app__item {
+                                            .hover {
+                                                padding: 15px 25px;
+                                            }
+                                        }
+                                        
+                                    }
+                                    .main_app__item {
+                                        background: $Text_black;
+                                        .basic {
+                                            visibility: hidden;
+                                            display: none;
+                                        }
+                                        .hover {
+                                            display: block;
+                                            overflow: visible;
+                                            visibility: visible;
+                                            opacity: 1;
+                                            
+                                            
+                                        }
+                                        
                                     }
                                 }
                             }
@@ -352,21 +398,9 @@
                                     height: 30px;
                                     display: block;
                                     position: relative;
-                                    img {
-                                        position: absolute;
-                                        inset: 0;
-                                    }
-                                }
-                                &:hover {
+                                    outline: 1px solid transparent;
                                     
-                                    a {
-                                        border: 1px solid $Color_orange;
-                                        img {
-                                            
-                                        }
-                                    }
                                 }
-                                
                             }
                             p {
                                 display: none;
@@ -374,6 +408,12 @@
                             &:hover {
                                 li {
                                     margin-right: 10px;
+                                    &:hover {
+                                    
+                                        a {
+                                            outline: 1px solid $Color_orange;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -386,6 +426,7 @@
                         }
                         &-wrapper {
                             flex-wrap: nowrap;
+                            
                         }
                     }
                 }
@@ -422,6 +463,7 @@
 
 @media (min-width: 1880px) {
     .main {
+        padding: 0 0 60px;
         .container {
             .wrapper {
                 padding: 265px 0 0;
@@ -479,9 +521,13 @@
                                     width: 171px;
                                     height: 55px;
                                     margin: 0 15px 6px 0;
-                                    img {
+                                    .basic {
                                         width: 171px;
-                                        height: 55px; 
+                                        height: 55px;
+                                    }
+                                    .hover {
+                                        width: 171px;
+                                        height: 55px;
                                     }
                                 }
                                 .box {

@@ -171,12 +171,14 @@
                 
             </li>
         </ul>
-        <span class="header_menu"></span>
+        <span class="header_menu">
+            <span></span>
+        </span>
     </div>
 </header>
 
    <!-- Основной контент -->
-   <div class="menu_overlay">
+   <div class="menu_overlay ">
     <div class="wrapper">
         <div class="menu_overlay-head">
             <a href="javascript:void(0)" class="menu_overlay-logo">
@@ -187,40 +189,38 @@
             </a>
         </div>
         <div class="menu_overlay-actions">
-            <button class="menu_overlay-user">Особистий кабінет</button>
-            <ul class="menu_overlay-lang">
-                <li class="lang lang-active">
-                    <a href="javascript:void(0)">
-                        <img src="img/ua.svg" alt="UA">
-                        <span>UA</span>
-                    </a>
+            <div class="flex-box">
+                <button class="menu_overlay-user">Особистий кабінет</button>
+                <ul class="menu_overlay-lang">
+                    <li class="lang lang-active">
+                        <a href="javascript:void(0)">
+                            <img src="img/ua.svg" alt="UA">
+                            <span>UA</span>
+                        </a>
 
-                </li>
-                <li class="lang ">
-                    <a href="javascript:void(0)">
-                        <img src="img/us.svg" alt="ENG">
-                        <span>ENG</span>
-                    </a>
+                    </li>
+                    <li class="lang ">
+                        <a href="javascript:void(0)">
+                            <img src="img/us.svg" alt="ENG">
+                            <span>ENG</span>
+                        </a>
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="menu_overlay-questions">База знань</a>
         </div>
         <nav>
             <ul class="menu_overlay-navigation">
                 <li>
                     <a href="javascript:void(0)">Про продукт</a>
                 </li>
-                <li>
+                <li class="order">
                     <a href="javascript:void(0)">Готові рішення</a>
                     <div class="solutions">
                         <ul class="tabs">
-                            <li>Рішення для Retail</li>
-                            <li>Рішення для Horeka</li>
-                            <li>Рішення для Service</li>
-                        </ul>
-                        <ul class="main_level">
-                            <li>
-                                <ul class="item_list">
+                            <li data-tab="tab_1">Рішення для Retail
+                                <ul class="item_list" id="tab_1">
                                     <li>
                                         <a href="javascript:void(0)">Невелика торгова точка</a>
                                     </li>
@@ -264,12 +264,12 @@
                                         <a href="javascript:void(0)"></a>
                                     </li>
                                     <li>
-                                        
+
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <ul class="item_list">
+                            <li data-tab="tab_2">Рішення для Horeka
+                                <ul class="item_list" id="tab_2">
                                     <li>
                                         <a href="javascript:void(0)">Фаст-фуд (фуд-трак)</a>
                                     </li>
@@ -296,8 +296,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <ul class="item_list">
+                            <li data-tab="tab_3">Рішення для Service
+                                <ul class="item_list" id="tab_3">
                                     <li>
                                         <a href="javascript:void(0)">Перукарня</a>
                                     </li>
@@ -311,7 +311,8 @@
                                         <a href="javascript:void(0)">Продаж білетів (атракціони)</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)">Побутові послуги (хімчистка, ремонт одягу, ремонт техніки)</a>
+                                        <a href="javascript:void(0)">Побутові послуги (хімчистка, ремонт одягу, ремонт
+                                            техніки)</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">Парковка</a>
@@ -342,8 +343,6 @@
             </ul>
         </nav>
         <div class="menu_overlay-footer">
-            <span class="menu_overlay-questions">База знань</span>
-            <p>Наші соцмережі</p>
             <ul class="menu_overlay-social">
                 <li>
                     <a href="javascript:void(0)">
@@ -366,18 +365,41 @@
                     </a>
                 </li>
             </ul>
+            <p>Наші соцмережі</p>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-   <div class="main">
+   <div class="modal_overlay">
+    <div class="wrapper">
+        <form action="" class="form form_modal">
+            <span></span>
+            <h3 class="title title_footer">Отримати демо продукту</h3>
+            <p><i>Отримуйте</i> тестовий період 14 днів користування <i>безкоштовно!</i></p>
+            <div class="form_flex">
+                <div>
+                    <label for="name_modal">Ваше Ім’я</label>
+                    <input type="text" id="name_modal" placeholder="Ім’я" class="input">
+                </div>
+                <div>
+                    <label for="phone_number_modal">Номер телефону</label>
+                    <input type="text" id="phone_number_modal" placeholder="+38 (___) __ __ ___" class="input">
+                </div>
+                <button class="btn btn_form">Надіслати заявку</button>
+                <div>
+                    <input type="checkbox" class="custom-checkbox" id="checkbox_modal" name="checkbox_modal" value="yes">
+                    <label class="checkbox_label-modal" for="checkbox_modal">Я погоджуюсь з умовами політики конфіденційності і
+                        дозволяю обробляти мої персональні дані</label>
+                </div></div>
+        </form>
+        <div class="modal_thanks">
+            <h4>Дякуємо!</h4>
+            <span>Наш менеджер зв’яжеться з Вами найближчим часом.</span>
+            <a href="javascript:void(0)" class="btn btn_modal">закрити</a>
+        </div>
+    </div>
+    
+</div>
+   <section class="main">
     <div class="container">
         <div class="wrapper">
             <h1 class="main_title">POS-система для автоматизації бізнесу</h1>
@@ -425,7 +447,8 @@
                     <div class="main_app-wrapper">
                         <div>
                             <a href="javascript:void(0)" class="main_app__item">
-                                <img src="img/Google_play.svg" alt="Google play">
+                                <img src="img/Google_play.svg" alt="Google play" class="basic">
+                                <img src="img/Google_play-white.svg" alt="Google play" class="hover">
                             </a>
                             <div class="box">
                                 <span>PayKit POS Smart</span>
@@ -437,7 +460,8 @@
                         </div>
                         <div>
                             <a href="javascript:void(0)" class="main_app__item">
-                                <img src="img/Google_play.svg" alt="Google play">
+                                <img src="img/Google_play.svg" alt="Google play" class="basic">
+                                <img src="img/Google_play-white.svg" alt="Google play" class="hover">
                             </a>
                             <div class="box">
                                 <span>PayKit POS Tab</span>
@@ -449,7 +473,8 @@
                         </div>
                         <div>
                             <a href="javascript:void(0)" class="main_app__item">
-                                <img src="img/App_store.svg" alt="Appstore">
+                                <img src="img/App_store.svg" alt="Appstore" class="basic">
+                                <span class="hover">в розробці</span>
                             </a>
                             <div class="box">
                                 <span>В розробці</span>
@@ -464,8 +489,8 @@
         <img src="img/main_img.png" alt="App" class="img_one">
         <img src="img/tablet_main.png" alt="" class="img_two">
     </div>
-</div>
-   <div class="our_partners">
+</section>
+   <section class="our_partners">
     <div class="wrapper">
         <h2 class="title title_our_partners">Наші партнери</h2>
         <div class="swiper slider-our_partners">
@@ -563,8 +588,8 @@
             <div class="swiper-button-next"></div>
         </div>
     </div>
-</div>
-   <div class="about_us">
+</section>
+   <section class="about_us">
     <div class="container">
         <div class="wrapper">
             <div class="our_results">
@@ -615,10 +640,10 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
-   <div class="advantages">
+   <section class="advantages">
     <div class="container">
         <h2 class="title title_advantages">Переваги PayKit для власника або керуючого торговою точкою</h2>
         <div class="wrapper">
@@ -647,12 +672,12 @@
             </ul>
         </div>
     </div>
-</div>
-   <div class="order_demo">
+</section>
+   <section class="order_demo">
     <div class="container">
         <div class="wrapper">
             <h2 class="title title-order_demo"><i>4 місяці</i> користування PayKit POS <i>безкоштовно</i></h2>
-            <p class="order_demo-text">при підключенні еквайрингу <i>від А-банку тариф банку</i>  всього <i>1,2%</i></p>
+            <p class="order_demo-text">при підключенні еквайрингу <i>від А-банку тариф банку</i> всього <i>1,2%</i></p>
             <ul class="order_demo-list">
                 <li>складський облік</li>
                 <li>ПРРО</li>
@@ -662,41 +687,44 @@
             <div class="flex-wrapper">
                 <a href="javascript:void(0)" class="btn btn-order_demo">Замовити демо</a>
                 <div class="order_demo-app">
-                <p class="order_demo-app-text">Завантажуйте нашу аплікацію у</p>
-                <div class="order_demo-app-wrapper">
-                    <div>
-                        <a href="javascript:void(0)" class="order_demo__item">
-                            <img src="img/Google_play.svg" alt="Google play">
-                        </a>
-                        <div class="box">
-                            <span>PayKit POS Smart</span>
-                            <div class="flex-box">
-                                <img src="img/smart.svg" alt="smartphone">
-                                <p>Для смартфонів</p>
+                    <p class="order_demo-app-text">Завантажуйте нашу аплікацію у</p>
+                    <div class="order_demo-app-wrapper">
+                        <div>
+                            <a href="javascript:void(0)" class="order_demo__item">
+                                <img src="img/Google_play.svg" alt="Google play" class="basic">
+                                <img src="img/Google_play-white.svg" alt="Google play" class="hover">
+                            </a>
+                            <div class="box">
+                                <span>PayKit POS Smart</span>
+                                <div class="flex-box">
+                                    <img src="img/smart.svg" alt="smartphone">
+                                    <p>Для смартфонів</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)" class="order_demo__item">
+                                <img src="img/Google_play.svg" alt="Google play" class="basic">
+                                <img src="img/Google_play-white.svg" alt="Google play" class="hover">
+                            </a>
+                            <div class="box">
+                                <span>PayKit POS Tab</span>
+                                <div class="flex-box">
+                                    <img src="img/tablet.svg" alt="tablet">
+                                    <p>Для планшетів</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)" class="order_demo__item">
+                                <img src="img/App_store.svg" alt="Appstore" class="basic">
+                                <span class="hover">в розробці</span>
+                            </a>
+                            <div class="box">
+                                <span>В розробці</span>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <a href="javascript:void(0)" class="order_demo__item">
-                            <img src="img/Google_play.svg" alt="Google play">
-                        </a>
-                        <div class="box">
-                            <span>PayKit POS Tab</span>
-                            <div class="flex-box">
-                                <img src="img/tablet.svg" alt="tablet">
-                                <p>Для планшетів</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="javascript:void(0)" class="order_demo__item">
-                            <img src="img/App_store.svg" alt="Appstore">
-                        </a>
-                        <div class="box">
-                            <span>В розробці</span>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
             <div class="order_demo-img">
@@ -705,13 +733,8 @@
             </div>
         </div>
     </div>
-</div>
-
-
-
-
-
-   <div class="offers">
+</section>
+   <section class="offers">
     <div class="container">
         <div class="swiper slider_offers">
             <div class="swiper-wrapper">
@@ -798,7 +821,96 @@
                             <p>Персонал</p>
                         </div>
                     </div>
-                    <a href="javascrip:void(0)" class="btn btn_offers">Детальніше</a>
+                    <a href="javascript:void(0)" class="btn btn_offers">Детальніше</a>
+                    <div class="swiper-slide_img">
+                        <img src="img/bird.svg" alt="PayKit">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide_head">
+                        <h4>Pro</h4>
+                        <span>1400 грн/міс.</span>
+                    </div>
+                    <p class="swiper-slide_text">Дає можливість вести взаєморозрахунки з клієнтами та керувати акціями</p>
+                    <div class="swiper-slide_flex">
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <p></p>
+                            </ul>
+                            <p>Управління та налаштування</p>
+                        </div>
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                            </ul>
+                            <p>Товарний облік</p>
+                        </div>
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                            </ul>
+                            <p>Внутрішній електронний документообіг з торговими точками</p>
+                        </div>
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                            </ul>
+                            <p>Фінансовий облік</p>
+                        </div>
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                            </ul>
+                            <p>Каса</p>
+                        </div>
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                            </ul>
+                            <p>Торгове обладнання</p>
+                        </div>
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                            </ul>
+                            <p>Маркетинг</p>
+                        </div>
+                        <div class="swiper-slide_block">
+                            <ul class="swiper-slide_block-item">
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                                <li class="rating rating_active"></li>
+                            </ul>
+                            <p>Персонал</p>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="btn btn_offers">Детальніше</a>
                     <div class="swiper-slide_img">
                         <img src="img/bird.svg" alt="PayKit">
                     </div>
@@ -892,7 +1004,6 @@
                         <img src="img/bird.svg" alt="PayKit">
                     </div>
                 </div>
-
                 <div class="swiper-slide">
                     <div class="swiper-slide_head">
                         <h4>Pro</h4>
@@ -977,96 +1088,7 @@
                             <p>Персонал</p>
                         </div>
                     </div>
-                    <a href="javascrip:void(0)" class="btn btn_offers">Детальніше</a>
-                    <div class="swiper-slide_img">
-                        <img src="img/bird.svg" alt="PayKit">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-slide_head">
-                        <h4>Pro</h4>
-                        <span>1400 грн/міс.</span>
-                    </div>
-                    <p class="swiper-slide_text">Дає можливість вести взаєморозрахунки з клієнтами та керувати акціями</p>
-                    <div class="swiper-slide_flex">
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <p></p>
-                            </ul>
-                            <p>Управління та налаштування</p>
-                        </div>
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                            </ul>
-                            <p>Товарний облік</p>
-                        </div>
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                            </ul>
-                            <p>Внутрішній електронний документообіг з торговими точками</p>
-                        </div>
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                            </ul>
-                            <p>Фінансовий облік</p>
-                        </div>
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                            </ul>
-                            <p>Каса</p>
-                        </div>
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                            </ul>
-                            <p>Торгове обладнання</p>
-                        </div>
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                            </ul>
-                            <p>Маркетинг</p>
-                        </div>
-                        <div class="swiper-slide_block">
-                            <ul class="swiper-slide_block-item">
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                                <li class="rating rating_active"></li>
-                            </ul>
-                            <p>Персонал</p>
-                        </div>
-                    </div>
-                    <a href="javascrip:void(0)" class="btn btn_offers">Детальніше</a>
+                    <a href="javascript:void(0)" class="btn btn_offers">Детальніше</a>
                     <div class="swiper-slide_img">
                         <img src="img/bird.svg" alt="PayKit">
                     </div>
@@ -1076,7 +1098,7 @@
             <div class="swiper-button-next"></div>
         </div>
     </div>
-</div>
+</section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -1102,30 +1124,30 @@
                     </div>
                     <button class="btn btn_form">Надіслати заявку</button>
                     <div>
-                        <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="yes">
-                        <label class="checkbox_label" for="happy">Я погоджуюсь з умовами політики конфіденційності і
+                        <input type="checkbox" class="custom-checkbox" id="checkbox" name="happy" value="yes">
+                        <label class="checkbox_label" for="checkbox">Я погоджуюсь з умовами політики конфіденційності і
                             дозволяю обробляти мої персональні дані</label>
                     </div></div>
             </form>
             <div class="social_wrapper">
                 <ul class="footer_actions-social">
                     <li>
-                        <a href="javascrip:void(0)">
+                        <a href="javascript:void(0)">
                             <img src="img/instagram.svg" alt="Instagram">
                         </a>
                     </li>
                     <li>
-                        <a href="javascrip:void(0)">
+                        <a href="javascript:void(0)">
                             <img src="img/facebook.svg" alt="Facebook">
                         </a>
                     </li>
                     <li>
-                        <a href="javascrip:void(0)">
+                        <a href="javascript:void(0)">
                             <img src="img/twitter.svg" alt="X">
                         </a>
                     </li>
                     <li>
-                        <a href="javascrip:void(0)">
+                        <a href="javascript:void(0)">
                             <img src="img/youtube.svg" alt="Youtube">
                         </a>
                     </li>
@@ -1133,10 +1155,10 @@
                 <h3 class="subtitle subtitle_footer">Наші контакти</h3>
             </div>
             <div class="footer_contacts">
-                <a href="javascrip:void(0)" class="footer_contacts-item">+38 (097) 339-54-45</a>
-                <a href="javascrip:void(0)" class="footer_contacts-item">+38 (097) 339-54-45</a>
-                <a href="javascrip:void(0)" class="footer_contacts-item">+38 (097) 339-54-45</a>
-                <a href="javascrip:void(0)" class="footer_contacts-item">info@paykitpos.com</a>
+                <a href="javascript:void(0)" class="footer_contacts-item">+38 (097) 339-54-45</a>
+                <a href="javascript:void(0)" class="footer_contacts-item">+38 (097) 339-54-45</a>
+                <a href="javascript:void(0)" class="footer_contacts-item">+38 (097) 339-54-45</a>
+                <a href="javascript:void(0)" class="footer_contacts-item">info@paykitpos.com</a>
                 <p class="footer_contacts-item">Плеханівська 92а, м. Харків</p>
 
             </div>
@@ -1146,7 +1168,8 @@
                     <div class="footer_app-wrapper">
                         <div>
                             <a href="javascript:void(0)" class="footer_app__item">
-                                <img src="img/Google_play-white.svg" alt="Google play">
+                                <img src="img/Google_play-white.svg" alt="Google play" class="basic">
+                                <img src="img/Google_play.svg" alt="Google play" class="hover">
                             </a>
                             <div class="box">
                                 <span>PayKit POS Smart</span>
@@ -1158,7 +1181,8 @@
                         </div>
                         <div>
                             <a href="javascript:void(0)" class="footer_app__item">
-                                <img src="img/Google_play-white.svg" alt="Google play">
+                                <img src="img/Google_play.svg" alt="Google play" class="hover">
+                                <img src="img/Google_play-white.svg" alt="Google play" class="basic">
                             </a>
                             <div class="box">
                                 <span>PayKit POS Tab</span>
@@ -1170,7 +1194,8 @@
                         </div>
                         <div>
                             <a href="javascript:void(0)" class="footer_app__item">
-                                <img src="img/App_store-white.svg" alt="Appstore">
+                                <img src="img/App_store-white.svg" alt="Appstore" class="basic">
+                                <span class="hover">в розробці</span>
                             </a>
                             <div class="box">
                                 <span>В розробці</span>
