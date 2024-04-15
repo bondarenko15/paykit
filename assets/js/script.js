@@ -163,8 +163,12 @@ btnPopUp.forEach((btn) => {
     closePopUp.addEventListener('click', () => {
       popUp.classList.remove('modal_overlay-active');
     })
-    wrapper.addEventListener('click', () => {
-      popUp.classList.remove('modal_overlay-active');
+    wrapper.addEventListener('click', (evt) => {
+      if (evt.currentTarget === evt.target) {
+        popUp.classList.remove('modal_overlay-active');
+      }
     })
   })
 })
+
+

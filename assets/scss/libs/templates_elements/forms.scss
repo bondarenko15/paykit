@@ -1,4 +1,5 @@
 .form {
+    z-index: 10;
     p {
         color: $Color_white_grey;
         font-family: Montserrat;
@@ -19,6 +20,7 @@
             margin-top: 10px;
             position: relative;
             width: 305px;
+
             label {
                 color: $Color_grey_light;
                 font-family: "Exo 2";
@@ -29,8 +31,9 @@
                 display: block;
                 padding-left: 20px;
                 margin-bottom: 8px;
-    
+
             }
+
             .input {
                 padding: 16px 20px;
                 border-radius: 100px;
@@ -44,22 +47,26 @@
                 font-weight: 300;
                 line-height: 140%;
                 letter-spacing: 0.36px;
+
                 #placeholder {
                     color: $Color_grey_dark;
                 }
-                
-            } 
+
+            }
+
             .custom-checkbox {
                 position: absolute;
                 z-index: -1;
                 opacity: 0;
             }
+
             .custom-checkbox+label {
                 display: inline-flex;
                 align-items: center;
                 user-select: none;
                 cursor: pointer;
             }
+
             .custom-checkbox+label::before {
                 content: '';
                 position: absolute;
@@ -72,24 +79,29 @@
                 flex-grow: 0;
                 background: url('../img/check.svg') center center/cover no-repeat;
             }
+
             .custom-checkbox:checked+label::before {
                 background: url('../img/checked.svg') center center/cover no-repeat;
             }
+
             .checkbox_label {
                 padding: 6px 0 0 22px;
                 margin: 0;
                 color: $Color_grey_dark;
+
                 a {
                     color: $Color_grey_dark;
                     text-decoration: underline;
-                    display: inline-block;
+                    display: block;
+                    padding: 0 4px;
                 }
             }
-            
-    
+
+
         }
-    }     
+    }
 }
+
 .form_modal {
     background: url('../img/modal_bg.png') center center/cover no-repeat;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
@@ -99,6 +111,7 @@
     height: 500px;
     position: relative;
     display: block;
+
     span {
         display: block;
         width: 24px;
@@ -108,8 +121,9 @@
         top: 15px;
         right: 15px;
         cursor: pointer;
-       
+
     }
+
     .flex-box {
         div {}
     }
@@ -124,24 +138,30 @@
             width: 435px;
             margin: 15px 0 20px;
         }
+
         &_flex {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+
             div {
                 width: 295px;
+
                 label {
                     font-size: 14px;
                     letter-spacing: 0.42px;
                 }
+
                 .input {
                     font-size: 14px;
                     letter-spacing: 0.42px;
                     width: 295px;
                 }
+
                 &:last-child {
                     width: 350px;
                     margin-top: 24px;
+
                     label {
                         font-size: 12px;
                         letter-spacing: 0.36px;
@@ -150,10 +170,12 @@
             }
         }
     }
+
     .form_modal {
         width: 707px;
         height: 458px;
         padding: 0 50px;
+
         .form_flex {
             div {
                 &:last-child {
@@ -171,30 +193,44 @@
             width: 720px;
             letter-spacing: 0.2px;
         }
+
         &_flex {
             justify-content: flex-start;
+
             div {
                 margin-right: 18px;
+                .input {
                 
+                }
+
+                &:last-child {
+                    label {
+                        width: 700px;
+                    }
+                }
                 &:hover {
                     .input {
                         border: 1px solid $Color_orange;
                         cursor: pointer;
                     }
+
                     label {
                         color: $Color_orange;
                         cursor: pointer;
 
                     }
+
                     .checkbox_label {
                         &::before {
                             background: url('../img/check-hover.svg') center center/cover no-repeat;
                         }
                     }
                 }
+
                 &:last-child {
                     order: 4;
                     width: 508px;
+
                     .checkbox_label {
                         font-size: 14px;
                         letter-spacing: 0.28px;
@@ -202,9 +238,10 @@
                     }
                 }
             }
-            
+
         }
     }
+
     .form_modal {
         width: 795px;
         height: 450px;
@@ -215,31 +252,32 @@
     .form {
         width: 1200px;
         margin: 0 auto;
+
         &_flex {
             align-items: flex-end;
             justify-content: space-between;
+
             div {
-                .input {
-                    width: 335px;
-                }
-                &:last-child {
-                    label {
-                        width: 700px;
-                    }
-                }
+                
             }
         }
     }
+
     .form_modal {
         width: 964px;
         height: 563px;
         padding: 0 100px;
+
         .form_flex {
             flex-direction: column;
-            align-items:flex-start;
+            align-items: flex-start;
             justify-content: flex-start;
+
             div {
                 margin-bottom: 20px;
+
+                label {}
+
                 &:last-child {
                     label {
                         width: 556px;
@@ -253,28 +291,52 @@
 @media (min-width: 1880px) {
     .form {
         width: 100%;
+
         div {
             .input {
                 width: 435px;
                 font-size: 18px;
                 letter-spacing: 0.54px;
-                
+
             }
+
             label {
                 font-size: 18px;
                 letter-spacing: 0.54px;
-            }
-            &:last-child {
-                label {
+
+                &:last-child {
                     font-size: 16px;
                     letter-spacing: 0.32px;
+                    margin: 0 0 0 -180px;
+
+                    &::before {
+                        left: -183px;
+                    }
                 }
             }
         }
     }
+
     .form_modal {
         width: 964px;
         height: 663px;
-        
+
+        div {
+            label {
+                &:last-child {
+                    font-size: 16px;
+                    letter-spacing: 0.32px;
+                    margin: 0;
+    
+                    &::before {
+                        left: 0;
+                    }
+                }
+            }
+            .custom-checkbox+label::before {
+                top: 30%;
+            }
+            
+        }
     }
 }
