@@ -275,7 +275,7 @@
 
             .header_questions {
                 display: block;
-                color: $Color_grey_dark;
+                color: $Color_white_medium;
                 font-family: "Exo 2";
                 font-size: 16px;
                 letter-spacing: 0.54px;
@@ -286,7 +286,7 @@
                     position: absolute;
                     top: 1px;
                     left: -21px;
-                    background: url('../img/questions-dark-grey.svg') center center/cover no-repeat;
+                    background: url('../img/questions.svg') center center/cover no-repeat;
                     width: 17px;
                     height: 17px;
 
