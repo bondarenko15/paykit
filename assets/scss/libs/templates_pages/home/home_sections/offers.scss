@@ -191,7 +191,7 @@
                             display: flex;
                             flex-direction: column;
                             flex-wrap: wrap;
-                            height: 240px;
+                            min-height: 240px;
                             .swiper-slide_block {
                                 width: 314px;
                                 margin-right: 57px;
@@ -273,13 +273,10 @@
 
                         }
                         &_flex {
-                            height: 280px;
+                            min-height: 280px;
                             .swiper-slide_block {
                                 width: 366px;
-                                &-item {
-
-                                }
-                                p {
+                                                                p {
                                     font-size: 18px;
                                     letter-spacing: 0.36px;
                                     margin: 0 0 18px;
@@ -346,13 +343,14 @@
                         }
                         &_flex {
                             flex-wrap: nowrap;
+                            min-height: 380px;
                             .swiper-slide_block {
                                 flex-direction: row-reverse;
                                 justify-content: flex-end;
                                 align-items: center;
                                 display: flex;
-                                margin-bottom: 20px;
-                                width: 90%;
+                                margin: 0 0 20px 0;
+                                width: 100%;
                                 &-item {
                                     margin: 0;
                                     .rating {
@@ -361,7 +359,8 @@
                                     }
                                 }
                                 p {
-                                    margin: 0 12px 0 0;
+                                    margin: 0 20px 0 0;
+                                    width: calc(100% - 140px);
                                 }
                             }
                         }

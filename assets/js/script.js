@@ -76,9 +76,12 @@ window.addEventListener('scroll', function () {
 
 function toShow() {
   const lang = document.querySelectorAll('.lang');
+  const headerLanguage = document.querySelector('.header_language')
   lang.forEach((item) => {
     item.classList.toggle('lang-all');
   })
+  headerLanguage.classList.toggle('active');
+  
 }
 
 const langMenu = document.querySelector('.header_language');
@@ -89,7 +92,7 @@ menu.addEventListener('click', toShow);
 
 
 // navMenuAccordion
-const navBtn = document.querySelector('.order');
+/* const navBtn = document.querySelector('.order');
 const tabs = document.querySelector('.menu_overlay-navigation .tabs');
 const tabsFlex = document.querySelector('nav .tabs-flex');
 const tabsBtn = document.querySelectorAll('.menu_overlay-navigation .tabs li');
@@ -137,7 +140,7 @@ if (window.innerWidth < 767) {
       });
     })
   });
-}
+} */
 
 // inputMask
 

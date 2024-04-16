@@ -54,19 +54,19 @@
                         padding: 0 0 10px 4px;
                         margin-bottom: 30px;
                     }
-                    .one-left, .one-right {
+                    .left_1, .right_1 {
                         height: 100px;
                     }
-                    .two-left, .two-right {
+                    .left_2, .right_2 {
                         height: 75px;
                     }
-                    .three-left, .three-right {
+                    .left_3, .right_3 {
                         height: 53px;
                     }
-                    .four-left, .four-right {
+                    .left_4, .right_4 {
                         height: 120px;
                     }
-                    .five-left, .five-right {
+                    .left_5, .left_6 .right_5 {
                         height: 120px;
                     }
                     &:nth-child(1) {
@@ -102,16 +102,16 @@
                         letter-spacing: 0.36px;
                         margin-bottom: 41px;
                     }
-                    .one-left, .one-right {
+                    .left_1, .right_1 {
                         height: 84px;
                     }
-                    .two-left, .two-right {
+                    .left_2, .right_2 {
                         height: 60px;
                     }
-                    .three-left, .three-right {
+                    .left_3, .right_3 {
                         height: 60px;
                     }
-                    .four-left, .four-right {
+                    .left_5, .left_6 .right_5 {
                         height: 107px;
                     }
                 }
@@ -141,19 +141,22 @@
                         margin-bottom: 24px;
 
                     }
-                    .one-left, .one-right {
+                    .left_1, .right_1 {
                         height: 135px;
                     }
-                    .two-left, .two-right {
+                    .left_2, .right_2 {
                         height: 80px;
                     }
-                    .three-left, .three-right {
+                    .left_3, .right_3 {
                         height: 90px;
                     }
-                    .four-left, .four-right {
+                    .left_4, .right_4 {
                         height: 160px;
                     }
-                    .five-left, .five-right {
+                    .left_5, .left_6 {
+                        height: 85px;
+                    }
+                    .right_5 {
                         height: 160px;
                     }
                 }
@@ -176,7 +179,7 @@
                 justify-content: center;
                 margin-top: 20px;
                 .advantages_item {
-                    .one-left {
+                    .left_1 {
                         text-align: right;
                         font-size: 18px;
                         letter-spacing: 0.36px;
@@ -185,7 +188,7 @@
                         height: 95px;
                         margin-bottom: 40px;
                     }
-                    .one-right {
+                    .right_1 {
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         margin-left: -20px;
@@ -193,18 +196,18 @@
                         height: 95px;
                         margin-bottom: 40px;
                     }
-                    .two-left {
+                    .left_2 {
                         text-align: right;
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
                         height: 75px;
                         margin-bottom: 40px;
-                        margin-left: -24px;
+                        margin-left: -16px;
                         height: 60px;
 
                     }
-                    .two-right {
+                    .right_2 {
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
@@ -213,16 +216,16 @@
                         margin-left: 43px;
                         height: 60px;
                     }
-                    .three-left {
+                    .left_3 {
                         text-align: right;
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
                         margin-bottom: 40px;
                         height: 44px;
-                        margin-left: -64px;
+                        margin-left: -35px;
                     }
-                    .three-right {
+                    .right_3 {
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
@@ -230,7 +233,7 @@
                         height: 44px;
                         margin-left: 81px;
                     }
-                    .four-left {
+                    .left_4 {
                         text-align: right;
                         font-size: 18px;
                         letter-spacing: 0.36px;
@@ -239,7 +242,7 @@
                         margin-left: -25px;
                         height: 120px;
                     }
-                    .four-right {
+                    .right_4 {
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
@@ -247,21 +250,31 @@
                         margin-left: 42px;
                         height: 120px;
                     }
-                    .five-left {
+                    .left_5 {
                         text-align: right;  
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
                         margin-bottom: 40px;
-                        margin-left: 15px;
+                        margin-left: 0px;
                         height: 120px;
+                        
                     }
-                    .five-right {
+                    .right_5 {
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
                         margin-bottom: 40px;
                         margin-left: -20px;
+                        height: 120px;
+                    }
+                    .left_6 {
+                        text-align: right;  
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                        width: 430px;
+                        margin-bottom: 40px;
+                        margin-left: 25px;
                         height: 120px;
                     }
                 }
