@@ -17,10 +17,12 @@
 
     &_flex {
         div {
-            margin-top: 10px;
+            margin-top: 30px;
             position: relative;
             width: 305px;
-
+            &:last-child {
+                margin-top: 10px;
+            }
             label {
                 color: $Color_grey_light;
                 font-family: "Exo 2";
@@ -61,7 +63,6 @@
             }
 
             .custom-checkbox+label {
-                display: inline-flex;
                 align-items: center;
                 user-select: none;
                 cursor: pointer;
@@ -92,12 +93,41 @@
                 a {
                     color: $Color_grey_dark;
                     text-decoration: underline;
-                    display: block;
+                    display: inline-block;
                     padding: 0 4px;
                 }
             }
+            .error_text {
+                display: none;
+            }
 
 
+        }
+        
+        .error {
+            label {
+                color: $Color_red;
+                a {
+                    color: $Color_red;
+                }
+            }
+            .input {
+                border: 1px solid $Color_red;
+            }
+            .error_text {
+                color: $Color_red;
+                display: block;
+                margin-top: 8px;
+                position: absolute;
+                top : 66px;
+                left: 20px;
+                font-family: "Exo 2";
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 0.36px;
+
+            }
         }
     }
 }
@@ -108,10 +138,12 @@
     border-radius: 20px;
     padding: 0 20px;
     width: 350px;
-    height: 500px;
-    position: relative;
+    height: 538px;
     display: block;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     span {
         display: block;
         width: 24px;
@@ -124,9 +156,24 @@
 
     }
 
-    .flex-box {
-        div {}
+    .form_flex {
+        div {
+        }
+        .error {
+            .error_text {
+                display: inline;
+                width: auto;
+                height: auto;
+                background: none;
+            }
+        }
     }
+}
+.is_hide {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: scale(0);
 }
 
 
@@ -168,6 +215,12 @@
                     }
                 }
             }
+            .error {
+                
+                .error_text {
+                    top: 72px;
+                }
+            }
         }
     }
 
@@ -196,7 +249,7 @@
 
         &_flex {
             justify-content: flex-start;
-
+            align-items: flex-end;
             div {
                 margin-right: 18px;
                 .input {
@@ -286,6 +339,13 @@
             }
         }
     }
+    .is_hide {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
 }
 
 @media (min-width: 1880px) {
@@ -312,6 +372,13 @@
                         left: 0;
                     }
                 }
+            }
+        }
+        .error {
+                
+            .error_text {
+                top: 76px;
+                font-size: 14px;
             }
         }
     }

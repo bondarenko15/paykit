@@ -35,8 +35,8 @@
     &_form {
         width: 305px;
         height: 49px;
-        margin: 20px 0 0;
-        border: none;   
+        margin: 40px 0 0;
+        border: none;  
     }
     &_modal {
         margin: 25px auto 0;
@@ -131,6 +131,9 @@
 @media (min-width: 1366px) {
     .btn {
         margin: 0 50px 0 0;
+        &_form {
+            margin: 20px 50px 0 0;
+        }
         
     }
 }

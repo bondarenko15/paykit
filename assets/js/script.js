@@ -81,7 +81,6 @@ function toShow() {
     item.classList.toggle('lang-all');
   })
   headerLanguage.classList.toggle('active');
-  
 }
 
 const langMenu = document.querySelector('.header_language');
@@ -160,6 +159,7 @@ const btnPopUp = document.querySelectorAll('.btn_popUp');
 const closePopUp = document.querySelector('.form_modal span');
 const popUp = document.querySelector('.modal_overlay');
 const wrapper = document.querySelector('.modal_overlay .wrapper')
+const btnClose = document.querySelector('.btn_modal')
 btnPopUp.forEach((btn) => {
   btn.addEventListener('click', () => {
     popUp.classList.add('modal_overlay-active');
@@ -170,6 +170,9 @@ btnPopUp.forEach((btn) => {
       if (evt.currentTarget === evt.target) {
         popUp.classList.remove('modal_overlay-active');
       }
+    });
+    btnClose.addEventListener('click', () => {
+      popUp.classList.remove('modal_overlay-active');
     })
   })
 })
