@@ -77,7 +77,7 @@
             &:hover {
                 outline: 3px solid rgba(244, 153, 26, 0.50);
             }
-            &:focus {
+            &:active {
                 outline: 2px solid rgba(244, 153, 26, 0.70);
             }
         }
@@ -90,7 +90,7 @@
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
             }
-            &:focus {
+            &:active {
                 background: $Color_orange;
                 color: $Text_black;
             }
@@ -103,7 +103,7 @@
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
             }
-            &:focus {
+            &:active {
                 background: $Color_orange;
                 color: $Text_black;
             }
@@ -117,7 +117,7 @@
             &:hover {
                 outline: 3px solid rgba(244, 153, 26, 0.50);
             }
-            &:focus {
+            &:active {
                 outline: 2px solid rgba(244, 153, 26, 0.70);
             }
         }
