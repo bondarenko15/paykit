@@ -323,7 +323,7 @@
                     }
 
                     .footer_navigation {
-                        height: 150px;
+                        min-height: 150px;
                         margin-top: 40px;
                         display: flex;
                         flex-direction: column;
@@ -341,7 +341,8 @@
                             }
 
                             &:nth-child(n+8) {
-                                width: 303px;
+                                
+                                width: 230px;
                                 margin: 0 0 17px 0;
 
                                 a {
@@ -442,7 +443,7 @@
 
                     .footer_navigation {
                         height: 60px;
-
+                        min-height: 117px;
                         li {
                             margin: 0 0px 10px 0;
                             width: 127px;
@@ -477,7 +478,7 @@
             .footer_wrapper {
                 .footer_contacts {
                     height: 40px;
-
+                    justify-content: space-between;
                     &-item {
                         margin: 0 40px 10px 0;
                     }
@@ -520,7 +521,7 @@
 @media (min-width: 1880px) {
     .footer {
         padding: 70px 0 20px;
-
+        height: 10000px;
         .container {
             .footer_wrapper {
                 display: flex;
@@ -585,10 +586,9 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-
+                    width: 100%;
                     .footer_app {
-                        margin: 0 35px 0 0;
-                        width: 555px;
+                        margin: 0;
                         &-text {
                             font-size: 16px;
                             letter-spacing: 0.48px;
@@ -625,21 +625,20 @@
                         }
                     }
                     .footer_navigation {
-                        height: 96px;
-                        width: 1090px;
+                        width: 1050px;
+                        height: 120px;
                         li {
-                            display: inline;
-                            width: auto;
+                            display: block;
+                            margin: 0 50px 10px 0; 
+                            width: 170px;
                             a {
                                 font-size: 16px;
                                 letter-spacing: 0.32px;
                                 
                             }
-                            &:nth-child(8) {
-                            }
 
                             &:nth-child(n+8) {
-                                width: auto;
+                                /* width: auto; */
                             }  
                             
                         }

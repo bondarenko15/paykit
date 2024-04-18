@@ -55,19 +55,22 @@
                         margin-bottom: 30px;
                     }
                     .left_1, .right_1 {
-                        height: 100px;
+                        min-height: 100px;
                     }
                     .left_2, .right_2 {
-                        height: 75px;
+                        min-height: 75px;
                     }
                     .left_3, .right_3 {
-                        height: 53px;
+                        min-height: 53px;
                     }
                     .left_4, .right_4 {
-                        height: 120px;
+                        min-height: 160px;
                     }
-                    .left_5, .left_6 .right_5 {
-                        height: 120px;
+                    .right_5 {
+                        min-height: 120px;
+                    }
+                    .left_5, .left_6 {
+                        min-height: 80px;
                     }
                     &:nth-child(1) {
                         margin-right: 20px;
@@ -103,16 +106,16 @@
                         margin-bottom: 41px;
                     }
                     .left_1, .right_1 {
-                        height: 84px;
+                        min-height: 84px;
                     }
                     .left_2, .right_2 {
-                        height: 60px;
+                        min-height: 60px;
                     }
                     .left_3, .right_3 {
-                        height: 60px;
+                        min-height: 60px;
                     }
                     .left_5, .left_6 .right_5 {
-                        height: 107px;
+                        min-height: 107px;
                     }
                 }
                 .advantages_img {
@@ -142,22 +145,22 @@
 
                     }
                     .left_1, .right_1 {
-                        height: 135px;
+                        min-height: 135px;
                     }
                     .left_2, .right_2 {
-                        height: 80px;
+                        min-height: 80px;
                     }
                     .left_3, .right_3 {
-                        height: 90px;
+                        min-height: 90px;
                     }
                     .left_4, .right_4 {
-                        height: 160px;
+                        min-height: 160px;
                     }
                     .left_5, .left_6 {
-                        height: 85px;
+                        min-height: 85px;
                     }
                     .right_5 {
-                        height: 160px;
+                        min-height: 160px;
                     }
                 }
                 .advantages_img {
@@ -193,7 +196,7 @@
                         letter-spacing: 0.36px;
                         margin-left: -20px;
                         width: 430px;
-                        height: 95px;
+                        min-height: 95px;
                         margin-bottom: 40px;
                     }
                     .left_2 {
@@ -201,7 +204,7 @@
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
-                        height: 75px;
+                        min-height: 75px;
                         margin-bottom: 40px;
                         margin-left: -16px;
                         height: 60px;
@@ -211,7 +214,7 @@
                         font-size: 18px;
                         letter-spacing: 0.36px;
                         width: 430px;
-                        height: 75px;
+                        min-height: 75px;
                         margin-bottom: 40px;
                         margin-left: 43px;
                         height: 60px;
@@ -222,7 +225,7 @@
                         letter-spacing: 0.36px;
                         width: 430px;
                         margin-bottom: 40px;
-                        height: 44px;
+                        min-height: 44px;
                         margin-left: -35px;
                     }
                     .right_3 {
@@ -230,7 +233,7 @@
                         letter-spacing: 0.36px;
                         width: 430px;
                         margin-bottom: 40px;
-                        height: 44px;
+                        min-height: 44px;
                         margin-left: 81px;
                     }
                     .left_4 {
@@ -240,7 +243,7 @@
                         width: 430px;
                         margin-bottom: 40px;
                         margin-left: -25px;
-                        height: 120px;
+                        min-height: 120px;
                     }
                     .right_4 {
                         font-size: 18px;
@@ -248,7 +251,7 @@
                         width: 430px;
                         margin-bottom: 40px;
                         margin-left: 42px;
-                        height: 120px;
+                        min-height: 120px;
                     }
                     .left_5 {
                         text-align: right;  
@@ -257,7 +260,7 @@
                         width: 430px;
                         margin-bottom: 40px;
                         margin-left: 0px;
-                        height: 120px;
+                        min-height: 85px;
                         
                     }
                     .right_5 {
@@ -266,7 +269,7 @@
                         width: 430px;
                         margin-bottom: 40px;
                         margin-left: -20px;
-                        height: 120px;
+                        min-height: 120px;
                     }
                     .left_6 {
                         text-align: right;  
@@ -275,7 +278,7 @@
                         width: 430px;
                         margin-bottom: 40px;
                         margin-left: 25px;
-                        height: 120px;
+                        min-height: 85px;
                     }
                 }
                 .advantages_img {

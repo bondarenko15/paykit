@@ -6,12 +6,13 @@
         
         .slider_offers {
             .swiper-wrapper {
+                align-items: stretch;
                 .swiper-slide {
                     padding: 15px 13px;
                     border-radius: 30px;
                     border: 3px solid $Color_orange;
                     background: $Color_grey_light;
-
+                    height: auto;
                     &_head {
                         display: flex;
                         justify-content: space-between;

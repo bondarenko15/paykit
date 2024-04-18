@@ -274,6 +274,10 @@
                     }
 
                     .checkbox_label {
+                        color: $Color_grey_dark;
+                        a {
+                            color: $Color_orange;
+                        }
                         &::before {
                             background: url('../img/check-hover.svg') center center/cover no-repeat;
                         }
@@ -303,7 +307,7 @@
 
 @media (min-width: 1366px) {
     .form {
-        width: 1200px;
+        width: 1180px;
         margin: 0 auto;
 
         &_flex {

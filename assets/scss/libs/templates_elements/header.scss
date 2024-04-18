@@ -19,7 +19,7 @@
             position: absolute;
             inset: 0;
             background: url('../img/background_header-320.png') center center/cover no-repeat;
-            border-radius: 20px 0px 0px 20px;
+            border-radius: 30px 0px 0px 30px;
             height: 73px;
             z-index: -1;
         }
@@ -141,14 +141,14 @@
         overflow: visible;
 
         .wrapper {
-            height: 118px;
+            height: 98px;
             padding: 0 50px ;
             align-items: center;
             &::before {
                 background: url('../img/header_desk.png') center center/cover no-repeat;
                 opacity: 0;
                 transition: .5s all ease;
-                height: 118px;
+                height: 98px;
             }
 
             .header_logo {
@@ -160,8 +160,8 @@
 
                 .header_navigation {
                     display: flex;
-                    width: 525px;
                     margin-left: -65px;
+                    width: 570px;
 
                     li {
                         margin-right: 10px;
@@ -285,7 +285,7 @@
                 font-size: 16px;
                 letter-spacing: 0.54px;
                 position: relative;
-
+                margin-left: -90px;
                 &::before {
                     content: '';
                     position: absolute;
@@ -310,7 +310,8 @@
 
             .header_user-account {
                 display: block;
-                padding: 12px 14px 12px 30px;
+                text-align: center;
+                padding: 12px 10px 12px 30px;
                 border-radius: 30px;
                 background: $Text_black;
                 color: $Color_grey_light;
@@ -322,7 +323,7 @@
                 position: relative;
                 border: none;
                 width: 198px;
-                margin-right: -50px;
+                margin-right: -65px;
                 outline: 1px solid transparent;
 
                 &::before {
@@ -481,8 +482,8 @@
                 margin: 0;
 
                 .header_navigation {
-                    width: 600px;
-                    margin-right: 100px;
+                    width: 670px;
+                    margin-right: 20px;
                     margin-left: 8px;
 
                     li {
@@ -587,7 +588,10 @@
             }
 
             .header_questions {
-                margin-right: 380px;
+                margin-right: 300px;
+                margin-left: 0;
+                width: 150px;
+
             }
 
             .header_user-account {

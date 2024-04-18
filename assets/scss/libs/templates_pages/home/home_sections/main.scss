@@ -442,7 +442,7 @@
                 content: '';
                 position: absolute;
                 top: 33px;
-                left: 75px;
+                left: 86px;
                 height: 890px;
                 width: 100%;
                 background: url('../img/background_main.png') center center/cover no-repeat;
@@ -492,7 +492,7 @@
                     
                     .main_actions {
                         margin-top: 42px;
-                        width: 555px;
+                        min-width: 625px;
                         &-social {
                             p {
                                 display: block;

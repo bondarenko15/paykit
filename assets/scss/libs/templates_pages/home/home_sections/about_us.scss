@@ -57,7 +57,7 @@
 
             .stages_work {
                 padding: 20px 15px;
-                height: 581px;
+                min-height: 581px;
                 margin-top: 15px;
                 position: relative;
 
@@ -167,7 +167,7 @@
 
                 .stages_work {
                     padding: 40px 30px;
-                    height: 591px;
+                    min-height: 591px;
 
                     &-item {
                         p {
@@ -225,7 +225,7 @@
 
                 .stages_work {
                     margin-top: 20px;
-                    height: 620px;
+                    min-height: 620px;
 
                     &-item {
                         span {
@@ -256,7 +256,7 @@
 
                 .our_results {
                     order: 2;
-                    width: 605px;
+                    width: 55%;
 
                     &__img {
                         display: block;
@@ -292,7 +292,7 @@
                 .stages_work {
                     order: 1;
                     margin: 0;
-                    height: 790px;
+                    min-height: 790px;
 
                     &-item {
                         span {
@@ -355,7 +355,7 @@
                 }
 
                 .stages_work {
-                    height: 735px;
+                    min-height: 735px;
                     width: 33%;
                     margin-right: 20px;
                     padding: 50px 40px;

@@ -77,10 +77,19 @@ window.addEventListener('scroll', function () {
 function toShow() {
   const lang = document.querySelectorAll('.lang');
   const headerLanguage = document.querySelector('.header_language')
+  const overlayMenu = document.querySelector('.menu_overlay-lang')
+  const wrapper = document.querySelector('.header .wrapper')
   lang.forEach((item) => {
     item.classList.toggle('lang-all');
   })
   headerLanguage.classList.toggle('active');
+  overlayMenu.classList.toggle('active');
+  wrapper.addEventListener('click', (evt) => {
+    if (evt.currentTarget === evt.target) {
+      item.classList.remove('lang-all');
+      headerLanguage.classList.remove('active');
+    }
+  });
 }
 
 const langMenu = document.querySelector('.header_language');
