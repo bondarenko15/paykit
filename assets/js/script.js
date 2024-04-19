@@ -164,16 +164,25 @@ imModal.mask(selectorModal);
 
 // popUp
 
+
 const btnPopUp = document.querySelectorAll('.btn_popUp');
-const closePopUp = document.querySelector('.form_modal span');
+const closePopUp = document.querySelector('.close_modal');
 const popUp = document.querySelector('.modal_overlay');
 const wrapper = document.querySelector('.modal_overlay .wrapper')
 const btnClose = document.querySelector('.btn_modal')
+const popUpForm = document.querySelector('.form_modal');
+const modalThanks = document.querySelector('.modal_thanks');
 btnPopUp.forEach((btn) => {
   btn.addEventListener('click', () => {
     popUp.classList.add('modal_overlay-active');
+
+    popUpForm.classList.contains('is_hide') ? popUpForm.classList.remove('is_hide') : null;
+
+
     closePopUp.addEventListener('click', () => {
       popUp.classList.remove('modal_overlay-active');
+      popUpForm.classList.add('is_hide');
+      modalThanks.classList.remove('is_show');
     })
     wrapper.addEventListener('click', (evt) => {
       if (evt.currentTarget === evt.target) {
@@ -186,4 +195,30 @@ btnPopUp.forEach((btn) => {
   })
 })
 
+const btnMore = document.querySelectorAll('.btn_more');
+const popUpMore = document.querySelector('.modal_more');
+const wrapperMore = document.querySelector('.modal_more .wrapper');
+
+btnMore.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popUpMore.classList.add('modal_more-active');
+
+    popUpForm.classList.contains('is_hide') ? popUpForm.classList.remove('is_hide') : null;
+
+
+    closePopUp.addEventListener('click', () => {
+      popUpMore.classList.remove('modal_more-active');
+      popUpForm.classList.add('is_hide');
+      modalThanks.classList.remove('is_show');
+    })
+    wrapperMore.addEventListener('click', (evt) => {
+      if (evt.currentTarget === evt.target) {
+        popUpMore.classList.remove('modal_more-active');
+      }
+    });
+    btnClose.addEventListener('click', () => {
+      popUpMore.classList.remove('modal_more-active');
+    })
+  })
+})
 

@@ -3,16 +3,18 @@
     border-radius: 20px;
 
     .container {
-        
+
         .slider_offers {
             .swiper-wrapper {
                 align-items: stretch;
+
                 .swiper-slide {
                     padding: 15px 13px;
                     border-radius: 30px;
                     border: 3px solid $Color_orange;
                     background: $Color_grey_light;
                     height: auto;
+
                     &_head {
                         display: flex;
                         justify-content: space-between;
@@ -51,6 +53,12 @@
 
                     &_flex {
                         .swiper-slide_block {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-direction: row-reverse;
+
                             &-item {
                                 display: flex;
                                 justify-content: flex-start;
@@ -80,6 +88,7 @@
                                 letter-spacing: 0.28px;
                                 display: block;
                                 margin-bottom: 15px;
+                                width: calc(100% - 120px);
                             }
                         }
                     }
@@ -183,22 +192,26 @@
                                 letter-spacing: 1.3px;
                             }
                         }
+
                         &_text {
                             font-size: 16px;
                             letter-spacing: 0.32px;
                             width: 480px;
                         }
+
                         &_flex {
                             display: flex;
                             flex-direction: column;
                             flex-wrap: wrap;
                             min-height: 240px;
+
                             .swiper-slide_block {
-                                width: 314px;
                                 margin-right: 57px;
+
                                 &-item {
                                     margin-bottom: 10px;
                                 }
+
                                 p {
                                     font-size: 16px;
                                     letter-spacing: 0.32px;
@@ -206,11 +219,13 @@
                                 }
                             }
                         }
+
                         &_img {
                             width: 134px;
                             height: 139px;
                             right: 15px;
                             bottom: 7px;
+
                             img {
                                 width: 134px;
                                 height: 139px;
@@ -224,6 +239,7 @@
                     height: 70px;
                     top: 50%;
                     left: 13px;
+
                     &::after {
                         width: 22px;
                         height: 22px;
@@ -235,6 +251,7 @@
                     height: 70px;
                     top: 50%;
                     right: 13px;
+
                     &::after {
                         width: 22px;
                         height: 22px;
@@ -248,76 +265,90 @@
 @media (min-width: 960px) {
     .offers {
         padding: 280px 0 0;
+
         .container {
             padding-right: 0;
+
             .slider_offers {
                 .swiper-wrapper {
                     .swiper-slide {
                         width: 688px;
                         border: none;
+
                         &_head {
                             align-items: flex-end;
+
                             h4 {
                                 font-size: 44px;
                                 letter-spacing: 0.44px;
                             }
+
                             span {
                                 font-size: 28px;
                                 letter-spacing: 1.4px;
                             }
                         }
+
                         &_text {
                             font-size: 18px;
                             letter-spacing: 0.36px;
                             width: 544px;
                             margin: 20px 0 50px
-
                         }
+
                         &_flex {
                             min-height: 280px;
+
                             .swiper-slide_block {
-                                width: 366px;
-                                                                p {
+                                p {
                                     font-size: 18px;
                                     letter-spacing: 0.36px;
                                     margin: 0 0 18px;
                                 }
                             }
                         }
+
                         &_img {
                             right: 25px;
                         }
                     }
+
                     .swiper-slide-active {
                         border: 3px solid $Color_orange;
                     }
                 }
+
                 .swiper-button-prev {
                     outline: 1px solid transparent;
+
                     &:hover {
                         background: $Color_grey_light;
                         opacity: 0.6;
                         backdrop-filter: blur(2px);
                         outline: 1px solid $Color_orange;
                         border-radius: 100px;
+
                         &::after {
                             background: url('../img/chevron-hover.svg') center center/cover no-repeat;
-                        }   
+                        }
                     }
-                    
+
                 }
+
                 .swiper-button-next {
                     outline: 1px solid transparent;
+
                     &:hover {
                         background: $Color_grey_light;
-                        
+
                         opacity: 0.6;
                         backdrop-filter: blur(2px);
                         outline: 1px solid $Color_orange;
                         border-radius: 100px;
+
                         &::after {
                             background: url('../img/chevron-hover.svg') center center/cover no-repeat;
-                        }   
+                        }
                     }
                 }
             }
@@ -328,58 +359,67 @@
 @media (min-width: 1880px) {
     .offers {
         padding: 316px 0 20px;
+
         .container {
             .slider_offers {
                 margin-bottom: 10px;
+
                 .swiper-wrapper {
                     padding-left: 5px;
+
                     .swiper-slide {
                         width: 563px;
                         padding: 50px 35px;
                         transition: .2s all ease;
                         border: 1px solid transparent;
+
                         &_text {
                             width: 508px;
                             margin: 20px 0 96px;
                         }
+
                         &_flex {
                             flex-wrap: nowrap;
                             min-height: 380px;
+
                             .swiper-slide_block {
-                                flex-direction: row-reverse;
-                                justify-content: flex-end;
-                                align-items: center;
-                                display: flex;
                                 margin: 0 0 20px 0;
-                                width: 100%;
+
                                 &-item {
                                     margin: 0;
+
                                     .rating {
                                         width: 12px;
                                         height: 12px;
                                     }
                                 }
+
                                 p {
                                     margin: 0 20px 0 0;
                                     width: calc(100% - 140px);
                                 }
                             }
                         }
+
                         &_img {
                             opacity: 0;
                             transition: .2s all ease;
                         }
+
                         &:hover {
                             border: 1px solid $Color_orange;
+
                             .swiper-slide_img {
                                 opacity: 1;
                             }
                         }
                     }
                 }
+
                 .swiper-button-prev {
                     left: 64px;
                 }
+
                 .swiper-button-next {
                     right: 28px;
                 }

@@ -313,10 +313,6 @@
         &_flex {
             align-items: flex-end;
             justify-content: space-between;
-
-            div {
-                
-            }
         }
     }
 
@@ -333,7 +329,9 @@
             div {
                 margin-bottom: 20px;
 
-                label {}
+                .custom-checkbox+label::before {
+                    top: 30%;
+                }
 
                 &:last-child {
                     label {

@@ -1,0 +1,119 @@
+.modal_more {
+    position: fixed;
+    inset: 0;
+    background: rgba($Text_black, 0.7);
+    z-index: 100;
+    overflow: hidden;
+    transition-duration: .2s;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        z-index: -1;
+        .modal_thanks {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: scale(0) translate(-50%, -50%);
+            width: 350px;
+            padding: 25px 20px;
+            border-radius: 20px;
+            background: $Color_grey_light;
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            h4 {
+                color: $Text_black;
+                text-align: center;
+                font-family: "Exo 2";
+                font-size: 28px;
+                font-weight: 600;
+                line-height: 120%;
+                letter-spacing: 1.12px;
+            }
+            span {
+                color: $Text_grey_dark;
+                text-align: center;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.32px;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+        .is_show {
+            opacity: 1;
+            transform: scale(1) translate(-50%, -50%);
+            visibility: visible;
+
+        }
+    }
+}
+.modal_more-active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+@media (min-width: 648px) {
+    .modal_more {
+        .wrapper {
+            .modal_thanks {
+                padding: 25px 50px;
+                width: 480px;
+                h4 {
+                    font-size: 42px;
+                    letter-spacing: 1.68px;
+                    margin-top: 20px;
+                }
+                span {
+                    font-size: 18px;
+                    letter-spacing: 0.36px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 960px) {
+    .modal_more {
+        .wrapper {
+            .modal_thanks {
+                padding: 25px 50px;
+                width: 520px;
+                h4 {
+                    font-size: 52px;
+                    letter-spacing: 2.08px;
+                }
+                span {
+                    font-size: 20px;
+                    letter-spacing: 0.2px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .modal_more {
+        .wrapper {
+            .modal_thanks {
+                padding: 25px 50px;
+                width: 480px;
+                h4 {
+                    font-size: 62px;
+                    letter-spacing: 2.48px;
+                }
+                span {
+                    font-size: 20px;
+                    letter-spacing: 0.2px;
+                }
+            }
+        }
+    }
+}
+
