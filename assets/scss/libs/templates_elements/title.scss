@@ -47,6 +47,15 @@
             color: $Color_orange;
         }
     }
+    &_contacts {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: 1.12px;
+        display: block;
+        text-align: left;
+        margin: 0;
+    }
 }
 
 @media (min-width: 648px) {
@@ -79,6 +88,10 @@
             letter-spacing: 1.14px;
 
         }
+        &_contacts {
+            font-size: 42px;
+            letter-spacing: 1.68px;
+        }
     }
 }
 
@@ -102,6 +115,11 @@
             letter-spacing: 1.44px;
             width: 559px;
             width: 604px;
+        }
+        &_contacts {
+            font-size: 52px;
+            letter-spacing: 2.08px;
+
         }
     }
 }
@@ -154,6 +172,10 @@
             width: 745px;
             font-size: 58px;
             letter-spacing: 1.74px;
+        }
+        &_contacts {
+            font-size: 62px;
+            letter-spacing: 2.48px;
         }
     }
 }
