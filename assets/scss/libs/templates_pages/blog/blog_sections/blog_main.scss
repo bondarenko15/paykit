@@ -1,0 +1,604 @@
+.blog_main {
+    padding: 134px 0 0;
+
+    .container {
+        .wrapper {
+            .blog_main-head {
+                &__title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    .blog_main_actions {
+                        display: flex;
+                        justify-content: space-between;
+
+                        li {
+                            margin-left: 8px;
+
+                            a {
+                                display: block;
+                                width: 20px;
+                                height: 20px;
+                                outline: 1px solid transparent;
+                                border-radius: 100px;
+
+                                img {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                        }
+
+                        &__text {
+                            display: none;
+                        }
+                    }
+                }
+
+                &__descr {
+                    p {
+                        color: $Text_grey_dark;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 140%;
+                        letter-spacing: 0.28px;
+                        display: block;
+                        margin-top: 20px;
+
+                        i {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .blog_main-items {
+                margin-top: 40px;
+
+                &__item {
+                    position: relative;
+                    padding: 15px 5px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        border-radius: 10px;
+                        background: $Color_grey_light;
+                        padding: 15px 5px;
+                        inset: 0;
+                        z-index: -1;
+                    }
+
+                    .item_img {
+                        position: relative;
+
+                        img {
+                            display: block;
+                            border-radius: 7px;
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        &-author {
+                            padding: 4px 8px 4px;
+                            border-radius: 50px;
+                            background: rgba(67, 69, 76, 0.30);
+                            backdrop-filter: blur(2.5px);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            position: absolute;
+                            bottom: 15px;
+                            left: 5px;
+
+                            img {
+                                display: block;
+                                width: 26px;
+                                height: 26px;
+                                border-radius: 100px;
+                            }
+
+                            span {
+                                color: $Color_white_light;
+                                font-family: Montserrat;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 140%;
+                                letter-spacing: 0.24px;
+                                display: block;
+                                margin-left: 11px;
+                            }
+                        }
+                    }
+
+                    .item_title {
+                        color: $Text_black;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 140%;
+                        letter-spacing: 0.28px;
+                        display: block;
+                        margin-top: 10px;
+                    }
+
+                    .item_subtitle {
+                        color: $Text_grey_dark;
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 140%;
+                        letter-spacing: 0.24px;
+                        margin-top: 10px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+
+                    .item_footer {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin-top: 15px;
+
+                        &-date {
+                            position: relative;
+                            padding-left: 15px;
+                            color: $Text_gray_medium;
+                            font-family: "Exo 2";
+                            font-size: 10px;
+                            font-weight: 300;
+                            line-height: 140%;
+                            letter-spacing: 0.3px;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                background: url('../img/calendar.svg') center center/cover no-repeat;
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+
+                        &-link {
+                            position: relative;
+                            padding-left: 15px;
+                            margin-left: 15px;
+                            color: $Text_gray_medium;
+                            font-family: "Exo 2";
+                            font-size: 10px;
+                            font-weight: 300;
+                            line-height: 140%;
+                            letter-spacing: 0.3px;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                background: url('../img/share-nodes.svg') center center/cover no-repeat;
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+
+                        &-btn {
+                            width: 100%;
+                            margin-top: 20px;
+                            border-radius: 30px;
+                            border: 1px solid $Text_grey_dark;
+                            padding: 6px 26px;
+                            justify-content: center;
+                            background: transparent;
+                            color: $Text_grey_dark;
+                            font-family: "Exo 2";
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 140%;
+                            letter-spacing: 0.42px;
+                        }
+                    }
+                }
+            }
+
+            .btns-pages {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 0 auto;
+                width: 335px;
+                margin-top: 40px;
+
+                .btn-items {
+                    margin: 0 27px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .num-page {
+                        color: $Text_black;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 140%;
+                        letter-spacing: 0.32px;
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .num-active {
+                        border-radius: 3px;
+                        background: $Color_orange;
+                    }
+                }
+
+                .btn-left,
+                .btn-right {
+                    width: 50px;
+                    height: 50px;
+                    fill: $Color_white_light;
+                    opacity: 0.4;
+                    backdrop-filter: blur(2px);
+                    position: relative;
+                    border-radius: 100px;
+                    border: none;
+
+                    &::before {
+                        content: '';
+                        background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                .btn-left {
+                    &::before {
+                        transform: translate(-50%, -50%) rotate(180deg);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .blog_main {
+        padding: 185px 0 0;
+
+        .container {
+            .wrapper {
+                .blog_main-head {
+                    &__title {
+                        align-items: center;
+
+                        .blog_main_actions {
+                            li {
+                                a {
+                                    width: 30px;
+                                    height: 30px;
+
+                                    img {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &__descr {
+                        p {
+                            margin-top: 25px;
+                            font-size: 18px;
+                            letter-spacing: 0.36px;
+                        }
+                    }
+                }
+
+                .blog_main-items {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    flex-wrap: wrap;
+
+                    &__item {
+                        width: 49%;
+                        margin-top: 30px;
+                        padding: 5px 5px 10px 5px;
+
+                        .item_img {
+                            img {
+                                height: 204px;
+                            }
+
+                            &-author {
+                                img {
+                                    width: 26px;
+                                    height: 26px;
+                                }
+                            }
+                        }
+
+                        .item_title {
+                            font-size: 16px;
+                            letter-spacing: 0.32px;
+                            min-height: 88px;
+                        }
+
+                        .item_subtitle {
+                            font-size: 14px;
+                            letter-spacing: 0.28px;
+                        }
+
+                        .item_footer {
+                            &-date {
+                                font-size: 12px;
+                                letter-spacing: 0.24px;
+                            }
+
+                            &-link {
+                                font-size: 12px;
+                                letter-spacing: 0.24px;
+                            }
+
+                            &-btn {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .blog_main {
+        padding: 195px 0 0;
+
+        .container {
+            .wrapper {
+                .blog_main-head {
+                    &__title {
+                        .blog_main_actions {
+                            align-items: center;
+
+                            &__text {
+                                display: block;
+                                color: $Text_gray_medium;
+                                font-family: "Exo 2";
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 140%;
+                                letter-spacing: 0.42px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                    &__descr {
+                        p {
+                            width: 60%;
+                        }
+                    }
+                }
+
+                .blog_main-items {
+                    &__item {
+                        .item_img {
+                            img {
+                                height: 260px;
+                            }
+
+                            &-author {
+                                img {
+                                    width: 38px;
+                                    height: 38px;
+                                }
+
+                                span {
+                                    font-size: 14px;
+                                    letter-spacing: 0.28px;
+                                }
+                            }
+                        }
+
+                        .item_title {
+                            font-size: 18px;
+                            letter-spacing: 0.36px;
+                        }
+
+                        .item_subtitle {
+                            font-size: 16px;
+                            letter-spacing: 0.32px;
+                            -webkit-line-clamp: 4;
+                        }
+
+                        .item_footer {
+                            flex-wrap: nowrap;
+                            justify-content: space-between;
+
+                            &-date {
+                                font-size: 14px;
+                                letter-spacing: 0.28px;
+                                padding-left: 20px;
+
+                                &::before {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+
+                                &:hover {
+                                    color: $Color_orange;
+
+                                    &::before {
+                                        background: url('../img/calendar_hover.svg') center center/cover no-repeat;
+                                        transform: translateY(-50%) scale(1.1);
+                                    }
+                                }
+                            }
+
+                            &-link {
+                                font-size: 14px;
+                                letter-spacing: 0.28px;
+                                margin-left: -50px;
+                                padding-left: 20px;
+
+                                &::before {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+
+                                &:hover {
+                                    color: $Color_orange;
+
+                                    &::before {
+                                        background: url('../img/share-nodes_hover.svg') center center/cover no-repeat;
+
+                                    }
+                                }
+                            }
+
+                            &-btn {
+                                width: 140px;
+                                margin: 0;
+
+                                &:hover {
+                                    border: 1px solid $Color_orange;
+                                    color: $Color_orange;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .blog_main {
+        .container {
+            .wrapper {
+                .blog_main-head {
+                    .blog_main_actions {
+                        li {
+                            margin-left: -8px;
+
+                            &:hover {
+                                a {
+                                    outline: 1px solid $Color_orange;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            li {
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .blog_main {
+        .container {
+            .wrapper {
+                .blog_main-head {
+                    &__title {
+                        .blog_main_actions {
+                            &__text {
+                                font-size: 16px;
+                                letter-spacing: 0.48px;
+                            }
+                        }
+                    }
+
+                    &__descr {
+                        p {
+                            width: 630px;
+                            font-size: 20px;
+                            letter-spacing: 0.2px;
+                        }
+                    }
+                }
+
+                .blog_main-items {
+                    margin-top: 80px;
+
+                    &__item {
+                        width: 32%;
+                        padding: 20px 20px 30px 20px;
+                        margin: 0 0 40px;
+
+                        .item_img {
+                            img {
+                                height: 300px;
+                            }
+
+                            &-author {
+                                img {
+                                    width: 38px;
+                                    height: 38px;
+                                }
+                            }
+                        }
+
+                        .item_title {
+                            font-size: 22px;
+                            letter-spacing: 0.22px;
+                            min-height: 99px;
+                            margin-top: 20px;
+                        }
+
+                        .item_subtitle {
+                            font-size: 18px;
+                            letter-spacing: 0.36px;
+                        }
+
+                        .item_footer {
+                            margin-top: 30px;
+
+                            &-date {
+                                font-size: 16px;
+                                letter-spacing: 0.32px;
+                            }
+
+                            &-link {
+                                font-size: 16px;
+                                letter-spacing: 0.32px;
+                            }
+
+                            &-btn {
+                                width: 185px;
+                                font-size: 16px;
+                                letter-spacing: 0.48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

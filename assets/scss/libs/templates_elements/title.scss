@@ -4,67 +4,126 @@
     font-family: "Exo 2";
     font-size: 26px;
     font-weight: 500;
-    line-height: 118%; 
+    line-height: 118%;
     letter-spacing: 0.78px;
+
     &-order_demo {
         text-align: left;
+
         i {
             display: block;
             color: $Color_orange;
             font-weight: 500;
-            
+
             &:last-child {
                 display: inline;
             }
         }
     }
+
     &_footer {
         color: $Color_grey_light;
         text-align: left;
         margin-top: 40px;
-        
+
+    }
+
+    &_blog {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: 1.12px;
+        display: block;
+        text-align: left;
+        margin: 0;
+    }
+
+    &_order_banner {
+        font-weight: 600;
+        line-height: 118%;
+        text-align: center;
+
+        i {
+            color: $Color_orange;
+        }
     }
 }
-@media (min-width: 648px) { 
+
+@media (min-width: 648px) {
     .title {
         font-size: 38px;
         line-height: 118%;
         letter-spacing: 1.44px;
+
         &-order_demo {
             display: block;
             width: 480px;
+
             i {
                 display: inline;
             }
         }
+
         &_footer {
             letter-spacing: 1.14px;
         }
+
+        &_blog {
+            font-size: 42px;
+            letter-spacing: 1.68px;
+        }
+
+        &_order_banner {
+            text-align: left;
+            font-size: 38px;
+            letter-spacing: 1.14px;
+
+        }
     }
 }
 
-@media (min-width: 960px) { 
+@media (min-width: 960px) {
     .title {
         font-size: 48px;
         letter-spacing: 1.44px;
+
         &-order_demo {
             width: 595px;
+        }
+
+        &_blog {
+            font-size: 52px;
+            letter-spacing: 2.08px;
+
+        }
+
+        &_order_banner {
+            font-size: 48px;
+            letter-spacing: 1.44px;
+            width: 559px;
+            width: 604px;
         }
     }
 }
 
 
-@media (min-width: 1366px) { 
+@media (min-width: 1366px) {
     .title {
         font-size: 52px;
         letter-spacing: 1.44px;
+
         &-order_demo {
             width: 645px;
         }
+
         &_advantages {
             width: 1000px;
             display: block;
-            margin: 0  auto;
+            margin: 0 auto;
+        }
+
+        &_order_banner {
+            width: 604px;
         }
     }
 }
@@ -73,17 +132,28 @@
     .title {
         font-size: 58px;
         letter-spacing: 1.74px;
+
         &-order_demo {
             width: 730px;
         }
+
         &_advantages {
             width: 1430px;
         }
+
         &_footer {
             margin-top: 80px;
         }
+
+        &_blog {
+            font-size: 62px;
+            letter-spacing: 2.48px;
+        }
+
+        &_order_banner {
+            width: 745px;
+            font-size: 58px;
+            letter-spacing: 1.74px;
+        }
     }
 }
-
-
-

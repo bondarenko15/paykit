@@ -1,0 +1,130 @@
+.order_banner {
+    margin-top: 90px;
+
+    .container {
+        .wrapper {
+            padding: 30px 10px 0;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 20px;
+                background: url('../img/background_blog-320.png') center center/cover no-repeat;
+                z-index: -1;
+
+            }
+
+            p {
+                color: $Text_grey_dark;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.32px;
+                display: block;
+                margin-top: 20px;
+            }
+
+            img {
+                margin-top: 20px;
+                width: 100%;
+                display: block;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .order_banner {
+
+        .container {
+            .wrapper {
+                padding: 30px 30px 300px;
+                overflow: hidden;
+
+                p {
+                    font-size: 18px;
+                    letter-spacing: 0.36px;
+                    padding-right: 65px;
+                }
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    right: -13px;
+                    height: auto;
+                    width: 65%;
+                    margin: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .order_banner {
+        .container {
+            .wrapper {
+                padding: 50px 30px;
+
+                p {
+                    font-size: 18px;
+                    font-style: normal;
+                    letter-spacing: 0.36px;
+                    width: 455px;
+                    padding: 0;
+                    margin-top: 50px;
+                }
+
+                img {
+                    width: 50%;
+                    right: -19px;
+                    bottom: -40px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .order_banner {
+        .container {
+            .wrapper {
+                padding: 50px 30px;
+
+                p {
+                    margin-top: 30px;
+                }
+
+                img {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .order_banner {
+        .container {
+            .wrapper {
+                overflow: visible;
+
+                p {
+                    width: 830px;
+                    font-size: 20px;
+                    letter-spacing: 0.2px;
+                }
+                img {
+                    bottom: 0;
+                    right: 60px;
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
