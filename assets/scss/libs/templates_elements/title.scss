@@ -47,6 +47,7 @@
             color: $Color_orange;
         }
     }
+
     &_contacts {
         font-size: 28px;
         font-weight: 600;
@@ -55,6 +56,20 @@
         display: block;
         text-align: left;
         margin: 0;
+    }
+
+    &_news {
+        text-align: left;
+        font-weight: 600;
+        letter-spacing: 1.12px;
+        margin: 0;
+    }
+
+    &_404 {
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 1.12px;
+        text-align: left;
     }
 }
 
@@ -88,7 +103,18 @@
             letter-spacing: 1.14px;
 
         }
+
         &_contacts {
+            font-size: 42px;
+            letter-spacing: 1.68px;
+        }
+
+        &_news {
+            font-size: 42px;
+            letter-spacing: 1.68px;
+        }
+
+        &_404 {
             font-size: 42px;
             letter-spacing: 1.68px;
         }
@@ -116,10 +142,21 @@
             width: 559px;
             width: 604px;
         }
+
         &_contacts {
             font-size: 52px;
             letter-spacing: 2.08px;
 
+        }
+
+        &_news {
+            font-size: 52px;
+            letter-spacing: 2.08px;
+        }
+
+        &_404 {
+            font-size: 52px;
+            letter-spacing: 2.08px;
         }
     }
 }
@@ -173,7 +210,20 @@
             font-size: 58px;
             letter-spacing: 1.74px;
         }
+
         &_contacts {
+            font-size: 62px;
+            letter-spacing: 2.48px;
+        }
+
+        &_news {
+            font-size: 62px;
+            letter-spacing: 2.48px;
+            width: 75%;
+        }
+
+        &_404 {
+            margin: 0 0 20px;
             font-size: 62px;
             letter-spacing: 2.48px;
         }

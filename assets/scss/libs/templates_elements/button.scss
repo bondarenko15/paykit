@@ -12,8 +12,9 @@
     width: 335px;
     margin: 29px auto 0;
     text-align: center;
-    
+
     padding: 16px 0;
+
     &-order_demo {
         margin-top: 30px;
         background: transparent;
@@ -23,6 +24,7 @@
         width: 304px;
 
     }
+
     &_offers {
         background: transparent;
         height: 45px;
@@ -32,18 +34,21 @@
         margin: 70px 0 0;
         padding: 14px 0;
     }
+
     &_form {
         width: 305px;
         height: 49px;
         margin: 40px 0 0;
-        border: none;  
+        border: none;
         padding: 14px 0;
     }
+
     &_modal {
         margin: 25px auto 0;
         width: 310px;
         padding: 14px 0;
     }
+
     &_order_banner {
         background: transparent;
         width: 305px;
@@ -52,31 +57,49 @@
         border: 1px solid $Color_orange;
         color: $Color_orange;
     }
+
+    &_404 {
+        border: 1px solid transparent;
+        width: 305px;
+        margin: 30px auto 0;
+    }
 }
 
 @media (min-width: 648px) {
     .btn {
         width: 174px;
+
         &-order_demo {
             margin: 30px 0 0;
         }
+
         &_offers {
             width: 142px;
             margin: 80px 0 0;
         }
+
         &_form {
             order: 4;
             width: 184px;
             margin: 22px 0 0;
 
         }
+
         &_modal {
             margin: 30px auto 0;
             width: 174px;
         }
+
         &_order_banner {
             margin: 40px 0 0;
             width: 231px;
+        }
+
+        &_404 {
+            margin: 50px 0 0;
+            width: 241px;
+            font-size: 14px;
+            letter-spacing: 0.42px;
         }
     }
 }
@@ -87,107 +110,149 @@
         margin: 27px auto 0;
         font-size: 16px;
         letter-spacing: 0.48px;
+
         &_main {
             &:hover {
                 outline: 3px solid rgba(244, 153, 26, 0.50);
             }
+
             &:active {
                 outline: 2px solid rgba(244, 153, 26, 0.70);
             }
         }
+
         &-order_demo {
             margin: 38px 0 0;
             padding: 16px 10px;
             width: 173px;
             font-size: 14px;
             letter-spacing: 0.42px;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
             }
+
             &:active {
                 background: $Color_orange;
                 color: $Text_black;
             }
         }
+
         &_offers {
             margin: 70px 0 0;
             width: 138px;
             font-size: 14px;
             letter-spacing: 0.42px;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
             }
+
             &:active {
                 background: $Color_orange;
                 color: $Text_black;
             }
         }
+
         &_form {
             order: 3;
             margin: 37px 0 0;
             font-size: 14px;
             letter-spacing: 0.42px;
             width: 187px;
+
             &:hover {
                 outline: 3px solid rgba(244, 153, 26, 0.50);
             }
+
             &:active {
                 outline: 2px solid rgba(244, 153, 26, 0.70);
             }
         }
+
         &_modal {
             width: 191px;
         }
+
         &_order_banner {
             margin: 40px 0 0;
             width: 231px;
         }
-        
+
+        &_404 {
+            margin: 50px 0 0;
+            width: 241px;
+            font-size: 14px;
+            letter-spacing: 0.42px;
+        }
+
     }
 }
 
 @media (min-width: 1366px) {
     .btn {
         margin: 0 50px 0 0;
+
         &_form {
             margin: 20px 50px 0 0;
         }
+
         &_offers {
             margin: 70px 0 0;
         }
+
         &_order_banner {
             margin: 40px 0 0;
         }
-        
+
+        &_404 {
+            margin: 50px 0 0;
+            width: 241px;
+            font-size: 14px;
+            letter-spacing: 0.42px;
+        }
+
     }
 }
+
 @media (min-width: 1880px) {
     .btn {
         padding: 14px 10px;
+
         &-order_demo {
             width: 192px;
             font-size: 16px;
             letter-spacing: 0.48px;
             margin-right: 60px;
         }
-        &_offers {  
+
+        &_offers {
             width: 155px;
-            
+
         }
+
         &_form {
             margin-right: 350px;
             width: 250px;
         }
+
         &_modal {
             margin: 30px auto 0;
             width: 174px;
         }
+
         &_order_banner {
             margin: 40px 0 0;
             width: 257px;
         }
-        
+
+        &_404 {
+            margin: 50px 0 0;
+            width: 268px;
+            font-size: 16px;
+            letter-spacing: 0.48px;
+        }
+
+
     }
 }
-
-

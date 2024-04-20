@@ -1,69 +1,31 @@
-.blog_main {
-    padding: 134px 0 0;
+.news_slider {
+    margin-top: 90px;
 
     .container {
-        .wrapper {
-            .blog_main-head {
-                &__title {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
+        h3 {
+            color: $Text_black;
+            text-align: center;
+            font-family: "Exo 2";
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 118%;
+            letter-spacing: 0.78px;
+        }
 
-                    .blog_main_actions {
-                        display: flex;
-                        justify-content: space-between;
+        .slider_news {
+            margin-top: 20px;
+            position: static;
+            align-items: stretch;
 
-                        li {
-                            margin-left: 8px;
-
-                            a {
-                                display: block;
-                                width: 20px;
-                                height: 20px;
-                                outline: 1px solid transparent;
-                                border-radius: 100px;
-
-                                img {
-                                    width: 20px;
-                                    height: 20px;
-                                }
-                            }
-                        }
-
-                        &__text {
-                            display: none;
-                        }
-                    }
-                }
-
-                &__descr {
-                    p {
-                        color: $Text_grey_dark;
-                        font-family: Montserrat;
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 140%;
-                        letter-spacing: 0.28px;
-                        display: block;
-                        margin-top: 20px;
-
-                        i {
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-
-            .blog_main-items {
-                margin-top: 40px;
-
-                &__item {
+            .swiper-wrapper {
+                .swiper-slide {
                     position: relative;
                     padding: 15px 5px;
                     margin-bottom: 20px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+
                     &::before {
                         content: '';
                         position: absolute;
@@ -125,6 +87,7 @@
                         letter-spacing: 0.28px;
                         display: block;
                         margin-top: 10px;
+                        text-align: left;
                     }
 
                     .item_subtitle {
@@ -212,117 +175,91 @@
                 }
             }
 
-            .btns-pages {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                margin: 0 auto;
-                width: 335px;
-                margin-top: 40px;
+            .swiper-button-prev {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) rotate(180deg);
+                width: 35px;
+                height: 35px;
 
-                .btn-items {
-                    margin: 0 27px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .num-page {
-                        color: $Text_black;
-                        font-family: Montserrat;
-                        font-size: 16px;
-                        font-weight: 400;
-                        line-height: 140%;
-                        letter-spacing: 0.32px;
-                        height: 30px;
-                        width: 30px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-
-                    .num-active {
-                        border-radius: 3px;
-                        background: $Color_orange;
-                    }
-                }
-
-                .btn-left,
-                .btn-right {
-                    width: 50px;
-                    height: 50px;
-                    fill: $Color_white_light;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: $Color_white_medium;
                     opacity: 0.4;
                     backdrop-filter: blur(2px);
-                    position: relative;
-                    border-radius: 100px;
-                    border: none;
-
-                    &::before {
-                        content: '';
-                        background: url('../img/chevron_grey.svg') center center/cover no-repeat;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 18px;
-                        height: 18px;
-                    }
+                    border-radius: 50px;
                 }
 
-                .btn-left {
-                    &::before {
-                        transform: translate(-50%, -50%) rotate(180deg);
-                    }
+                &::after {
+                    position: absolute;
+                    font-size: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                    width: 16px;
+                    height: 16px;
+                    z-index: 2;
+                }
+            }
+
+            .swiper-button-next {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 35px;
+                height: 35px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: $Color_white_medium;
+                    opacity: 0.4;
+                    backdrop-filter: blur(2px);
+                    border-radius: 50px;
                 }
 
+                &::after {
+                    position: absolute;
+                    font-size: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                    width: 16px;
+                    height: 16px;
+                    z-index: 2;
+                }
+            }
+
+            .swiper-button-disabled {
+                display: none;
             }
         }
     }
 }
 
 @media (min-width: 648px) {
-    .blog_main {
-        padding: 185px 0 0;
+    .news_slider {
+        margin-top: 120px;
 
         .container {
-            .wrapper {
-                .blog_main-head {
-                    &__title {
-                        align-items: center;
+            h3 {
+                font-size: 38px;
+                letter-spacing: 1.14px;
+            }
 
-                        .blog_main_actions {
-                            li {
-                                a {
-                                    width: 30px;
-                                    height: 30px;
+            .slider_news {
+                margin-top: 40px;
 
-                                    img {
-                                        width: 30px;
-                                        height: 30px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    &__descr {
-                        p {
-                            margin-top: 25px;
-                            font-size: 18px;
-                            letter-spacing: 0.36px;
-                        }
-                    }
-                }
-
-                .blog_main-items {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: stretch;
-                    flex-wrap: wrap;
-
-                    &__item {
-                        width: 49%;
-                        margin-top: 30px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        width: 48.5%;
                         padding: 5px 5px 10px 5px;
 
                         .item_img {
@@ -360,7 +297,7 @@
                                 letter-spacing: 0.24px;
                             }
 
-                            
+
                         }
                     }
                 }
@@ -370,38 +307,20 @@
 }
 
 @media (min-width: 960px) {
-    .blog_main {
-        padding: 195px 0 0;
+    .news_slider {
+        margin-top: 160px;
 
         .container {
-            .wrapper {
-                .blog_main-head {
-                    &__title {
-                        .blog_main_actions {
-                            align-items: center;
+            h3 {
+                font-size: 48px;
+                letter-spacing: 1.44px;
+            }
 
-                            &__text {
-                                display: block;
-                                color: $Text_gray_medium;
-                                font-family: "Exo 2";
-                                font-size: 14px;
-                                font-weight: 400;
-                                line-height: 140%;
-                                letter-spacing: 0.42px;
-                                margin-left: 10px;
-                            }
-                        }
-                    }
+            .slider_news {
+                margin-top: 50px;
 
-                    &__descr {
-                        p {
-                            width: 60%;
-                        }
-                    }
-                }
-
-                .blog_main-items {
-                    &__item {
+                .swiper-wrapper {
+                    .swiper-slide {
                         .item_img {
                             img {
                                 height: 260px;
@@ -488,32 +407,72 @@
                         }
                     }
                 }
+
+                .swiper-button-prev {
+                    width: 85px;
+                    height: 85px;
+                    top: 50%;
+                    left: 10px;
+                    outline: 1px solid transparent;
+                    border-radius: 100px;
+
+                    &::after {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    &:hover {
+                        outline: $Color_grey_light;
+                        opacity: 0.6;
+                        backdrop-filter: blur(2px);
+                        outline: 1px solid $Color_orange;
+
+                        &::after {
+                            background: url('../img/chevron-hover.svg') center center/cover no-repeat;
+                        }
+                    }
+
+                }
+
+                .swiper-button-next {
+                    width: 85px;
+                    height: 85px;
+                    top: 50;
+                    right: 10px;
+                    outline: 1px solid transparent;
+                    border-radius: 100px;
+
+                    &::after {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    &:hover {
+                        outline: $Color_grey_light;
+
+                        opacity: 0.6;
+                        backdrop-filter: blur(2px);
+                        outline: 1px solid $Color_orange;
+
+                        &::after {
+                            background: url('../img/chevron-hover.svg') center center/cover no-repeat;
+                        }
+                    }
+
+                }
             }
         }
     }
 }
 
 @media (min-width: 1366px) {
-    .blog_main {
+    .news_slider {
         .container {
-            .wrapper {
-                .blog_main-head {
-                    .blog_main_actions {
-                        li {
-                            margin-left: -8px;
+            .slider_news {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        width: 49%;
 
-                            &:hover {
-                                a {
-                                    outline: 1px solid $Color_orange;
-                                }
-                            }
-                        }
-
-                        &:hover {
-                            li {
-                                margin-left: 8px;
-                            }
-                        }
                     }
                 }
             }
@@ -522,33 +481,20 @@
 }
 
 @media (min-width: 1880px) {
-    .blog_main {
+    .news_slider {
+        margin-top: 200px;
+
         .container {
-            .wrapper {
-                .blog_main-head {
-                    &__title {
-                        .blog_main_actions {
-                            &__text {
-                                font-size: 16px;
-                                letter-spacing: 0.48px;
-                            }
-                        }
-                    }
+            h3 {
+                font-size: 58px;
+                letter-spacing: 1.74px;
+            }
 
-                    &__descr {
-                        p {
-                            width: 630px;
-                            font-size: 20px;
-                            letter-spacing: 0.2px;
-                        }
-                    }
-                }
-
-                .blog_main-items {
-                    margin-top: 80px;
-
-                    &__item {
-                        width: 32%;
+            .slider_news {
+                margin-top: 60px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        width: 32.5%;
                         padding: 20px 20px 30px 20px;
                         margin: 0 0 40px;
 
@@ -597,6 +543,59 @@
                             }
                         }
                     }
+                }
+
+                .swiper-button-prev {
+                    width: 85px;
+                    height: 85px;
+                    top: 50%;
+                    left: 10px;
+                    outline: 1px solid transparent;
+                    border-radius: 100px;
+
+                    &::after {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    &:hover {
+                        outline: $Color_grey_light;
+                        opacity: 0.6;
+                        backdrop-filter: blur(2px);
+                        outline: 1px solid $Color_orange;
+
+                        &::after {
+                            background: url('../img/chevron-hover.svg') center center/cover no-repeat;
+                        }
+                    }
+
+                }
+
+                .swiper-button-next {
+                    width: 85px;
+                    height: 85px;
+                    top: 50;
+                    right: 10px;
+                    outline: 1px solid transparent;
+                    border-radius: 100px;
+
+                    &::after {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    &:hover {
+                        outline: $Color_grey_light;
+
+                        opacity: 0.6;
+                        backdrop-filter: blur(2px);
+                        outline: 1px solid $Color_orange;
+
+                        &::after {
+                            background: url('../img/chevron-hover.svg') center center/cover no-repeat;
+                        }
+                    }
+
                 }
             }
         }

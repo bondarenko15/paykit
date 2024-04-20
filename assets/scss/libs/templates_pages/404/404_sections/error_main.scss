@@ -1,0 +1,152 @@
+.error_main {
+    padding: 134px 0 30px;
+
+    .container {
+        .error_main-block {
+            p {
+                color: $Text_black;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.32px;
+            }
+        }
+
+        .error_main-img {
+            margin-top: 40px;
+            padding: 0 30px;
+
+            img {
+                min-height: 178px;
+
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -35px;
+                left: 20px;
+                right: 0;
+                background: url('../img/404_bg_tablet.png') center center/cover no-repeat;
+                min-height: 115px;
+
+                z-index: -1;
+                border-radius: 30px 0px 0px 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .error_main {
+        padding: 185px 0 50px;
+
+        .container {
+            .error_main-block {
+                p {
+                    display: block;
+                    width: 452px;
+                    font-size: 18px;
+                    letter-spacing: 0.36px;
+                }
+            }
+
+            .error_main-img {
+                margin-top: 70px;
+                padding: 0 50px;
+
+                img {
+                    min-height: 362px;
+
+                }
+
+                &::before {
+                    bottom: -60px;
+                    left: 50px;
+                    min-height: 235px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .error_main {
+        padding: 315px 0 100px;
+        overflow: hidden;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .error_main-block {
+                p {
+                    font-size: 18px;
+                    letter-spacing: 0.36px;
+                }
+            }
+
+            .error_main-img {
+                position: absolute;
+                bottom: -97px;
+                right: -75px;
+                padding: 55px 0;
+                margin: 0;
+
+                img {
+                    min-height: 362px;
+
+                }
+
+                &::before {
+                    border-radius: 30px 0px 0px 30px;
+                    bottom: 0px;
+                    right: 0;
+                    min-height: 480px;
+                    z-index: -1;
+                    background: url('../img/404_bg_desktop.png') center center/cover no-repeat;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .error_main {
+        padding: 470px 0 272px;
+        overflow: hidden;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .error_main-block {
+                p {
+                    font-size: 20px;
+                    letter-spacing: 0.2px;
+                    width: 705px;
+                }
+            }
+
+            .error_main-img {
+                right: -81px;
+                bottom: -247px;
+
+                img {
+                    min-height: 652px;
+
+                }
+
+                &::before {
+                    bottom: -23px;
+                    left: 168px;
+                    min-height: 774px;
+                }
+            }
+        }
+    }
+}

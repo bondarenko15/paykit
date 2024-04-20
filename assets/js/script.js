@@ -1,7 +1,7 @@
 
-const swiperOurPartners = document.querySelector('.slider-our_partners') || null;
+const swiperOurPartners = document.querySelector('.slider-our_partners') || document.querySelector('.slider_news') || null;
 if (swiperOurPartners) {
-  const slider = new Swiper('.slider-our_partners', {
+  const slider = new Swiper(swiperOurPartners, {
     slidesPerView: "auto",
     spaceBetween: 10,
     navigation: {
@@ -103,14 +103,16 @@ if (menu) {
 
 
 // inputMask
-
 var selector = document.getElementById("phone_number");
 var im = new Inputmask("+38 (099)9999999");
 im.mask(selector);
+const formModal = document.querySelector('.form_modal') || null;
+if (formModal) {
+  var selectorModal = document.getElementById("phone_number_modal");
+  var imModal = new Inputmask("+38 (099)9999999");
+  imModal.mask(selectorModal);
+}
 
-var selectorModal = document.getElementById("phone_number_modal");
-var imModal = new Inputmask("+38 (099)9999999");
-imModal.mask(selectorModal);
 
 
 
@@ -190,11 +192,38 @@ function deleteItems(i, j) {
 }
 if (window.innerWidth < 767) {
   deleteItems(0, 3)
-  
+
 } else if (window.innerWidth < 1365) {
   deleteItems(0, 4)
 }
 else if (window.innerWidth < 1880) {
   deleteItems(0, 6)
+}
+
+
+// youtube player API
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('player', {
+    videoId: '8WtRKHwVROs',
+    playerVars: {
+      'controls': 1,
+      'modestbranding': 1,
+      'rel': 0,
+      'showinfo': 0,
+      'fs': 0,
+      'autoplay': 0
+    }
+  });
+}
+function playVideo() {
+  player.playVideo();
+  document.getElementById("play").remove();
+  document.getElementById("bg").style = 'display:none';
 }
 
