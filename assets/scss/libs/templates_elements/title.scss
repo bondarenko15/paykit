@@ -71,6 +71,12 @@
         letter-spacing: 1.12px;
         text-align: left;
     }
+    &_article {
+        text-align: left;
+        font-weight: 600;
+        letter-spacing: 1.12px;
+        margin: 20px 0 0;
+    }
 }
 
 @media (min-width: 648px) {
@@ -118,6 +124,10 @@
             font-size: 42px;
             letter-spacing: 1.68px;
         }
+        &_article {
+            font-size: 42px;
+            letter-spacing: 1.68px;
+        }
     }
 }
 
@@ -155,6 +165,10 @@
         }
 
         &_404 {
+            font-size: 52px;
+            letter-spacing: 2.08px;
+        }
+        &_article {
             font-size: 52px;
             letter-spacing: 2.08px;
         }
@@ -224,6 +238,10 @@
 
         &_404 {
             margin: 0 0 20px;
+            font-size: 62px;
+            letter-spacing: 2.48px;
+        }
+        &_article {
             font-size: 62px;
             letter-spacing: 2.48px;
         }
