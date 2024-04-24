@@ -457,7 +457,17 @@
             }
         }
     }
-
+    .without_menu {
+        .wrapper {
+            nav {   
+                width: 505px;
+                height: 20px;
+                .header_navigation {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1880px) {
@@ -599,6 +609,17 @@
             }
 
             .header_language {}
+        }
+    }
+    .without_menu {
+        .wrapper {
+            nav {   
+                width: 700px;
+                height: 80px;
+                .header_navigation {
+                    display: none;
+                }
+            }
         }
     }
 }
