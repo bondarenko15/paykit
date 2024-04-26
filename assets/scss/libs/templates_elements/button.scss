@@ -63,7 +63,15 @@
         width: 305px;
         margin: 30px auto 0;
     }
+
+    &_product {
+        background: transparent;
+        border: 1px solid $Color_orange;
+        color: $Color_orange;
+        width: 335px;
+    }
 }
+
 
 @media (min-width: 648px) {
     .btn {

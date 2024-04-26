@@ -1,0 +1,86 @@
+.product_services {
+    padding: 90px 0 0;
+
+    .container {
+        .wrapper {
+            .product_services-img {
+                img {
+                    display: block;
+                    border-radius: 10px;
+                }
+            }
+
+            .product_services-blocks {
+                p {
+                    display: block;
+                    margin-top: 40px;
+                    color: $Text_grey_dark;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.32px;
+                }
+
+                .blocks_item {
+                    border-radius: 10px;
+                    background: $Color_grey_light;
+                    padding: 15px 10px;
+                    margin-bottom: 15px;
+
+                    span {
+                        color: $Text_grey_dark;
+                        font-family: "Exo 2";
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 145%;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        display: block;
+                        margin-top: 5px;
+                        color: $Text_grey_dark;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        letter-spacing: 0.28px;
+
+                        i {
+                            font-weight: 600;
+                        }
+                    }
+
+                    ul {
+                        margin-top: 15px;
+                        li {
+                            color: $Text_grey_dark;
+                            font-family: Montserrat;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 140%;
+                            letter-spacing: 0.24px;
+                            position: relative;
+                            padding: 0 0 0 10px;
+                            margin-bottom: 8px;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                width: 4px;
+                                height: 4px;
+                                background: $Color_orange;
+                                border-radius: 100px;   
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -104,12 +104,12 @@ if (menu) {
 
 // inputMask
 var selector = document.getElementById("phone_number");
-var im = new Inputmask("+38 (099)9999999");
+var im = new Inputmask("+38 (999)9999999");
 im.mask(selector);
 const formModal = document.querySelector('.form_modal') || null;
 if (formModal) {
   var selectorModal = document.getElementById("phone_number_modal");
-  var imModal = new Inputmask("+38 (099)9999999");
+  var imModal = new Inputmask("+38 (999)9999999");
   imModal.mask(selectorModal);
 }
 
@@ -226,4 +226,19 @@ function playVideo() {
   document.getElementById("play").remove();
   document.getElementById("bg").style = 'display:none';
 }
+
+
+
+// accordion
+
+const accordionBtn = document.querySelectorAll('.tabs_item');
+const tabsSub = document.querySelector('.tabs_item-active ul')
+accordionBtn.forEach((item) => {
+  item.addEventListener('click', ()=> {
+    accordionBtn.forEach((subitem) => {
+      subitem.classList.remove('tabs_item-active');
+    })
+    item.classList.toggle('tabs_item-active');
+    })
+})
 

@@ -77,6 +77,10 @@
         letter-spacing: 1.12px;
         margin: 20px 0 0;
     }
+    &_product {
+        text-align: left;
+        font-weight: 600;
+    }
 }
 
 @media (min-width: 648px) {

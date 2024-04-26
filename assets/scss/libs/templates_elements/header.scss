@@ -388,7 +388,7 @@
 
                 .lang {
                     display: none;
-                    padding: 8px 16px;
+                    padding: 10px 16px;
 
                     a {
                         color: $Color_grey_light;
@@ -434,7 +434,7 @@
             }
             .active {
                 background: rgba($Text_black, 0.7);
-                margin-bottom: -60px;
+                margin-bottom: -78px;
                 transition: 0s;
                 &:hover {
                     border: 1px solid $Color_grey_light;
