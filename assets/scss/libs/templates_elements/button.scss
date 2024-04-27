@@ -70,6 +70,14 @@
         color: $Color_orange;
         width: 335px;
     }
+
+    &-product_banner {
+        background: transparent;
+        border: 1px solid $Color_orange;
+        width: 305px;
+        color: $Color_orange;
+        margin: 20px 0 0;
+    }
 }
 
 

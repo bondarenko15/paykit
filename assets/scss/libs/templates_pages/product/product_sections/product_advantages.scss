@@ -1,0 +1,38 @@
+.product_advantages {
+    padding: 90px 0 0;
+    .container {
+        .product_advantages-items {
+            margin-top: 30px;
+            li {
+                border-radius: 10px;
+                border-left: 4px solid $Color_orange;
+                background: $Color_grey_light;
+                padding: 15px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                span {
+                    color: $Color_orange;
+                    font-family: "Exo 2";
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 145%;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    display: block;
+                    margin-right: 15px;
+                }
+
+                p {
+                    color: $Text_black;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.32px;
+                }
+            }
+        }
+    }
+}

@@ -239,6 +239,7 @@ accordionBtn.forEach((item) => {
       subitem.classList.remove('tabs_item-active');
     })
     item.classList.toggle('tabs_item-active');
+
     })
 })
 

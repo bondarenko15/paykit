@@ -97,6 +97,15 @@
                     
                 }
             }
+            .checkbox_label-modal {
+                color: $Color_grey_dark;
+                a {
+                    color: $Color_grey_dark;
+                    text-decoration: underline;
+                    display: inline-block;
+                    
+                }
+            }
             .error_text {
                 display: none;
             }
@@ -271,7 +280,7 @@
 
                     }
 
-                    .checkbox_label {
+                    .checkbox_label, .checkbox_label-modal {
                         color: $Color_grey_dark;
                         a {
                             color: $Color_orange;

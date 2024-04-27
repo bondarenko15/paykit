@@ -3,9 +3,10 @@
     position: relative;
 
     .wrapper {
+        padding: 0 18px;
         .slider-our_partners {
             position: static;
-            padding: 20px 20px 0 20px;
+            padding: 20px 0;
             margin: 0 auto;
 
             .swiper-wrapper {
@@ -33,7 +34,7 @@
 
             .swiper-button-prev {
                 position: absolute;
-                top: 73%;
+                top: 68%;
                 left: 0;
                 transform: translateY(-50%) rotate(180deg);
                 width: 35px;
@@ -64,7 +65,7 @@
 
             .swiper-button-next {
                 position: absolute;
-                top: 73%;
+                top: 68%;
                 right: 0;
                 transform: translateY(-50%);
                 width: 35px;
@@ -105,6 +106,7 @@
         padding: 100px 0 0;
 
         .wrapper {
+            padding: 0;
             .slider-our_partners {
                 height: 260px;
                 margin: 40px 50px 0;
@@ -268,11 +270,8 @@
                     top: 63%;
                     width: 70px;
                     height: 70px;
-
                     &::after {
-                        width: 25px;
-                        height: 25px;
-
+                        left: 55%;
                     }
 
 
@@ -283,10 +282,8 @@
                     top: 63%;
                     width: 70px;
                     height: 70px;
-
                     &::after {
-                        width: 25px;
-                        height: 25px;
+                        left: 55%;
                     }
 
 

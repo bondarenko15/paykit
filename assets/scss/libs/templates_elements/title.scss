@@ -80,6 +80,17 @@
     &_product {
         text-align: left;
         font-weight: 600;
+        i {
+            color: $Color_orange;
+        }
+    }
+    &-product_banner {
+        text-align: left;
+        font-weight: 600;
+        color: $Color_grey_light;
+        i {
+            color: $Color_orange;
+        }
     }
 }
 
