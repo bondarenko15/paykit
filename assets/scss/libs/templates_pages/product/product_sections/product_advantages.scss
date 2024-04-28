@@ -1,8 +1,11 @@
 .product_advantages {
     padding: 90px 0 0;
+    position: relative;
+
     .container {
         .product_advantages-items {
             margin-top: 30px;
+
             li {
                 border-radius: 10px;
                 border-left: 4px solid $Color_orange;
@@ -10,8 +13,9 @@
                 padding: 15px 20px;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: flex-start;
                 margin-bottom: 20px;
+
                 span {
                     color: $Color_orange;
                     font-family: "Exo 2";
@@ -33,6 +37,93 @@
                     letter-spacing: 0.32px;
                 }
             }
+        }
+    }
+
+    &-img {
+        display: none;
+    }
+}
+
+
+@media (min-width: 648px) {
+    .product_advantages {
+        padding: 120px 0 0;
+
+        .container {
+            .product_advantages-items {
+                li {
+                    span {
+                        font-size: 26px;
+                        letter-spacing: 1.3px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        letter-spacing: 0.36px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .product_advantages {
+        padding: 160px 0 0;
+
+        .container {
+            .product_advantages-items {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                flex-wrap: wrap;
+                margin-top: 60px;
+
+                li {
+                    width: 49%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .product_advantages {
+        padding: 200px 0 100px;
+
+        .container {
+            .product_advantages-items {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: stretch;
+                flex-wrap: wrap;
+                margin-top: 60px;
+                width: 870px;
+
+                li {
+                    padding: 20px;
+                    width: 100%;
+
+                    span {
+                        font-size: 28px;
+                        letter-spacing: 1.4px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        letter-spacing: 0.2px;
+                    }
+                }
+            }
+        }
+
+        &-img {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
 }

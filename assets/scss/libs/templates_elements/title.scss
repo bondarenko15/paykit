@@ -92,6 +92,17 @@
             color: $Color_orange;
         }
     }
+    &-product_capabilities {
+        width: 100%;
+        text-align: left;
+    }
+    &-product_advantages {
+        text-align: left;
+        font-weight: 600;
+        i {
+            color: $Color_orange;
+        }
+    }
 }
 
 @media (min-width: 648px) {
@@ -143,6 +154,13 @@
             font-size: 42px;
             letter-spacing: 1.68px;
         }
+        &-product_banner {
+            width: 466px;
+        }
+        &-product_capabilities {
+            width: 100%;
+            text-align: left;
+        }
     }
 }
 
@@ -187,6 +205,17 @@
             font-size: 52px;
             letter-spacing: 2.08px;
         }
+        &_product {
+            width: 589px;
+            font-size: 52px;
+            letter-spacing: 2.08px;
+        }
+        &-product_banner {
+            width: 559px;
+        }
+        &-product_advantages {
+            width: 100%;
+        }
     }
 }
 
@@ -208,6 +237,9 @@
 
         &_order_banner {
             width: 604px;
+        }
+        &-product_banner {
+            width: 625px;
         }
     }
 }
@@ -259,6 +291,14 @@
         &_article {
             font-size: 62px;
             letter-spacing: 2.48px;
+        }
+        &_product {
+            width: 725px;
+            font-size: 62px;
+            letter-spacing: 2.48px;
+        }
+        &-product_banner {
+            width: 745px;
         }
     }
 }

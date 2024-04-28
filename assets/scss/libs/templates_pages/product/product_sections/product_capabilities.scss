@@ -22,14 +22,15 @@
                     .tabs_item {
                         border-radius: 10px;
                         background: $Color_grey_light;
-                        
+
                         margin-bottom: 10px;
                         overflow: hidden;
+
                         span {
                             color: $Text_grey_dark;
                             font-family: "Exo 2";
                             font-size: 20px;
-                            font-weight: 600;
+                            font-weight: 400;
                             line-height: 145%;
                             letter-spacing: 1px;
                             text-transform: uppercase;
@@ -52,7 +53,7 @@
                         .tabs_subitem {
                             height: 0;
                             visibility: hidden;
-                            
+
                             li {
                                 color: $Text_gray_medium;
                                 font-family: Montserrat;
@@ -80,21 +81,155 @@
 
                     .tabs_item-active {
                         span {
+                            font-weight: 600;
                         }
 
                         .tabs_subitem {
                             height: auto;
                             visibility: visible;
-                            padding: 15px 10px ;
+                            padding: 15px 10px;
                         }
                     }
                 }
             }
+
             .product_capabilities-img {
                 img {
                     border-radius: 15px;
                     display: block;
                     margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .product_capabilities {
+        padding: 160px 0 0;
+
+        .container {
+            .wrapper {
+                .product_capabilities-text {
+                    p {
+                        font-size: 16px;
+                        letter-spacing: 0.32px;
+                    }
+
+                    .product_capabilities-tabs {
+                        .tabs_item {
+
+                            cursor: pointer;
+
+                            span {
+                                padding: 0;
+                                font-size: 26px;
+                                letter-spacing: 1.3px;
+                                padding: 25px 20px;
+                            }
+
+                            .tabs_subitem {
+                                li {
+                                    font-size: 16px;
+                                    letter-spacing: 0.32px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .product_capabilities-img {
+                    position: relative;
+                    height: 450px;
+                    margin-top: 30px;
+
+                    img {
+                        display: none;
+                    }
+
+                    &::before {
+                        content: '';
+                        border-radius: 20px;
+                        position: absolute;
+                        inset: 0;
+                        background: url('../img/product_capabilities.jpeg') 100% 100%/cover no-repeat;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .product_capabilities {
+        .container {
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                flex-direction: row-reverse;
+
+                .product_capabilities-img {
+                    width: 38%;
+                    height: auto;
+                    margin: 0;
+
+                    img {}
+
+                    &::before {
+                        background: url(../img/product_capabilities.jpeg) 43% 100% / cover no-repeat;
+                    }
+
+                }
+
+                .product_capabilities-text {
+                    width: 56%;
+
+                    p {
+                        font-size: 20px;
+                        letter-spacing: 0.2px;
+                    }
+
+                    .product_capabilities-tabs {
+                        .tabs_item {
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .product_capabilities {
+        padding: 200px 0 ;
+
+        .container {
+            .wrapper {
+                .product_capabilities-text {
+                    .product_capabilities-tabs {
+                        .tabs_item {
+                            span {
+                                font-size: 28px;
+                                letter-spacing: 1.4px;
+                                padding: 30px 20px;
+                            }
+
+                            .tabs_subitem {
+                                li {
+                                    font-size: 20px;
+                                    letter-spacing: 0.2px;
+                                    
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
