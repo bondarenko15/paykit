@@ -78,6 +78,25 @@
         color: $Color_orange;
         margin: 20px 0 0;
     }
+
+    &-card_product {
+        width: 162px;
+        margin: 0;
+    }
+
+    &-card_product-opacity {
+        width: 162px;
+        margin: 0;
+        color: $Color_orange;
+        background: transparent;
+        border: 1px solid $Color_orange;
+    }
+
+    &-card_product-slider {
+        border: 1px solid $Text_grey_dark;
+        background: transparent;
+        margin: 15px auto 0;
+    }
 }
 
 
@@ -117,12 +136,17 @@
             font-size: 14px;
             letter-spacing: 0.42px;
         }
+
         &_product {
             margin: 0;
         }
+
         &-product_banner {
             width: 231px;
             margin-top: 40px;
+        }
+        &-card_product-slider {
+            margin: 0;
         }
     }
 }
@@ -208,8 +232,10 @@
             font-size: 14px;
             letter-spacing: 0.42px;
         }
+
         &_product {
             margin: 0;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
             }
@@ -219,9 +245,11 @@
                 color: $Text_black;
             }
         }
+
         &-product_banner {
             margin: 40px 0 0;
             width: 231px;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
             }
@@ -230,6 +258,29 @@
                 background: $Color_orange;
                 color: $Text_black;
             }
+        }
+
+        &-card_product {
+            margin: 0;
+        }
+
+        &-card_product-opacity {
+            margin: 0;
+        }
+        &-card_product-slider {
+            margin: 0;
+            width: 140px;
+            &:hover {
+                background: rgba(244, 153, 26, 0.20);
+                border: 1px solid $Color_orange;
+                color: $Color_orange;
+            }
+
+            &:active {
+                background: $Color_orange;
+                color: $Text_black;
+
+            }   
         }
 
     }
@@ -257,9 +308,21 @@
             font-size: 14px;
             letter-spacing: 0.42px;
         }
+
         &-product_banner {
             margin: 40px 0 0;
             width: 231px;
+        }
+
+        &-card_product {
+            margin: 0;
+        }
+
+        &-card_product-opacity {
+            margin: 0;
+        }
+        &-card_product-slider {
+            margin: 0;
         }
 
     }
@@ -302,7 +365,11 @@
             font-size: 16px;
             letter-spacing: 0.48px;
         }
-
+        &-card_product-slider {
+            margin: 0;
+            width: 185px;
+            padding: 10 22px;
+        }
 
     }
 }

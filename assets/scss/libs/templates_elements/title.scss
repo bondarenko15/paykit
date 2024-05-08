@@ -71,37 +71,57 @@
         letter-spacing: 1.12px;
         text-align: left;
     }
+
     &_article {
         text-align: left;
         font-weight: 600;
         letter-spacing: 1.12px;
         margin: 20px 0 0;
     }
+
     &_product {
         text-align: left;
         font-weight: 600;
+
         i {
             color: $Color_orange;
         }
     }
+
     &-product_banner {
         text-align: left;
         font-weight: 600;
         color: $Color_grey_light;
+
         i {
             color: $Color_orange;
         }
     }
+
     &-product_capabilities {
         width: 100%;
         text-align: left;
     }
+
     &-product_advantages {
         text-align: left;
         font-weight: 600;
+
         i {
             color: $Color_orange;
         }
+    }
+
+    &-card_product {
+        text-align: left;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 124%;
+        letter-spacing: 0.24px;
+        margin: 10px 0 15px;
+    }
+    &-card_product-slider {
+        text-align: left;
     }
 }
 
@@ -150,16 +170,25 @@
             font-size: 42px;
             letter-spacing: 1.68px;
         }
+
         &_article {
             font-size: 42px;
             letter-spacing: 1.68px;
         }
+
         &-product_banner {
             width: 466px;
         }
+
         &-product_capabilities {
             width: 100%;
             text-align: left;
+        }
+
+        &-card_product {
+            font-size: 34px;
+            letter-spacing: 0.34px;
+
         }
     }
 }
@@ -201,20 +230,28 @@
             font-size: 52px;
             letter-spacing: 2.08px;
         }
+
         &_article {
             font-size: 52px;
             letter-spacing: 2.08px;
         }
+
         &_product {
             width: 589px;
             font-size: 52px;
             letter-spacing: 2.08px;
         }
+
         &-product_banner {
             width: 559px;
         }
+
         &-product_advantages {
             width: 100%;
+        }
+        &-card_product {
+            font-size: 44px;
+
         }
     }
 }
@@ -238,8 +275,13 @@
         &_order_banner {
             width: 604px;
         }
+
         &-product_banner {
             width: 625px;
+        }
+        &-card_product {
+            margin: 10px 0 40px;
+            font-size: 44px;
         }
     }
 }
@@ -288,17 +330,23 @@
             font-size: 62px;
             letter-spacing: 2.48px;
         }
+
         &_article {
             font-size: 62px;
             letter-spacing: 2.48px;
         }
+
         &_product {
             width: 725px;
             font-size: 62px;
             letter-spacing: 2.48px;
         }
+
         &-product_banner {
             width: 745px;
+        }
+        &-card_product {
+            font-size: 44px;
         }
     }
 }

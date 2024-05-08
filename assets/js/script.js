@@ -21,17 +21,32 @@ if (swiperOurPartners) {
   });
 }
 
+const swiperTabs = document.querySelector('.card_product-tabs') || null;
+if (swiperTabs) {
+  const slider = new Swiper(swiperTabs, {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    breakpoints: {
+      648: {
+        
+        spaceBetween: 0,
+      }
+    }
+  });
+}
+
+
 const swiperOffers = document.querySelector('.slider_offers') || null;
 if (swiperOffers) {
   const slider = new Swiper('.slider_offers', {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 20,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
     breakpoints: {
-      960: {
+      648: {
         loop: true,
         slidesPerView: 'auto',
         spaceBetween: 20,
@@ -41,6 +56,27 @@ if (swiperOffers) {
 }
 
 
+const swiperProduct = document.querySelector('.product_slider') || null;
+if (swiperProduct) {
+  const slider = new Swiper('.product_slider', {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      648: {
+        slidesPerView: 'auto'
+      }, 
+      1880: {
+        slidesPerView: 'auto',
+        spaceBetween: 60
+      }
+    }
+  });
+}
 
 
 // menuOverlay
@@ -232,14 +268,91 @@ function playVideo() {
 // accordion
 
 const accordionBtn = document.querySelectorAll('.tabs_item');
-const tabsSub = document.querySelector('.tabs_item-active ul')
 accordionBtn.forEach((item) => {
-  item.addEventListener('click', ()=> {
+  item.addEventListener('click', () => {
     accordionBtn.forEach((subitem) => {
       subitem.classList.remove('tabs_item-active');
     })
     item.classList.toggle('tabs_item-active');
 
-    })
+  })
 })
 
+// cardModelBtn 
+const modelBtn = document.querySelectorAll('.model_item');
+modelBtn.forEach((item) => {
+  item.addEventListener('click', () => {
+    modelBtn.forEach((subitem) => {
+      subitem.classList.remove('model_item-active')
+    })
+    item.classList.add('model_item-active')
+  })
+})
+
+
+//counter 
+
+const counters = document.querySelectorAll('[data-counter]');
+
+if (counters) {
+  counters.forEach(counter => {
+    counter.addEventListener('click', e => {
+      const target = e.target;
+
+      if (target.closest('.counter_button')) {
+        if (target.closest('.counter_wrapper').querySelector('input').value == '' && (target.classList.contains('counter_button-minus') || target.classList.contains('counter_button-plus'))) {
+          target.closest('.counter_wrapper').querySelector('input').value = 0;
+        }
+
+        let value = parseInt(target.closest('.counter_wrapper').querySelector('input').value);
+
+        if (target.classList.contains('counter_button-plus')) {
+          value++;
+        } else {
+          --value;
+        }
+
+        if (value <= 1) {
+          value = 1;
+          target.closest('.counter_wrapper').querySelector('.counter_button-minus').classList.add('disabled')
+        } else {
+          target.closest('.counter_wrapper').querySelector('.counter_button-minus').classList.remove('disabled')
+        }
+
+        target.closest('.counter_wrapper').querySelector('input').value = value;
+      }
+    })
+  })
+}
+
+// tabs 
+const tabsButtons = document.querySelectorAll('.tabs_button');
+tabsButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    console.log(btn)
+    const prevActiveItem = document.querySelector('.tabs_block-active');
+    // Получаем предыдущую активную вкладку
+    const prevActiveButton = document.querySelector('.swiper-slide_active');
+
+    // Проверяем есть или нет предыдущая активная кнопка
+    if (prevActiveButton) {
+      //Удаляем класс _active у предыдущей кнопки если она есть
+      prevActiveButton.classList.remove('swiper-slide_active');
+    }
+
+    // Проверяем есть или нет предыдущая активная вкладка
+    if (prevActiveItem) {
+      // Удаляем класс _active у предыдущей вкладки если она есть
+      prevActiveItem.classList.remove('tabs_block-active');
+    }
+    // получаем id новой активной вкладки, который мы перем из атрибута data-tab у кнопки
+    const nextActiveItemId = `#${btn.getAttribute('data-tab')}`;
+    // получаем новую активную вкладку по id
+    const nextActiveItem = document.querySelector(nextActiveItemId);
+
+    // добавляем класс _active кнопке на которую нажали
+    btn.classList.add('swiper-slide_active');
+    // добавляем класс _active новой выбранной вкладке
+    nextActiveItem.classList.add('tabs_block-active');
+  });
+})
