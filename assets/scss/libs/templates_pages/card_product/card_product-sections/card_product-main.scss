@@ -181,6 +181,7 @@
                                     border-left: 1px solid $Color_grey_dark;
                                     background: $Color_grey_light;
                                     font-weight: 600;
+                                    cursor: pointer;
                                 }
 
                                 .counter_button-minus {
@@ -190,7 +191,7 @@
 
                                 .disabled {
                                     color: $Color_grey_dark;
-
+                                    cursor: default;
                                 }
 
                                 .counter_input {
@@ -506,6 +507,16 @@
                                 font-size: 14px;
                                 letter-spacing: 0.28px;
                             }
+
+                            &:hover {
+                                background: rgba(244, 153, 26, 0.20);
+                                border: 1px solid $Color_orange;
+                            }
+
+                            &:active {
+                                background: $Color_orange;
+                                
+                            }
                         }
 
                     }
@@ -573,7 +584,7 @@
                         margin-top: 40px;
 
                         .model_item {
-                            margin: 0 20px 20px 0;
+                            margin: 0 20px 0 0;
 
                             h5 {
                                 font-size: 16px;
@@ -584,6 +595,10 @@
                             p {
                                 font-size: 14px;
                                 letter-spacing: 0.28px;
+                            }
+
+                            &:last-child {
+                                margin: 0;
                             }
                         }
 

@@ -694,7 +694,7 @@
                 .news_main-head {
                     display: flex;
                     justify-content: space-between;
-
+                    align-items: flex-end;
                     &__block {
                         flex-direction: column;
                         justify-content: flex-end;

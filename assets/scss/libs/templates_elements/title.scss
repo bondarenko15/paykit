@@ -120,8 +120,26 @@
         letter-spacing: 0.24px;
         margin: 10px 0 15px;
     }
+
     &-card_product-slider {
         text-align: left;
+        font-size: 26px;
+        letter-spacing: 0.78px;
+    }
+
+    &-card_product-banner {
+        text-align: left;
+        font-size: 26px;
+        letter-spacing: 0.78px;
+
+        i {
+            font-weight: 600;
+        }
+    }
+    &-knowledge_base {
+        margin: 0;
+        text-align: left;
+
     }
 }
 
@@ -190,6 +208,12 @@
             letter-spacing: 0.34px;
 
         }
+
+        &-card_product-slider,
+        &-card_product-banner {
+            font-size: 38px;
+            letter-spacing: 1.14px;
+        }
     }
 }
 
@@ -249,9 +273,14 @@
         &-product_advantages {
             width: 100%;
         }
+
         &-card_product {
             font-size: 44px;
 
+        }
+
+        &-card_product-banner {
+            width: 560px;
         }
     }
 }
@@ -279,9 +308,14 @@
         &-product_banner {
             width: 625px;
         }
+
         &-card_product {
             margin: 10px 0 40px;
             font-size: 44px;
+        }
+
+        &-card_product-banner {
+            width: 730px;
         }
     }
 }
@@ -345,8 +379,15 @@
         &-product_banner {
             width: 745px;
         }
+
         &-card_product {
             font-size: 44px;
+        }
+
+        &-card_product-banner {
+            width: 924px;
+            font-size: 44px;
+            letter-spacing: 0.44px;
         }
     }
 }

@@ -72,7 +72,7 @@ if (swiperProduct) {
       }, 
       1880: {
         slidesPerView: 'auto',
-        spaceBetween: 60
+        spaceBetween: 0
       }
     }
   });
@@ -278,6 +278,18 @@ accordionBtn.forEach((item) => {
   })
 })
 
+const accordionBase = document.querySelectorAll('.knowledge_base-navigation li');
+accordionBase.forEach((item) => {
+  item.addEventListener('click', () => {
+    accordionBase.forEach((subitem) => {
+      subitem.classList.remove('item-active');
+    })
+    item.classList.toggle('item-active');
+
+  })
+})
+
+
 // cardModelBtn 
 const modelBtn = document.querySelectorAll('.model_item');
 modelBtn.forEach((item) => {
@@ -331,28 +343,28 @@ tabsButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     console.log(btn)
     const prevActiveItem = document.querySelector('.tabs_block-active');
-    // Получаем предыдущую активную вкладку
     const prevActiveButton = document.querySelector('.swiper-slide_active');
-
-    // Проверяем есть или нет предыдущая активная кнопка
     if (prevActiveButton) {
-      //Удаляем класс _active у предыдущей кнопки если она есть
       prevActiveButton.classList.remove('swiper-slide_active');
     }
-
-    // Проверяем есть или нет предыдущая активная вкладка
     if (prevActiveItem) {
-      // Удаляем класс _active у предыдущей вкладки если она есть
       prevActiveItem.classList.remove('tabs_block-active');
     }
-    // получаем id новой активной вкладки, который мы перем из атрибута data-tab у кнопки
     const nextActiveItemId = `#${btn.getAttribute('data-tab')}`;
-    // получаем новую активную вкладку по id
     const nextActiveItem = document.querySelector(nextActiveItemId);
-
-    // добавляем класс _active кнопке на которую нажали
     btn.classList.add('swiper-slide_active');
-    // добавляем класс _active новой выбранной вкладке
     nextActiveItem.classList.add('tabs_block-active');
   });
 })
+
+const inputSearch = document.querySelector('.search form input');
+const searchForm = document.querySelector('.search');
+
+
+inputSearch.addEventListener('input', function() {
+  if (this.value.length >= 3) {
+  	searchForm.classList.add('search-active');
+  } else {
+    searchForm.classList.remove('search-active');
+  }
+});

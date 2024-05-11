@@ -82,6 +82,7 @@
     &-card_product {
         width: 162px;
         margin: 0;
+        border: 1px solid transparent;
     }
 
     &-card_product-opacity {
@@ -96,6 +97,10 @@
         border: 1px solid $Text_grey_dark;
         background: transparent;
         margin: 15px auto 0;
+    }
+    &-card_product-banner {
+        width: 295px;
+        margin: 30px auto 0;
     }
 }
 
@@ -147,6 +152,10 @@
         }
         &-card_product-slider {
             margin: 0;
+        }
+        &-card_product-banner {
+            width: 231px;
+            margin: 30px 0 0;
         }
     }
 }
@@ -262,10 +271,29 @@
 
         &-card_product {
             margin: 0;
+            &:hover {
+                background: rgba(244, 153, 26, 0.20);
+                border: 1px solid $Color_orange;
+                color: $Color_orange;
+            }
+
+            &:active {
+                background: $Color_orange;
+                color: $Text_black;
+
+            } 
         }
 
         &-card_product-opacity {
             margin: 0;
+            &:hover {
+                background: rgba(244, 153, 26, 0.20);
+            }
+
+            &:active {
+                background: $Color_orange;
+                color: $Text_black;
+            }
         }
         &-card_product-slider {
             margin: 0;
@@ -282,7 +310,21 @@
 
             }   
         }
+        &-card_product-banner {
+            width: 231px;
+            margin: 30px 0 0;
+            &:hover {
+                background: rgba(244, 153, 26, 0.20);
+                border: 1px solid $Color_orange;
+                color: $Color_orange;
+            }
 
+            &:active {
+                background: $Color_orange;
+                color: $Text_black;
+
+            } 
+        }
     }
 }
 
@@ -324,7 +366,10 @@
         &-card_product-slider {
             margin: 0;
         }
-
+        &-card_product-banner {
+            width: 231px;
+            margin: 30px 0 0;
+        }
     }
 }
 
@@ -370,6 +415,9 @@
             width: 185px;
             padding: 10 22px;
         }
-
+        &-card_product-banner {
+            width: 206px;
+            margin: 40px 0 0;
+        }
     }
 }

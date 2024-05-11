@@ -230,6 +230,7 @@
 @media (min-width: 960px) {
     .card_product-slider {
         padding: 100px 0 0;
+
         .swiper-slider {
             padding: 0;
             margin: 40px 0 0 50px;
@@ -291,13 +292,14 @@
 
 @media (min-width: 1880px) {
     .card_product-slider {
-        
+
         .swiper-slider {
             margin: 60px 100px 0;
 
             .swiper-wrapper {
                 .swiper-slide {
-                    width: 367px;
+                    width: 380px;
+                    margin-right: 60px;
 
                     .block_img {
                         .status {
@@ -336,6 +338,7 @@
                                 font-size: 28px;
                                 letter-spacing: 1.4px;
                             }
+
                             span {
                                 height: 42px;
                             }
@@ -353,7 +356,7 @@
 
             .swiper-button-next {
                 top: 60%;
-                right: 60px;
+                right: 30px;
             }
         }
     }

@@ -1,0 +1,126 @@
+.card_product-banner {
+    padding: 90px 0 0;
+
+    .container {
+        .wrapper {
+            position: relative;
+            padding: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: $Color_grey_light;
+                z-index: -1;
+                border-radius: 20px;
+            }
+
+            p {
+                color: $Text_grey_dark;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.32px;
+                display: block;
+                margin-top: 20px;
+
+                i {
+                    font-weight: 600;
+                }
+            }
+
+            img {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .card_product-banner {
+        padding: 120px 0 0;
+
+        .container {
+            .wrapper {
+                padding: 20px 20px 175px;
+
+                p {
+                    width: 390px;
+                    font-size: 18px;
+                    letter-spacing: 0.36px;
+
+                }
+
+                img {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 5px;
+                    width: 323px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .card_product-banner {
+        padding: 160px 0 0;
+
+        .container {
+            .wrapper {
+                padding: 30px 30px 95px;
+
+                p {
+                    width: 455px;
+
+                }
+
+                img {
+                    width: 450px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .card_product-banner {
+        .container {
+            .wrapper {
+                padding: 30px 30px 95px;
+
+                img {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .card_product-banner {
+        padding: 300px 0 0;
+
+        .container {
+            .wrapper {
+                padding: 50px 40px 50px 70px;
+
+                p {
+                    font-size: 20px;
+                    letter-spacing: 0.2px;
+                    width: 830px;
+                    margin-top: 25px;
+                }
+
+                img {
+                    width: 507px;
+                    right: 50px;
+                }
+            }
+        }
+    }
+}
