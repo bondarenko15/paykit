@@ -1,0 +1,411 @@
+.ready_solutions-banner {
+    position: relative;
+    padding: 90px 0 0;
+
+    .container {
+        .wrapper {
+            position: relative;
+            padding: 30px 15px;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: $Color_grey_light;
+                z-index: -2;
+                border-radius: 20px;
+            }
+
+            .ready_solutions-banner-text {
+                color: $Text_black;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.32px;
+                display: block;
+                margin-top: 30px;
+
+                i {
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+
+            .flex-wrapper {
+                .ready_solutions-banner-app {
+                    &-text {
+                        color: $Text_gray_medium;
+                        font-family: "Exo 2";
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 140%;
+                        letter-spacing: 0.36px;
+                        display: block;
+                        margin: 15px 0 0;
+                    }
+
+                    &-wrapper {
+                        margin: 10px 0 0;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        div {
+                            display: inline-block;
+
+                            .ready_solutions-banner__item {
+                                width: 115px;
+                                height: 38px;
+                                display: block;
+                                margin: 0 6px 1px 0;
+                                position: relative;
+                                border: 1px solid $Color_black;
+                                border-radius: 5px;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    inset: 0;
+                                    z-index: -1;
+                                    background: $Color_grey_light;
+                                }
+
+                                .basic {
+                                    width: 120px;
+                                    height: 40px;
+                                    padding: 8px;
+                                }
+
+                                .hover {
+                                    overflow: hidden;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    display: none;
+                                    padding: 8px;
+                                }
+
+                            }
+
+                            .box {
+                                span {
+                                    display: block;
+                                    color: $Text_black;
+                                    font-family: "Exo 2";
+                                    font-size: 10px;
+                                    font-weight: 300;
+                                    line-height: 140%;
+                                    letter-spacing: 0.36px;
+                                }
+
+                                .flex-box {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    margin: 2px 0 15px;
+
+                                    p {
+                                        color: $Text_gray_medium;
+                                        font-family: "Exo 2";
+                                        font-size: 10px;
+                                        font-weight: 300;
+                                        line-height: 140%;
+                                        letter-spacing: 0.3px;
+                                        display: inline-block;
+
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ready_solutions-banner-img {
+                display: none;
+
+
+            }
+        }
+
+    }
+}
+
+@media (min-width: 648px) {
+    .ready_solutions-banner {
+        padding: 120px 0 0;
+
+        .container {
+            .wrapper {
+                padding: 30px 30px 40px;
+                overflow: hidden;
+                position: relative;
+
+                .ready_solutions-banner-text {
+                    font-size: 18px;
+                    letter-spacing: 0.36px;
+                    display: block;
+                    width: 408px;
+                }
+
+                .flex-wrapper {
+                    .ready_solutions-banner-app {
+                        &-text {
+                            font-size: 14px;
+                            letter-spacing: 0.42px;
+                            margin: 25px 0 0;
+                        }
+
+                        &-wrapper {
+                            div {
+                                .ready_solutions-banner__item {
+                                    width: 130px;
+                                    height: 42px;
+                                    margin: 0 15px 1px 0;
+
+                                    img {
+                                        width: 130px;
+                                        height: 42px;
+                                    }
+                                }
+
+                                .box {
+                                    span {
+                                        font-size: 12px;
+                                        letter-spacing: 0.36px;
+                                    }
+
+                                    .flex-box {
+                                        margin: 5px 0 0;
+
+                                        p {
+                                            font-size: 12px;
+                                            letter-spacing: 0.36px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ready_solutions-banner-img {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    right: -60px;
+                    z-index: -1;
+
+                    img {
+                        width: 370px;
+                        height: 377px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .ready_solutions-banner {
+        padding: 167px 0 0;
+
+        .container {
+            .wrapper {
+                overflow: visible;
+                padding: 50px 30px 40px;
+
+                .ready_solutions-banner-text {
+                    font-size: 20px;
+                    letter-spacing: 0.2px;
+                    margin-top: 25px;
+                    width: 657px;
+                }
+
+                .flex-wrapper {
+                    .ready_solutions-banner-app {
+                        &-text {
+                            font-size: 14px;
+                            letter-spacing: 0.42px;
+                            margin: 50px 0 0;
+                        }
+
+                        &-wrapper {
+                            div {
+                                .ready_solutions-banner__item {
+                                    width: 149px;
+                                    height: 49px;
+
+                                    .basic {
+                                        width: 149px;
+                                        height: 49px;
+                                    }
+
+                                    .hover {
+                                        display: none;
+                                        transition-delay: .3s;
+                                        overflow: hidden;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        width: 149px;
+                                        height: 49px;
+                                        color: $Color_grey_light;
+                                        font-family: "Exo 2";
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        letter-spacing: 0.48px;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                    }
+
+                                }
+
+                                &:hover {
+                                    &:last-child {
+                                        .ready_solutions-banner__item {
+                                            .hover {
+                                                padding: 15px 25px;
+                                            }
+                                        }
+
+                                    }
+
+                                    .ready_solutions-banner__item {
+                                        background: $Text_black;
+
+                                        .basic {
+                                            visibility: hidden;
+                                            display: none;
+                                        }
+
+                                        .hover {
+                                            display: block;
+                                            overflow: visible;
+                                            visibility: visible;
+                                            opacity: 1;
+
+
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ready_solutions-banner-img {
+                    img {
+                        width: 384px;
+                        height: 365px;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .ready_solutions-banner {
+        .container {
+            .wrapper {
+                padding: 50px 40px 50px 70px;
+
+                .ready_solutions-banner-text {
+                    font-size: 20px;
+                    letter-spacing: 0.2px;
+                    width: 830px;
+                }
+
+                .flex-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin-top: 40px;
+
+                    .ready_solutions-banner-app {
+                        &-text {
+                            margin: 5px 0 0;
+                        }
+
+                        &-wrapper {
+                            div {
+                                .main_app__item {
+                                    width: 150px;
+                                    height: 49px;
+                                    margin: 0 15px 6px 0;
+
+                                    .basic {
+                                        width: 150px;
+                                        height: 49px;
+                                    }
+
+                                    .hover {
+                                        width: 150px;
+                                        height: 49px;
+                                    }
+                                }
+
+                                .box {
+                                    span {
+                                        font-size: 14px;
+                                        letter-spacing: 0.42px;
+
+                                    }
+
+                                    .flex-box {
+                                        p {
+                                            padding: 1px 0 0 9px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ready_solutions-banner-img {
+                    bottom: -4px;
+
+                    img {
+                        width: 485px;
+                        height: 540px;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .ready_solutions-banner {
+        padding: 228px 0 0;
+
+        .container {
+            .wrapper {
+                .flex-wrapper {
+                    .border {
+                        width: 1px;
+                        height: 49px;
+                        background: $Color_grey_dark;
+                        display: block;
+                        margin-right: 30px;
+                    }
+                }
+
+                .ready_solutions-banner-img {
+                    img {
+                        width: 574px;
+                        height: 590px;
+                    }
+                }
+            }
+        }
+    }
+}

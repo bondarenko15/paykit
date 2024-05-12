@@ -98,9 +98,19 @@
         background: transparent;
         margin: 15px auto 0;
     }
+
     &-card_product-banner {
         width: 295px;
         margin: 30px auto 0;
+    }
+
+    &-ready_solutions {
+        width: 199px;
+        margin: 0;
+    }
+
+    &-ready_solutions-banner {
+        width: 304px;
     }
 }
 
@@ -150,12 +160,23 @@
             width: 231px;
             margin-top: 40px;
         }
+
         &-card_product-slider {
             margin: 0;
         }
+
         &-card_product-banner {
             width: 231px;
             margin: 30px 0 0;
+        }
+
+        &-ready_solutions-banner {
+            width: 231px;
+            margin: 30px 0 0;
+        }
+        &_marketing {
+            width: 231px;
+            margin: 40px 0 0;
         }
     }
 }
@@ -271,6 +292,7 @@
 
         &-card_product {
             margin: 0;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
                 border: 1px solid $Color_orange;
@@ -281,11 +303,12 @@
                 background: $Color_orange;
                 color: $Text_black;
 
-            } 
+            }
         }
 
         &-card_product-opacity {
             margin: 0;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
             }
@@ -295,9 +318,11 @@
                 color: $Text_black;
             }
         }
+
         &-card_product-slider {
             margin: 0;
             width: 140px;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
                 border: 1px solid $Color_orange;
@@ -308,11 +333,13 @@
                 background: $Color_orange;
                 color: $Text_black;
 
-            }   
+            }
         }
+
         &-card_product-banner {
             width: 231px;
             margin: 30px 0 0;
+
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
                 border: 1px solid $Color_orange;
@@ -323,7 +350,33 @@
                 background: $Color_orange;
                 color: $Text_black;
 
-            } 
+            }
+        }
+
+        &-ready_solutions {
+            width: 199px;
+            margin: 0;
+        }
+
+        &-ready_solutions-banner {
+            width: 231px;
+            margin: 30px 0 0;
+        }
+        &_marketing {
+            width: 231px;
+            margin: 40px 0 0;
+            border: 1px solid transparent;
+            &:hover {
+                background: rgba(244, 153, 26, 0.20);
+                border: 1px solid $Color_orange;
+                color: $Color_orange;
+            }
+
+            &:active {
+                background: $Color_orange;
+                color: $Text_black;
+
+            }
         }
     }
 }
@@ -363,12 +416,21 @@
         &-card_product-opacity {
             margin: 0;
         }
+
         &-card_product-slider {
             margin: 0;
         }
+
         &-card_product-banner {
             width: 231px;
             margin: 30px 0 0;
+        }
+
+        &-ready_solutions {
+            margin: 0;
+        }
+        &_marketing {
+            margin: 40px 0 0;
         }
     }
 }
@@ -410,11 +472,13 @@
             font-size: 16px;
             letter-spacing: 0.48px;
         }
+
         &-card_product-slider {
             margin: 0;
             width: 185px;
             padding: 10 22px;
         }
+
         &-card_product-banner {
             width: 206px;
             margin: 40px 0 0;

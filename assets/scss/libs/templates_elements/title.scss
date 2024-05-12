@@ -136,10 +136,56 @@
             font-weight: 600;
         }
     }
+
     &-knowledge_base {
         margin: 0;
         text-align: left;
 
+    }
+
+    &-automation {
+        text-align: left;
+        font-weight: 600;
+
+        i {
+            display: block;
+            font-weight: 500;
+        }
+    }
+
+    &-ready_solutions-banner {
+        text-align: left;
+
+        i {
+            font-weight: 600;
+        }
+    }
+
+    &-ready_solutions-control {
+        text-align: left;
+        margin-top: 25px;
+
+        i {
+            font-weight: 600;
+        }
+    }
+
+    &-ready_solutions-panel {
+        text-align: left;
+        margin-top: 25px;
+
+        i {
+            font-weight: 600;
+        }
+    }
+
+    &-ready_solutions-time {
+        text-align: left;
+        margin-top: 25px;
+
+        i {
+            font-weight: 600;
+        }
     }
 }
 
@@ -214,6 +260,26 @@
             font-size: 38px;
             letter-spacing: 1.14px;
         }
+
+        &-ready_solutions-time {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 38px;
+            letter-spacing: 1.14px;
+
+        }
+
+        &-ready_solutions-control {
+            margin-top: 30px;
+            font-size: 38px;
+            letter-spacing: 1.14px;
+        }
+
+        &-ready_solutions-panel {
+            margin-top: 30px;
+            font-size: 38px;
+            letter-spacing: 1.14px;
+        }
     }
 }
 
@@ -282,6 +348,27 @@
         &-card_product-banner {
             width: 560px;
         }
+
+        &-ready_solutions-banner {
+            width: 676px;
+            font-size: 38px;
+            letter-spacing: 1.14px;
+        }
+
+        &-ready_solutions-time {
+            font-size: 38px;
+            letter-spacing: 1.14px;
+        }
+
+        &-ready_solutions-control {
+            font-size: 38px;
+            letter-spacing: 1.14px;
+        }
+
+        &-ready_solutions-panel {
+            font-size: 38px;
+            letter-spacing: 1.14px;
+        }
     }
 }
 
@@ -317,6 +404,22 @@
         &-card_product-banner {
             width: 730px;
         }
+
+        &-ready_solutions-banner {
+            width: 866px;
+        }
+
+        &-ready_solutions-time {
+            width: 1200px;
+            margin: 60px auto 0;
+
+        }
+        &-ready_solutions-panel {
+            margin: 0;
+            font-size: 44px;
+            letter-spacing: 0.44px;
+        }
+
     }
 }
 
@@ -389,5 +492,24 @@
             font-size: 44px;
             letter-spacing: 0.44px;
         }
+
+        &-ready_solutions-banner {
+            width: 924px;
+            font-size: 44px;
+            letter-spacing: 0.44px;
+        }
+
+        &-ready_solutions-time {
+            font-size: 44px;
+            letter-spacing: 0.44px;
+        }
+
+        &-ready_solutions-control {
+            margin: 0;
+            font-size: 44px;
+            letter-spacing: 0.44px;
+        }
+
+       
     }
 }

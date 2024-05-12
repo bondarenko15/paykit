@@ -357,14 +357,16 @@ tabsButtons.forEach(btn => {
   });
 })
 
-const inputSearch = document.querySelector('.search form input');
+const inputSearch = document.querySelector('.search form input') || null;
 const searchForm = document.querySelector('.search');
 
+if (inputSearch) {
+  inputSearch.addEventListener('input', function() {
+    if (this.value.length >= 3) {
+      searchForm.classList.add('search-active');
+    } else {
+      searchForm.classList.remove('search-active');
+    }
+  });
+}
 
-inputSearch.addEventListener('input', function() {
-  if (this.value.length >= 3) {
-  	searchForm.classList.add('search-active');
-  } else {
-    searchForm.classList.remove('search-active');
-  }
-});
