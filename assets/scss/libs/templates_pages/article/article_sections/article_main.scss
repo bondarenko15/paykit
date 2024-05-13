@@ -622,7 +622,8 @@
                             overflow: hidden;
                             cursor: pointer;
 
-                            span {
+                            span,
+                            a {
                                 display: block;
                                 color: $Text_black;
                                 font-family: Montserrat;
@@ -652,14 +653,53 @@
                                 }
                             }
 
+                            a {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+
                             .tabs_subitem {
                                 height: 0;
                                 visibility: hidden;
+                                padding: 15px 5px 0;
+
+                                li {
+                                    position: relative;
+                                    border-radius: 10px;
+                                    padding: 0 0 0 8px;
+
+                                    a {
+
+                                        background: transparent;
+                                        border: none;
+                                        color: $Text_grey_dark;
+                                        font-family: Montserrat;
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        line-height: 140%;
+                                        letter-spacing: 0.32px;
+
+                                        &::after {
+                                            display: none;
+                                        }
+
+                                        &:hover {
+                                            color: $Color_orange;
+                                        }
+                                    }
+                                }
+
+                                .active {
+                                    border-left: 3px solid $Color_orange;
+                                }
                             }
                         }
 
                         .tabs_item-active {
-                            span {
+
+                            span,
+                            a {
                                 border: 1px solid $Color_orange;
                                 background: rgba(244, 153, 26, 0.10);
 
@@ -675,31 +715,6 @@
                             .tabs_subitem {
                                 height: auto;
                                 visibility: visible;
-                                padding: 15px 5px 0;
-
-                                li {
-                                    margin-bottom: 15px;
-                                    position: relative;
-                                    border-radius: 10px;
-                                    padding: 0 0 0 8px;
-
-                                    a {
-                                        color: $Text_grey_dark;
-                                        font-family: Montserrat;
-                                        font-size: 16px;
-                                        font-weight: 400;
-                                        line-height: 140%;
-                                        letter-spacing: 0.32px;
-
-                                        &:hover {
-                                            color: $Color_orange;
-                                        }
-                                    }
-                                }
-
-                                .active {
-                                    border-left: 3px solid $Color_orange;
-                                }
                             }
                         }
 
@@ -710,7 +725,7 @@
                 .article_main-text {
                     width: 70%;
                     padding: 110px 0 0 20px;
-                    
+
                     &_back {
                         margin-bottom: 80px;
                     }
@@ -857,105 +872,23 @@
                         padding: 0 60px 0 0;
                         margin-top: 60px;
                         border: 1px solid transparent;
+                    }
 
-                        .tabs_item {
-                            margin-bottom: 10px;
-                            overflow: hidden;
-                            cursor: pointer;
+                    .article_main-text {
+                        padding: 125px 0 0 20px;
+                        position: relative;
 
-                            span {
-                                display: block;
-                                color: $Text_black;
-                                font-family: Montserrat;
-                                font-size: 18px;
-                                font-weight: 500;
-                                line-height: 140%;
-                                letter-spacing: 0.36px;
-                                background: $Color_grey_light;
-                                padding: 15px;
-                                border-radius: 10px;
-                                border: 1px solid transparent;
-                                position: relative;
-
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    top: 50%;
-                                    right: 15px;
-                                    transform: translateY(-50%) rotate(90deg);
-                                    background: url('../img/chevron_grey.svg') center center/cover no-repeat;
-                                    width: 20px;
-                                    height: 20px;
-
-                                }
-                            }
-
-                            .tabs_subitem {
-                                height: 0;
-                                visibility: hidden;
-                            }
-                        }
-
-                        .tabs_item-active {
-                            span {
-                                border: 1px solid $Color_orange;
-                                background: rgba(244, 153, 26, 0.10);
-
-                                &::after {
-                                    transform: translateY(-50%) rotate(-90deg);
-                                }
-                            }
-
-                            .tabs_subitem {
-                                height: auto;
-                                visibility: visible;
-                                padding: 15px 20px 0;
-
-                                li {
-                                    margin-bottom: 15px;
-                                    position: relative;
-                                    border-left: 3px solid transparent;
-                                    border-radius: 10px;
-                                    padding: 0 0 0 12px;
-
-                                    a {
-                                        color: $Text_grey_dark;
-                                        font-family: Montserrat;
-                                        font-size: 16px;
-                                        font-weight: 400;
-                                        line-height: 140%;
-                                        letter-spacing: 0.32px;
-
-                                        &:hover {
-                                            color: $Color_orange;
-                                        }
-                                    }
-                                }
-
-                                .active {
-                                    border-left: 3px solid $Color_orange;
-                                }
-                            }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 253px;
+                            bottom: 117px;
+                            left: -23px;
+                            background: $Color_white_light;
+                            width: 2px;
                         }
 
                     }
-
-                }
-
-                .article_main-text {
-                    padding: 125px 0 0 20px;
-                    position: relative;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 253px;
-                        bottom: 117px;
-                        left: -23px;
-                        background: $Color_white_light;
-                        width: 2px;
-                    }
-
                 }
             }
         }

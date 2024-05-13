@@ -270,27 +270,36 @@ function playVideo() {
 const accordionBtn = document.querySelectorAll('.tabs_item');
 accordionBtn.forEach((item) => {
   item.addEventListener('click', () => {
-    accordionBtn.forEach((subitem) => {
-      subitem.classList.remove('tabs_item-active');
-    })
-    item.classList.toggle('tabs_item-active');
-
+    if (item.classList.contains('tabs_item-active')) {
+      item.classList.remove('tabs_item-active')
+    } else {
+      accordionBtn.forEach((subitem) => {
+        subitem.classList.remove('tabs_item-active');
+      })
+      item.classList.add('tabs_item-active');
+      
+    }
+    
   })
 })
 
 const accordionBase = document.querySelectorAll('.knowledge_base-navigation li');
 accordionBase.forEach((item) => {
   item.addEventListener('click', () => {
-    accordionBase.forEach((subitem) => {
-      subitem.classList.remove('item-active');
-    })
-    item.classList.toggle('item-active');
-
+    if (item.classList.contains('item-active')) {
+      item.classList.remove('item-active')
+    } else {
+      accordionBase.forEach((subitem) => {
+        subitem.classList.remove('item-active');
+      })
+      item.classList.add('item-active');
+      
+    }
   })
 })
 
 
-// cardModelBtn 
+/* // cardModelBtn 
 const modelBtn = document.querySelectorAll('.model_item');
 modelBtn.forEach((item) => {
   item.addEventListener('click', () => {
@@ -299,7 +308,7 @@ modelBtn.forEach((item) => {
     })
     item.classList.add('model_item-active')
   })
-})
+}) */
 
 
 //counter 

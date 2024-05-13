@@ -23,6 +23,7 @@
             .search {
                 margin-top: 40px;
                 position: relative;
+
                 form {
                     position: relative;
 
@@ -31,7 +32,7 @@
                         border-radius: 30px;
                         background: $Color_grey_light;
                         width: 100%;
-                        border: none;
+                        border: 1px solid transparent;
                         z-index: 2;
                         color: $Text_gray_medium;
                         font-family: "Exo 2";
@@ -64,6 +65,7 @@
                     right: 0;
                     left: 0;
                     z-index: 10;
+
                     a {
                         color: $Text_black;
                         font-size: 14px;
@@ -73,23 +75,36 @@
                         letter-spacing: 0.42px;
                         display: block;
                         margin-bottom: 25px;
+
                         &:hover {
                             color: $Color_orange;
                         }
                     }
                 }
             }
+
             .search-active {
-                
+
                 form {
                     input {
                         border-radius: 30px 30px 0px 0px;
                     }
                 }
+
                 .pop-up_menu {
                     display: block;
-                    
+
                 }
+            }
+
+            .has_error {
+                form {
+                    input {
+                        border: 1px solid $Color_red;
+                        border-radius: 30px;
+                    }
+                }
+                
             }
         }
 
@@ -198,9 +213,11 @@
                     }
                 }
             }
+
             .border {
                 display: none;
             }
+
             .knowledge_base-articles {
                 margin-top: 30px;
 
@@ -446,6 +463,7 @@
                                 border: 1px solid $Color_orange;
                             }
                         }
+
                         ul {
                             li {
                                 a {
@@ -496,6 +514,7 @@
                 .knowledge_base-navigation {
                     width: 30%;
                 }
+
                 .border {
                     display: block;
                     width: 2px;
@@ -504,8 +523,10 @@
                     width: 2px;
                     height: 1185px;
                 }
+
                 .knowledge_base-articles {
                     width: 65%;
+
                     .item {
                         p {
                             -webkit-line-clamp: 2;
