@@ -58,13 +58,18 @@
 
                 .pop-up_menu {
                     border-radius: 0px 0px 10px 10px;
-                    background: $Color_grey_light;
-                    padding: 20px 12px 15px 12px;
+
+                    padding: 20px 12px 15px 30px;
                     display: none;
                     position: absolute;
                     right: 0;
                     left: 0;
                     z-index: 10;
+                    max-height: 190px;
+                    overflow: hidden;
+                    box-shadow: 0px 33px 75px 0px rgba(0, 0, 0, 0.66);
+                    background: $Color_grey_light;
+                    
 
                     a {
                         color: $Text_black;
@@ -73,9 +78,11 @@
                         font-weight: 400;
                         line-height: 140%;
                         letter-spacing: 0.42px;
-                        display: block;
                         margin-bottom: 25px;
-
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
                         &:hover {
                             color: $Color_orange;
                         }
@@ -104,7 +111,7 @@
                         border-radius: 30px;
                     }
                 }
-                
+
             }
         }
 
@@ -505,6 +512,9 @@
 
                 .search {
                     width: 65%;
+                    .pop-up_menu {
+                        padding-left: 40px;
+                    }
                 }
             }
 

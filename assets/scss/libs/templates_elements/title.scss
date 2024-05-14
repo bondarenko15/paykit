@@ -187,6 +187,13 @@
             font-weight: 600;
         }
     }
+
+    &-rates_main {
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 1.12px;
+        text-align: left;
+    }
 }
 
 @media (min-width: 648px) {
@@ -414,6 +421,7 @@
             margin: 60px auto 0;
 
         }
+
         &-ready_solutions-panel {
             margin: 0;
             font-size: 44px;
@@ -510,6 +518,6 @@
             letter-spacing: 0.44px;
         }
 
-       
+
     }
 }

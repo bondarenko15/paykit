@@ -1,0 +1,313 @@
+.rates_main {
+    padding: 90px 0 0;
+
+    .container {
+        .rates_main-head {
+            .rates_main-title {
+                p {
+                    color: $Text_grey_dark;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: 0.36px;
+
+                    i {
+                        font-weight: 600;
+                    }
+                }
+
+
+            }
+
+            .rates_main-block {
+                display: none;
+            }
+        }
+
+        .tablet-desktop {
+            display: none;
+        }
+    }
+}
+
+
+@media (min-width: 648px) {
+    .rates_main {
+        padding: 120px 0 0;
+
+        .container {
+            .rates_main-head {
+                .rates_main-title {
+                    p {
+                        font-size: 18px;
+                        display: block;
+                        width: 460px;
+                    }
+
+
+                }
+
+                .rates_main-block {
+                    display: none;
+                }
+            }
+
+            .tablet-desktop {
+                display: block;
+
+
+
+                .rates_main-bottom {
+                    border-radius: 20px;
+                    background: $Color_grey_light;
+                    padding: 10px;
+                    margin-top: 50px;
+
+                    .rates_main-block {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: stretch;
+
+                        li {
+
+                            display: block;
+                            width: 22%;
+
+                            .block-title {
+                                color: $Text_black;
+                                text-align: center;
+                                font-family: "Exo 2";
+                                font-size: 26px;
+                                font-weight: 400;
+                                line-height: 145%;
+                                letter-spacing: 1.3px;
+                                text-transform: uppercase;
+                                display: block;
+                            }
+
+                            .block_price {
+                                display: block;
+                                margin-top: 10px;
+                                color: $Color_orange;
+                                text-align: center;
+                                font-family: Montserrat;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 140%;
+                                letter-spacing: 0.32px;
+                            }
+
+                            p {
+                                display: none;
+                            }
+
+                            &:first-child {
+                                width: 34%;
+                            }
+
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .bottom_elements {
+                        margin-top: 30px;
+
+                        .elements_title {
+                            color: $Text_black;
+                            font-family: "Exo 2";
+                            font-size: 26px;
+                            font-weight: 400;
+                            line-height: 145%;
+                            letter-spacing: 1.3px;
+                            text-transform: uppercase;
+                            display: block;
+
+
+                        }
+
+                        .bottom_block {
+                            p {
+                                color: $Text_grey_dark;
+                                font-family: Montserrat;
+                                font-size: 14px;
+                                font-weight: 400;
+                                letter-spacing: 0.42px;
+                                display: block;
+                                margin-top: 15px;
+                                position: relative;
+                                padding-left: 8px;
+
+                                &::before {
+                                    content: '-';
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translateY(-50%);
+                                }
+                            }
+
+                            .items {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 0px 5px 20px 5px;
+                                width: 100%;
+                                margin-top: 20px;
+                                position: relative;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 1px;
+                                    background: $Color_white_grey;
+                                }
+
+                                .item {
+                                    display: block;
+                                    color: $Text_grey_dark;
+                                    font-family: "Exo 2";
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    letter-spacing: 0.36px;
+                                    text-transform: uppercase;
+                                    width: 22%;
+                                    text-align: center;
+
+                                    &:first-child {
+                                        width: 34%;
+                                    }
+
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+                                }
+
+                            }
+
+                            .bottom_items {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 20px;
+                                position: relative;
+                                padding-bottom: 20px;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 1px;
+                                    background: $Color_white_grey;
+                                }
+
+                                .item {
+                                    width: 22%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+
+
+                                    span {
+
+                                        width: 10px;
+                                        height: 10px;
+                                        background: $Color_white_medium;
+                                        border-radius: 100px;
+                                    }
+
+                                    &:first-child {
+                                        width: 34%;
+                                    }
+                                }
+
+                                .item_active {
+                                    span {
+                                        background: $Color_orange;
+                                    }
+                                }
+
+
+
+                            }
+                            &:last-child {
+                                .bottom_items {
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+
+@media (min-width: 960px) {
+    .rates_main {
+        padding: 160px 0 0;
+
+        .container {
+            .tablet-desktop {
+                .rates_main-bottom {
+                    .rates_main-block {
+                        li {
+                            width: 25%;
+
+                            &:first-child {
+                                width: 25%;
+                            }
+                        }
+                    }
+
+                    .bottom_elements {
+                        margin-top: 40px;
+
+                        .bottom_block {
+
+                            .items {
+                                margin-top: 25px;
+
+                                .item {
+                                    width: 25%;
+
+                                    &:first-child {
+                                        width: 25%;
+                                    }
+                                }
+
+                            }
+
+                            .bottom_items {
+                                margin-top: 25px;
+
+                                .item {
+                                    width: 25%;
+
+                                    &:first-child {
+                                        width: 25%;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
