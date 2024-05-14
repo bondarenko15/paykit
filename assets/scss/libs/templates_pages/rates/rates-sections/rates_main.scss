@@ -25,6 +25,132 @@
             }
         }
 
+        .mobile {
+            margin-top: 40px;
+            .swiper-slide {
+                padding: 15px 13px;
+                border-radius: 30px;
+                border: 3px solid $Color_orange;
+                background: $Color_grey_light;
+                height: auto;
+                width: 100%;
+                margin-bottom: 30px;
+                &_head {
+                    
+                    h4 {
+                        color: $Text_black;
+                        font-family: "Exo 2";
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 124%;
+                        letter-spacing: 0.24px;
+                    }
+
+                    span {
+                        color: $Color_orange;
+                        font-family: "Exo 2";
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 145%;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &_flex {
+                    .flex_header-title {
+                        margin: 25px 0 15px;
+                        color: $Text_grey_dark;
+                        font-family: "Exo 2";
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 145%;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+
+                    .flex_header {
+                        li {
+                            position: relative;
+                            padding-left: 22px;
+                            margin-bottom: 12px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 10px;
+                                left: 0;
+                                background: url('../img/strip.svg') center center/cover no-repeat;
+                                width: 10px;
+                                height: 2px;
+                            }
+
+                            span {
+                                color: $Text_grey_dark;
+                                font-family: Montserrat;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 140%;
+                                letter-spacing: 0.32px;
+                                display: block;
+                                margin-bottom: 5px;
+                            }
+
+                            p {
+                                color: $Text_grey_dark;
+                                font-family: "Exo 2";
+                                font-size: 14px;
+                                font-weight: 400;
+                                letter-spacing: 0.42px;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+
+                    .flex_bottom {
+
+
+                        li {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            margin-bottom: 12px;
+
+                            img {
+                                display: block;
+                                margin-right: 8px;
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            .active {
+                                color: $Text_grey_dark;
+                                font-family: Montserrat;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 140%;
+                                letter-spacing: 0.32px;
+                            }
+
+                            .no-active {
+                                color: $Color_grey_dark;
+                            }
+                        }
+                    }
+                }
+
+                &_img {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+
         .tablet-desktop {
             display: none;
         }
@@ -51,6 +177,10 @@
                 .rates_main-block {
                     display: none;
                 }
+            }
+
+            .mobile {
+                display: none;
             }
 
             .tablet-desktop {
@@ -92,10 +222,10 @@
                                 color: $Color_orange;
                                 text-align: center;
                                 font-family: Montserrat;
-                                font-size: 16px;
+                                font-size: 18px;
                                 font-weight: 400;
                                 line-height: 140%;
-                                letter-spacing: 0.32px;
+                                letter-spacing: 0.36px;
                             }
 
                             p {
@@ -132,7 +262,7 @@
                             p {
                                 color: $Text_grey_dark;
                                 font-family: Montserrat;
-                                font-size: 14px;
+                                font-size: 16px;
                                 font-weight: 400;
                                 letter-spacing: 0.42px;
                                 display: block;
@@ -172,7 +302,7 @@
                                     display: block;
                                     color: $Text_grey_dark;
                                     font-family: "Exo 2";
-                                    font-size: 12px;
+                                    font-size: 14px;
                                     font-weight: 400;
                                     letter-spacing: 0.36px;
                                     text-transform: uppercase;
@@ -197,6 +327,7 @@
                                 margin-top: 20px;
                                 position: relative;
                                 padding-bottom: 20px;
+
                                 &::after {
                                     content: '';
                                     position: absolute;
@@ -237,6 +368,7 @@
 
 
                             }
+
                             &:last-child {
                                 .bottom_items {
                                     &::after {
@@ -303,6 +435,184 @@
                             }
 
                         }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .rates_main {
+        padding: 200px 0 150px;
+
+        .container {
+            .rates_main-head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .rates_main-title {
+                    width: 35%;
+
+                    p {
+                        font-size: 20px;
+                        letter-spacing: 0.2px;
+                        padding: 0 0 50px;
+                        width: 560px;
+                    }
+                }
+
+                .rates_main-block {
+                    display: flex;
+                    border-radius: 40px 40px 0px 0px;
+                    background: $Color_grey_light;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    padding: 30px 30px 50px;
+                    margin-bottom: -10px;
+                    width: 65%;
+
+                    li {
+                        display: block;
+                        width: 25%;
+
+                        .block-title {
+                            display: block;
+                            color: $Text_black;
+                            text-align: center;
+                            font-family: "Exo 2";
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 145%;
+                            letter-spacing: 1.4px;
+                            text-transform: uppercase;
+                        }
+
+                        .block_price {
+                            display: block;
+                            margin-top: 10px;
+                            color: $Color_orange;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 136%;
+                            letter-spacing: 0.2px;
+                        }
+
+                        p {
+                            display: block;
+                            margin: 20px auto 0;
+                            color: $Text_grey_dark;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 140%;
+                            letter-spacing: 0.32px;
+                            width: 240px;
+                        }
+                    }
+                }
+            }
+
+            .tablet-desktop {
+                .rates_main-bottom {
+                    padding: 50px 30px;
+                    margin: 0;
+                    border-radius: 40px 0px 40px 40px;
+
+                    .rates_main-block {
+                        display: none;
+                    }
+
+                    .bottom_elements {
+                        margin-top: 40px;
+
+                        .elements_title {
+                            font-size: 28px;
+                            letter-spacing: 1.4px;
+                        }
+
+                        .bottom_block {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 1px;
+                                background: $Color_white_grey;
+                            }
+
+                            p {
+                                width: 35%;
+                                font-size: 20px;
+                                letter-spacing: 0.2px;
+                                padding-left: 15px;
+                            }
+
+                            .items {
+                                margin-top: 25px;
+                                width: 65%;
+
+                                &::after {
+                                    display: none;
+                                }
+
+                                .item {
+                                    width: 25%;
+                                    font-size: 20px;
+                                    letter-spacing: 0.2px;
+                                    padding: 20px 0;
+                                    margin: 0;
+
+                                    &:first-child {
+                                        width: 25%;
+                                    }
+                                }
+
+                            }
+
+                            .bottom_items {
+                                margin-top: 25px;
+                                width: 65%;
+
+                                &::after {
+                                    display: none;
+                                }
+
+                                .item {
+                                    width: 25%;
+                                    padding: 20px 0;
+                                    margin: 0;
+
+                                    &:first-child {
+                                        width: 25%;
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                &::after {
+                                    display: none;
+                                }
+
+                            }
+
+
+                        }
+
+
                     }
                 }
 
