@@ -311,10 +311,8 @@
                 }
 
                 .contacts_main-flex {
-                    display: flex;
-                    justify-content: space-between;
                     align-items: stretch;
-                    margin-top: 40px;
+                    margin-top: 60px;
 
                     .contacts_main__links {
                         margin-top: 0;
@@ -351,6 +349,31 @@
 
                     iframe {
                         height: 281px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1880px) {
+    .contacts_main {
+        padding: 200px 0 0;
+
+        .container {
+            .wrapper {
+
+
+                
+
+                .contacts_main-flex {
+                    align-items: flex-start;
+                    
+                    iframe {
+                        height: 450px;
                     }
                 }
             }

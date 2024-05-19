@@ -148,7 +148,7 @@ if (formModal) {
 }
 
 const modalEquipment = document.querySelector('.form_equipment') || null;
-if (formModal) {
+if (modalEquipment) {
   var selectorEquipment = document.getElementById("phone_number_modal-equipment");
   var imEquipment = new Inputmask("+38 (999)9999999");
   imEquipment.mask(selectorEquipment);
@@ -437,22 +437,28 @@ if (inputSearch) {
 
 
 
-const filterBtn = document.querySelector('.btn_sidebar');
+const filterBtn = document.querySelector('.btn_sidebar') || null;
 const filterMenu = document.querySelector('.sidebar_items');
-filterBtn.addEventListener('click', ()=> {  
-  filterMenu.classList.toggle('active')
-})
-
-
-const clearCheckbox = document.querySelector('.clear');
-const inputCheckBox = document.querySelectorAll('.checkbox')
-clearCheckbox.addEventListener('click', ()=> {
-  inputCheckBox.forEach((item) => {
-    if (item.type=='checkbox') {
-      item.checked = false;
-  }
+if (filterBtn) {
+  filterBtn.addEventListener('click', () => {
+    filterMenu.classList.toggle('active')
   })
-})
+}
+
+
+
+const clearCheckbox = document.querySelector('.clear') || null;
+const inputCheckBox = document.querySelectorAll('.checkbox');
+if (clearCheckbox) {
+  clearCheckbox.addEventListener('click', () => {
+    inputCheckBox.forEach((item) => {
+      if (item.type == 'checkbox') {
+        item.checked = false;
+      }
+    })
+  })
+}
+
 
 
 
