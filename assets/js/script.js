@@ -28,7 +28,7 @@ if (swiperTabs) {
     spaceBetween: 30,
     breakpoints: {
       648: {
-        
+
         spaceBetween: 0,
       }
     }
@@ -67,7 +67,7 @@ if (swiperProduct) {
     breakpoints: {
       648: {
         slidesPerView: 'auto'
-      }, 
+      },
       1880: {
         slidesPerView: 'auto',
         spaceBetween: 0
@@ -147,6 +147,13 @@ if (formModal) {
   imModal.mask(selectorModal);
 }
 
+const modalEquipment = document.querySelector('.form_equipment') || null;
+if (formModal) {
+  var selectorEquipment = document.getElementById("phone_number_modal-equipment");
+  var imEquipment = new Inputmask("+38 (999)9999999");
+  imEquipment.mask(selectorEquipment);
+}
+
 
 
 
@@ -183,6 +190,8 @@ btnPopUp.forEach((btn) => {
   })
 })
 
+
+
 const btnMore = document.querySelectorAll('.btn_more');
 const popUpMore = document.querySelector('.modal_more');
 const wrapperMore = document.querySelector('.modal_more .wrapper');
@@ -211,10 +220,36 @@ btnMore.forEach((btn) => {
 })
 
 
+const btnEquipment = document.querySelectorAll('.btn-card_equipment');
+const popUpEquipment = document.querySelector('.equipment_modal');
+const wrapperEquipment = document.querySelector('.modal_more .wrapper');
+
+btnEquipment.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popUpEquipment.classList.add('equipment_modal-active');
+
+    popUpForm.classList.contains('is_hide') ? popUpForm.classList.remove('is_hide') : null;
+
+
+    closePopUp.addEventListener('click', () => {
+      popUpEquipment.classList.remove('equipment_modal-active');
+      popUpForm.classList.add('is_hide');
+      modalThanks.classList.remove('is_show');
+    })
+    wrapperMore.addEventListener('click', (evt) => {
+      if (evt.currentTarget === evt.target) {
+        wrapperEquipment.classList.remove('equipment_modal-active');
+      }
+    });
+    btnClose.addEventListener('click', () => {
+      popUpEquipment.classList.remove('equipment_modal-active');
+    })
+  })
+})
+
 
 // blog
 
-const blog = document.querySelector('.blog_main-items');
 const blogItem = document.querySelectorAll('.blog_main-items__item');
 let newArray = Array.from(blogItem);
 var deleteItem = newArray;
@@ -232,6 +267,29 @@ if (window.innerWidth < 767) {
 }
 else if (window.innerWidth < 1880) {
   deleteItems(0, 6)
+}
+
+
+
+//equipment
+
+const items = document.querySelectorAll('.equipment_item');
+let array = Array.from(items);
+var deleteItems = array;
+function deleteItems1(i, j) {
+  deleteItems.splice(i, j)
+  deleteItems.forEach((item) => {
+    item.style.display = 'none'
+  });
+}
+if (window.innerWidth < 767) {
+  deleteItems1(0, 3)
+
+} else if (window.innerWidth < 1365) {
+  deleteItems1(0, 6)
+}
+else if (window.innerWidth <= 5000) {
+  deleteItems1(0, 9)
 }
 
 
@@ -275,9 +333,9 @@ accordionBtn.forEach((item) => {
         subitem.classList.remove('tabs_item-active');
       })
       item.classList.add('tabs_item-active');
-      
+
     }
-    
+
   })
 })
 
@@ -291,13 +349,13 @@ accordionBase.forEach((item) => {
         subitem.classList.remove('item-active');
       })
       item.classList.add('item-active');
-      
+
     }
   })
 })
 
 
-/* // cardModelBtn 
+// cardModelBtn 
 const modelBtn = document.querySelectorAll('.model_item');
 modelBtn.forEach((item) => {
   item.addEventListener('click', () => {
@@ -306,7 +364,7 @@ modelBtn.forEach((item) => {
     })
     item.classList.add('model_item-active')
   })
-}) */
+})
 
 
 //counter 
@@ -368,7 +426,7 @@ const inputSearch = document.querySelector('.search form input') || null;
 const searchForm = document.querySelector('.search');
 
 if (inputSearch) {
-  inputSearch.addEventListener('input', function() {
+  inputSearch.addEventListener('input', function () {
     if (this.value.length >= 3) {
       searchForm.classList.add('search-active');
     } else {
@@ -376,4 +434,28 @@ if (inputSearch) {
     }
   });
 }
+
+
+
+const filterBtn = document.querySelector('.btn_sidebar');
+const filterMenu = document.querySelector('.sidebar_items');
+filterBtn.addEventListener('click', ()=> {  
+  filterMenu.classList.toggle('active')
+})
+
+
+const clearCheckbox = document.querySelector('.clear');
+const inputCheckBox = document.querySelectorAll('.checkbox')
+clearCheckbox.addEventListener('click', ()=> {
+  inputCheckBox.forEach((item) => {
+    if (item.type=='checkbox') {
+      item.checked = false;
+  }
+  })
+})
+
+
+
+
+
 

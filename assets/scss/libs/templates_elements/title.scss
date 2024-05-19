@@ -3,7 +3,7 @@
     text-align: center;
     font-family: "Exo 2";
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 118%;
     letter-spacing: 0.78px;
 
@@ -194,6 +194,14 @@
         letter-spacing: 1.12px;
         text-align: left;
     }
+
+    &-equipment {
+        text-align: left;
+        font-weight: 600;
+    }
+    &_equipment-modal {
+        text-align: left;
+    }
 }
 
 @media (min-width: 648px) {
@@ -287,237 +295,241 @@
             font-size: 38px;
             letter-spacing: 1.14px;
         }
+
+        &_equipment-modal {
+            color: $Text_black;
+            }
+        }
     }
-}
 
-@media (min-width: 960px) {
-    .title {
-        font-size: 48px;
-        letter-spacing: 1.44px;
-
-        &-order_demo {
-            width: 595px;
-        }
-
-        &_blog {
-            font-size: 52px;
-            letter-spacing: 2.08px;
-
-        }
-
-        &_order_banner {
+    @media (min-width: 960px) {
+        .title {
             font-size: 48px;
             letter-spacing: 1.44px;
-            width: 559px;
-            width: 604px;
-        }
 
-        &_contacts {
-            font-size: 52px;
-            letter-spacing: 2.08px;
+            &-order_demo {
+                width: 595px;
+            }
 
-        }
+            &_blog {
+                font-size: 52px;
+                letter-spacing: 2.08px;
 
-        &_news {
-            font-size: 52px;
-            letter-spacing: 2.08px;
-        }
+            }
 
-        &_404 {
-            font-size: 52px;
-            letter-spacing: 2.08px;
-        }
+            &_order_banner {
+                font-size: 48px;
+                letter-spacing: 1.44px;
+                width: 559px;
+                width: 604px;
+            }
 
-        &_article {
-            font-size: 52px;
-            letter-spacing: 2.08px;
-        }
+            &_contacts {
+                font-size: 52px;
+                letter-spacing: 2.08px;
 
-        &_product {
-            width: 589px;
-            font-size: 52px;
-            letter-spacing: 2.08px;
-        }
+            }
 
-        &-product_banner {
-            width: 559px;
-        }
+            &_news {
+                font-size: 52px;
+                letter-spacing: 2.08px;
+            }
 
-        &-product_advantages {
-            width: 100%;
-        }
+            &_404 {
+                font-size: 52px;
+                letter-spacing: 2.08px;
+            }
 
-        &-card_product {
-            font-size: 44px;
+            &_article {
+                font-size: 52px;
+                letter-spacing: 2.08px;
+            }
 
-        }
+            &_product {
+                width: 589px;
+                font-size: 52px;
+                letter-spacing: 2.08px;
+            }
 
-        &-card_product-banner {
-            width: 560px;
-        }
+            &-product_banner {
+                width: 559px;
+            }
 
-        &-ready_solutions-banner {
-            width: 676px;
-            font-size: 38px;
-            letter-spacing: 1.14px;
-        }
+            &-product_advantages {
+                width: 100%;
+            }
 
-        &-ready_solutions-time {
-            font-size: 38px;
-            letter-spacing: 1.14px;
-        }
+            &-card_product {
+                font-size: 44px;
 
-        &-ready_solutions-control {
-            font-size: 38px;
-            letter-spacing: 1.14px;
-        }
+            }
 
-        &-ready_solutions-panel {
-            font-size: 38px;
-            letter-spacing: 1.14px;
+            &-card_product-banner {
+                width: 560px;
+            }
+
+            &-ready_solutions-banner {
+                width: 676px;
+                font-size: 38px;
+                letter-spacing: 1.14px;
+            }
+
+            &-ready_solutions-time {
+                font-size: 38px;
+                letter-spacing: 1.14px;
+            }
+
+            &-ready_solutions-control {
+                font-size: 38px;
+                letter-spacing: 1.14px;
+            }
+
+            &-ready_solutions-panel {
+                font-size: 38px;
+                letter-spacing: 1.14px;
+            }
         }
     }
-}
 
 
-@media (min-width: 1366px) {
-    .title {
-        font-size: 52px;
-        letter-spacing: 1.44px;
+    @media (min-width: 1366px) {
+        .title {
+            font-size: 52px;
+            letter-spacing: 1.44px;
 
-        &-order_demo {
-            width: 645px;
+            &-order_demo {
+                width: 645px;
+            }
+
+            &_advantages {
+                width: 1000px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            &_order_banner {
+                width: 604px;
+            }
+
+            &-product_banner {
+                width: 625px;
+            }
+
+            &-card_product {
+                margin: 10px 0 40px;
+                font-size: 44px;
+            }
+
+            &-card_product-banner {
+                width: 730px;
+            }
+
+            &-ready_solutions-banner {
+                width: 866px;
+            }
+
+            &-ready_solutions-time {
+                width: 1200px;
+                margin: 60px auto 0;
+
+            }
+
+            &-ready_solutions-panel {
+                margin: 0;
+                font-size: 44px;
+                letter-spacing: 0.44px;
+            }
+
         }
-
-        &_advantages {
-            width: 1000px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        &_order_banner {
-            width: 604px;
-        }
-
-        &-product_banner {
-            width: 625px;
-        }
-
-        &-card_product {
-            margin: 10px 0 40px;
-            font-size: 44px;
-        }
-
-        &-card_product-banner {
-            width: 730px;
-        }
-
-        &-ready_solutions-banner {
-            width: 866px;
-        }
-
-        &-ready_solutions-time {
-            width: 1200px;
-            margin: 60px auto 0;
-
-        }
-
-        &-ready_solutions-panel {
-            margin: 0;
-            font-size: 44px;
-            letter-spacing: 0.44px;
-        }
-
     }
-}
 
-@media (min-width: 1880px) {
-    .title {
-        font-size: 58px;
-        letter-spacing: 1.74px;
-
-        &-order_demo {
-            width: 730px;
-        }
-
-        &_advantages {
-            width: 1430px;
-        }
-
-        &_footer {
-            margin-top: 80px;
-        }
-
-        &_blog {
-            font-size: 62px;
-            letter-spacing: 2.48px;
-        }
-
-        &_order_banner {
-            width: 745px;
+    @media (min-width: 1880px) {
+        .title {
             font-size: 58px;
             letter-spacing: 1.74px;
+
+            &-order_demo {
+                width: 730px;
+            }
+
+            &_advantages {
+                width: 1430px;
+            }
+
+            &_footer {
+                margin-top: 80px;
+            }
+
+            &_blog {
+                font-size: 62px;
+                letter-spacing: 2.48px;
+            }
+
+            &_order_banner {
+                width: 745px;
+                font-size: 58px;
+                letter-spacing: 1.74px;
+            }
+
+            &_contacts {
+                font-size: 62px;
+                letter-spacing: 2.48px;
+            }
+
+            &_news {
+                font-size: 62px;
+                letter-spacing: 2.48px;
+                width: 75%;
+            }
+
+            &_404 {
+                margin: 0 0 20px;
+                font-size: 62px;
+                letter-spacing: 2.48px;
+            }
+
+            &_article {
+                font-size: 62px;
+                letter-spacing: 2.48px;
+            }
+
+            &_product {
+                width: 725px;
+                font-size: 62px;
+                letter-spacing: 2.48px;
+            }
+
+            &-product_banner {
+                width: 745px;
+            }
+
+            &-card_product {
+                font-size: 44px;
+            }
+
+            &-card_product-banner {
+                width: 924px;
+                font-size: 44px;
+                letter-spacing: 0.44px;
+            }
+
+            &-ready_solutions-banner {
+                width: 924px;
+                font-size: 44px;
+                letter-spacing: 0.44px;
+            }
+
+            &-ready_solutions-time {
+                font-size: 44px;
+                letter-spacing: 0.44px;
+            }
+
+            &-ready_solutions-control {
+                margin: 0;
+                font-size: 44px;
+                letter-spacing: 0.44px;
+            }
+
+
         }
-
-        &_contacts {
-            font-size: 62px;
-            letter-spacing: 2.48px;
-        }
-
-        &_news {
-            font-size: 62px;
-            letter-spacing: 2.48px;
-            width: 75%;
-        }
-
-        &_404 {
-            margin: 0 0 20px;
-            font-size: 62px;
-            letter-spacing: 2.48px;
-        }
-
-        &_article {
-            font-size: 62px;
-            letter-spacing: 2.48px;
-        }
-
-        &_product {
-            width: 725px;
-            font-size: 62px;
-            letter-spacing: 2.48px;
-        }
-
-        &-product_banner {
-            width: 745px;
-        }
-
-        &-card_product {
-            font-size: 44px;
-        }
-
-        &-card_product-banner {
-            width: 924px;
-            font-size: 44px;
-            letter-spacing: 0.44px;
-        }
-
-        &-ready_solutions-banner {
-            width: 924px;
-            font-size: 44px;
-            letter-spacing: 0.44px;
-        }
-
-        &-ready_solutions-time {
-            font-size: 44px;
-            letter-spacing: 0.44px;
-        }
-
-        &-ready_solutions-control {
-            margin: 0;
-            font-size: 44px;
-            letter-spacing: 0.44px;
-        }
-
-
     }
-}
