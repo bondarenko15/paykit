@@ -8,21 +8,23 @@
     transition: .3s ease all;
     filter: drop-shadow(-2px 7px 10px rgba(0, 0, 0, 0.25));
     visibility: hidden;
+    overflow: hidden;
+    height: 100vh;
 
     &::before {
         content: '';
         position: absolute;
         background: $Color_white_medium;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         border-radius: 30px 0 0 30px;
         z-index: -2;
     }
 
     .wrapper {
         padding: 0 30px 30px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .menu_overlay-head {
             display: flex;
@@ -81,7 +83,7 @@
                     font-weight: 400;
                     line-height: 140%;
                     letter-spacing: 0.42px;
-                    width: 218px;
+                    width: 211px;
                     height: 44px;
                     position: relative;
                     border: none;
@@ -90,7 +92,7 @@
                         content: '';
                         position: absolute;
                         top: 16px;
-                        left: 35px;
+                        left: 30px;
                         background: url('../img/user.svg') center center/cover no-repeat;
                         width: 12px;
                         height: 12px;
@@ -190,19 +192,23 @@
         }
 
         nav {
-            width: 325px;
+            width: 100%;
 
             .menu_overlay-navigation {
                 display: flex;
                 flex-direction: column;
                 padding: 0 0 0 12px;
                 margin-top: 50px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                height: 365px;
 
                 li {
                     text-align: left;
                     margin-bottom: 20px;
 
-                    a {
+                    a,
+                    span {
                         color: $Text_black;
                         font-family: "Exo 2";
                         font-size: 20px;
@@ -210,112 +216,85 @@
                         line-height: 145%;
                         letter-spacing: 1px;
                         text-transform: uppercase;
+                        cursor: pointer;
                     }
 
-                    .solutions {
-                        display: block;
+                    display: block;
 
-                        .tabs {
-                            display: none;
+                    .tabs {
+                        padding-right: 20px;
 
-                            li {
-                                margin-top: 20px;
-                                margin-bottom: 0;
-                                position: relative;
+                        li {
+                            margin-top: 5px;
+                            margin-bottom: 0;
+
+                            color: $Text_black;
+                            font-family: "Exo 2";
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 145%;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            overflow: hidden;
+
+
+                            span {
                                 color: $Text_black;
                                 font-family: "Exo 2";
-                                font-size: 20px;
+                                font-size: 16px;
                                 font-weight: 400;
                                 line-height: 145%;
                                 letter-spacing: 1px;
                                 text-transform: uppercase;
+                                position: relative;
 
                                 &::after {
                                     content: '';
                                     position: absolute;
-                                    top: 10px;
-                                    right: 20%;
+                                    top: 50%;
+                                    right: -20px;
                                     background: url('../img/chevron_grey.svg') center center/cover no-repeat;
                                     width: 12px;
                                     height: 12px;
-                                    transform: rotate(90deg);
+                                    transform: translateY(-50%) rotate(90deg);
                                 }
+                            }
 
-                                .item_list {
-                                    display: none;
+                            .item_list {
+                                height: 0;
 
-                                    li {
-                                        &::after {
-                                            display: none;
-                                        }
+                                li {
+                                    &::after {
+                                        display: none;
+                                    }
 
-                                        a {
-                                            font-family: "Exo 2";
-                                            font-size: 14px;
-                                            font-weight: 400;
-                                            line-height: 140%;
-                                            letter-spacing: 0.42px;
-
-                                        }
+                                    a {
+                                        font-family: "Exo 2";
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        line-height: 140%;
+                                        letter-spacing: 0.42px;
+                                        z-index: 50;
+                                        position: relative;
                                     }
                                 }
-
-                                ._active {
-                                    display: block;
+                            }
+                            .menu_btn-active {
+                                &::after {
+                                    transform: translateY(-50%) rotate(-90deg);
                                 }
                             }
-
-
-                        }
-
-                        ._active {
-                            display: block;
-                        }
-                    }
-                }
-            }
-
-            .tabs-flex {
-                display: none;
-
-                li {
-                    text-align: left;
-                    margin-bottom: 20px;
-
-                    a {
-                        color: $Text_black;
-                        font-family: "Exo 2";
-                        font-size: 20px;
-                        font-weight: 400;
-                        line-height: 145%;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                    }
-
-                    .item_list {
-                        display: none;
-
-                        li {
-                            &::after {
-                                display: none;
-                            }
-
-                            a {
-                                font-family: "Exo 2";
-                                font-size: 14px;
-                                font-weight: 400;
-                                line-height: 140%;
-                                letter-spacing: 0.42px;
-
+                            .active {
+                                height: auto;
                             }
                         }
-                    }
 
-                    ._active {
-                        display: block;
-                    }
+                        
 
+
+                    }
                 }
+
             }
         }
 
@@ -362,13 +341,10 @@
 }
 
 .menu_overlay-active {
-    top: 10px;
+    top: 0;
     left: 10px;
     right: 0;
     position: fixed;
-    overflow: auto;
-    height: 100%;
-    bottom: 0;
     visibility: visible;
 }
 
@@ -401,11 +377,13 @@
                 padding: 6px 0px 0;
                 justify-content: space-between;
                 align-items: flex-start;
-                flex-direction: column;
+                flex-direction: row;
+                height: 82px;
 
                 .flex-box {
                     justify-content: flex-start;
                     width: 50%;
+                    height: auto;
 
                     .menu_overlay-user {
                         width: 181px;
@@ -415,15 +393,13 @@
                             left: 17px;
                         }
                     }
-
-                    .menu_overlay-lang {}
                 }
 
                 .menu_overlay-questions {
                     font-size: 16px;
                     line-height: 118%;
                     letter-spacing: 0.48px;
-                    margin: 0;
+                    margin: 10px 0 0;
 
                     &::before {
                         width: 17px;
@@ -435,20 +411,40 @@
             }
 
             nav {
+
                 .menu_overlay-navigation {
                     margin-top: 60px;
                     padding: 0;
+                    position: relative;
+                    width: 100%;
+                    overflow: visible;
 
                     li {
                         margin-bottom: 25px;
+                        position: static;
 
-                        a {
+                        a,
+                        span {
                             font-size: 26px;
                             letter-spacing: 1.3px;
                         }
 
                         .tabs {
-                            display: none;
+                            height: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            overflow-x: hidden;
+                            overflow-y: scroll;
+
+                            li {
+                                margin: 0 0 10px;
+                            }
+                        }
+
+                        .active {
+
+                            height: 400px;
                         }
                     }
                 }
@@ -492,10 +488,7 @@
     }
 
     .menu_overlay-active {
-        top: 20px;
         left: 10px;
-
-        &::before {}
 
         .wrapper {
             .menu_overlay-head {
@@ -576,11 +569,70 @@
             nav {
                 .menu_overlay-navigation {
                     li {
+                        .tabs {
+                            li {
+                                margin-bottom: 15px;
+
+                                span {
+                                    font-size: 22px;
+                                }
+
+                                .item_list {
+                                    li {
+                                        margin-bottom: 10px;
+
+                                        a {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                        .active {
+                            height: 430px;
+                        }
+
                         &:hover {
-                            a {
+
+                            a,
+                            span {
                                 color: $Color_orange;
                             }
+
+                            .tabs {
+                                li {
+                                    span {
+                                        color: $Text_black;
+
+                                        &:hover {
+                                            color: $Color_orange;
+
+                                            &::after {
+                                                background: url('../img/chevron-hover.svg') center center/cover no-repeat;
+                                            }
+                                        }
+                                    }
+
+                                    .item_list {
+                                        li {
+                                            a {
+                                                color: $Text_black;
+
+                                                &:hover {
+                                                    color: $Color_orange;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+
                         }
+
                     }
                 }
             }

@@ -83,15 +83,19 @@ if (swiperProduct) {
 const mobileNav = document.querySelector('.menu_overlay');
 const mobileMenuActive = document.querySelector('.header_menu');
 const closeBtn = document.querySelector('.menu_overlay-close');
-const body = document.querySelector('body')
+const btnMenu = document.querySelector('.btn_nav');
+const orderMenu = document.querySelector('.menu_overlay-navigation .tabs');
 mobileMenuActive.addEventListener('click', () => {
   mobileNav.classList.add('menu_overlay-active');
   closeBtn.addEventListener('click', () => {
     mobileNav.classList.remove('menu_overlay-active');
+    orderMenu.classList.remove('active');
   });
-
 });
-
+btnMenu.addEventListener('click', () => {
+  console.log('hello')
+  orderMenu.classList.toggle('active');
+})
 
 
 //header fixed
@@ -406,7 +410,6 @@ if (counters) {
 const tabsButtons = document.querySelectorAll('.tabs_button');
 tabsButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log(btn)
     const prevActiveItem = document.querySelector('.tabs_block-active');
     const prevActiveButton = document.querySelector('.swiper-slide_active');
     if (prevActiveButton) {
@@ -461,7 +464,24 @@ if (clearCheckbox) {
 
 
 
+const menuMobileBtn = document.querySelectorAll('.menu_btn');
 
+menuMobileBtn.forEach((item) => {
+  const sibling = item.nextElementSibling;
+  item.addEventListener('click', () => {
+    if (item.classList.contains('menu_btn-active')) {
+      item.classList.remove('menu_btn-active');
+      sibling.classList.remove('active');
+    } else {
+      menuMobileBtn.forEach((subitem) => {
+        subitem.classList.remove('menu_btn-active');
+        sibling.classList.remove('active');
 
+      })
+      item.classList.add('menu_btn-active');
+      sibling.classList.add('active');
+    }
+  })
+})
 
 
