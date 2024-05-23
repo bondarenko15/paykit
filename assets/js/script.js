@@ -40,6 +40,7 @@ const swiperOffers = document.querySelector('.slider_offers') || null;
 if (swiperOffers) {
   const slider = new Swiper('.slider_offers', {
     slidesPerView: 1,
+    spaceBetween: 20,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
