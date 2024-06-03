@@ -28,6 +28,51 @@
         .wrapper {
             margin-top: 20px;
 
+            .slider {
+                .swiper {
+                    width: 100%;
+                    height: 300px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            background-size: cover;
+                            background-position: center;
+                        }
+                    }
+                }
+
+                .mySwiper {
+                    height: 20%;
+                    box-sizing: border-box;
+                    padding: 10px 0;
+
+                    .swiper-slide {
+                        width: 25%;
+                        height: 100%;
+                        opacity: 0.4;
+
+                        img {
+                            border-radius: 5px;
+                        }
+                    }
+
+                    .swiper-slide-thumb-active {
+                        opacity: 1;
+                    }
+                }
+
+                .mySwiper2 {
+                    height: 80%;
+                    width: 100%;
+
+                    img {
+                        border-radius: 10px;
+                    }
+                }
+            }
+
             .card_product-text {
                 margin-top: 30px;
 
@@ -365,6 +410,16 @@
             }
 
             .wrapper {
+                .slider {
+                    .mySwiper2 {
+                        img {
+                            border-radius: 10px;
+                            max-height: 500px;
+                            width: 100%;
+                        }
+                    }
+                }
+
                 .card_product-text {
                     p {
                         font-size: 18px;
@@ -515,7 +570,7 @@
 
                             &:active {
                                 background: $Color_orange;
-                                
+
                             }
                         }
 
@@ -559,6 +614,15 @@
             .wrapper {
                 .slider {
                     width: 45%;
+                    .mySwiper2 {
+                        .swiper-wrapper {
+                            img {
+                                border-radius: 10px;
+                                max-height: 530px;
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
 
                 .card_product-text {

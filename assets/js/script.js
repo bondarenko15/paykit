@@ -77,6 +77,30 @@ if (swiperProduct) {
   });
 }
 
+const mySwiper = document.querySelector('.mySwiper') || null;
+if (mySwiper) {
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+}
+const mySwiper2 = document.querySelector('.mySwiper2') || null;
+if (mySwiper2) {
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});
+}
+
+
 
 // menuOverlay
 
@@ -225,7 +249,7 @@ btnMore.forEach((btn) => {
 })
 
 
-const btnEquipment = document.querySelectorAll('.btn-card_equipment');
+const btnEquipment = document.querySelectorAll('.modalEquipment');
 const popUpEquipment = document.querySelector('.equipment_modal');
 const wrapperEquipment = document.querySelector('.modal_more .wrapper');
 

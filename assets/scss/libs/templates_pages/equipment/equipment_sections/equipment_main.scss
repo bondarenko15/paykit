@@ -40,7 +40,6 @@
                         font-weight: 400;
                         line-height: 140%;
                         letter-spacing: 0.42px;
-                        cursor: pointer;
                     }
 
                     button {
@@ -248,7 +247,7 @@
 
                             img {
                                 width: 100%;
-                                height: 100%;
+                                max-height: 327px;
                             }
 
                             .status {
@@ -266,7 +265,15 @@
                                     width: 12px;
                                     height: 12px;
                                 }
-
+                                .new_arrival {
+                                    fill: #A8DA64;
+                                }
+                                .sales {
+                                    fill: #F41A1A;
+                                }
+                                .bestseler {
+                                    fill: #F4991A;
+                                }
                                 p {
                                     display: block;
                                     margin-left: 5px;
@@ -442,7 +449,7 @@
                 .equipment_content {
                     .content_wrapper {
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: flex-start;
                         align-items: flex-start;
                         flex-wrap: wrap;
                         margin-top: 40px;
@@ -450,8 +457,10 @@
                         .equipment_item {
                             margin: 0;
                             width: 322px;
-                            margin-bottom: 40px;
-
+                            margin: 0 24px 40px 0;
+                            &:nth-child(2n) {
+                                margin: 0 0 40px 0;
+                            }
                             .block_text {
                                 .name {
                                     font-size: 18px;
@@ -541,6 +550,7 @@
 
                         .equipment_item {
                             width: 275px;
+                            margin: 0 32px 40px 0;
                         }
                     }
                 }
@@ -585,6 +595,17 @@
 
                 .equipment_content {
                     width: 69%;
+                    .content_wrapper {
+                        .equipment_item {
+                            margin: 0 15px 60px 0;
+                            &:nth-child(2n) {
+                                margin: 0 15px 60px 0;
+                            }
+                            &:nth-child(3n) {
+                                margin: 0 0 40px 0;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -677,6 +698,31 @@
                                 }
 
 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 2400px) {
+    .equipment_main {
+        .container {
+            .equipment_main-bottom {
+                .equipment_content {
+                    .content_wrapper {
+                        .equipment_item {
+                            margin: 0 36px 60px 0;
+                            &:nth-child(2n) {
+                                margin: 0 36px 60px 0;
+                            }
+                            &:nth-child(3n) {
+                                margin: 0 36px 60px 0;
+                            }
+                            &:nth-child(4n) {
+                                margin: 0 0 40px 0;
                             }
                         }
                     }
