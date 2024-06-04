@@ -53,7 +53,8 @@
                         height: 100%;
                         opacity: 0.4;
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: center;
+
                         img {
                             border-radius: 5px;
                             max-height: 250px;
@@ -69,13 +70,20 @@
                 .mySwiper2 {
                     height: 80%;
                     width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    img {
-                        border-radius: 10px;
-                        max-height: 500px;
-                        width: auto;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+
+                            img {
+                                border-radius: 10px;
+                                max-height: 500px;
+                                width: auto;
+                            }
+                        }
                     }
+
                 }
             }
 
@@ -277,6 +285,23 @@
                                 font-weight: 500;
                                 line-height: 124%;
                                 letter-spacing: 0.24px;
+                                display: block;
+                                position: relative;
+                                padding: 0 0 0 20px;
+                                min-width: 78px;
+
+                                &::before {
+                                    content: '₴';
+                                    color: $Text_black;
+                                    font-family: "Exo 2";
+                                    font-size: 24px;
+                                    font-weight: 500;
+                                    line-height: 124%;
+                                    letter-spacing: 0.24px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
                             }
 
                             p {
@@ -466,9 +491,13 @@
                                 span {
                                     font-size: 34px;
                                     letter-spacing: 0.34px;
-                                }
+                                    padding: 0 0 0 25px;
 
-                                p {}
+                                    &:before {
+                                        font-size: 34px;
+                                        letter-spacing: 0.34px;
+                                    }
+                                }
                             }
                         }
 
@@ -533,6 +562,11 @@
                                 span {
                                     font-size: 44px;
                                     letter-spacing: 0.44px;
+                                    padding: 0 0 0 30px;
+                                    &:before {
+                                        font-size: 44px;
+                                        letter-spacing: 0.44px;
+                                    }
                                 }
 
                                 p {
@@ -611,6 +645,7 @@
             .wrapper {
                 .slider {
                     width: 45%;
+
                     .mySwiper2 {
                         .swiper-wrapper {
                             img {

@@ -386,12 +386,14 @@ accordionBase.forEach((item) => {
 
 // cardModelBtn 
 const modelBtn = document.querySelectorAll('.model_item');
+let price = document.querySelector('.card_product-price span')
 modelBtn.forEach((item) => {
   item.addEventListener('click', () => {
     modelBtn.forEach((subitem) => {
       subitem.classList.remove('model_item-active')
     })
-    item.classList.add('model_item-active')
+    item.classList.add('model_item-active');
+    price.innerHTML = item.dataset.price;
   })
 })
 
