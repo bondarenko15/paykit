@@ -183,6 +183,12 @@ if (modalEquipment) {
   imEquipment.mask(selectorEquipment);
 }
 
+const modalShopping = document.querySelector('.modal_shopping') || null;
+if (modalEquipment) {
+  var selectorEquipment = document.getElementById("phone_number_modal-shopping");
+  var imEquipment = new Inputmask("+38 (999)9999999");
+  imEquipment.mask(selectorEquipment);
+}
 
 
 
@@ -218,6 +224,8 @@ btnPopUp.forEach((btn) => {
     })
   })
 })
+
+
 
 
 
@@ -272,6 +280,33 @@ btnEquipment.forEach((btn) => {
     });
     btnClose.addEventListener('click', () => {
       popUpEquipment.classList.remove('equipment_modal-active');
+    })
+  })
+})
+
+
+const btnShopping = document.querySelectorAll('.modalShopping');
+const popUpShopping = document.querySelector('.modal_shopping');
+
+btnShopping.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popUpShopping.classList.add('modal_shopping-active');
+
+    popUpForm.classList.contains('is_hide') ? popUpForm.classList.remove('is_hide') : null;
+
+
+    closePopUp.addEventListener('click', () => {
+      popUpShopping.classList.remove('modal_shopping-active');
+      popUpForm.classList.add('is_hide');
+      modalThanks.classList.remove('is_show');
+    })
+    wrapperMore.addEventListener('click', (evt) => {
+      if (evt.currentTarget === evt.target) {
+        popUpShopping.classList.remove('modal_shopping-active');
+      }
+    });
+    btnClose.addEventListener('click', () => {
+      popUpEquipment.classList.remove('modal_shopping-active');
     })
   })
 })
@@ -386,7 +421,7 @@ accordionBase.forEach((item) => {
 
 // cardModelBtn 
 const modelBtn = document.querySelectorAll('.model_item');
-let price = document.querySelector('.card_product-price span')
+let price = document.querySelector('.card_product-price .price')
 modelBtn.forEach((item) => {
   item.addEventListener('click', () => {
     modelBtn.forEach((subitem) => {

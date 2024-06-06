@@ -278,7 +278,7 @@
                             align-items: flex-end;
                             width: 50%;
 
-                            span {
+                            .price  {
                                 color: $Text_black;
                                 font-family: "Exo 2";
                                 font-size: 24px;
@@ -289,7 +289,7 @@
                                 position: relative;
                                 padding: 0 0 0 20px;
                                 min-width: 78px;
-
+                                
                                 &::before {
                                     content: '₴';
                                     color: $Text_black;
@@ -488,7 +488,7 @@
                             .card_product-price {
                                 width: 100%;
 
-                                span {
+                                .price  {
                                     font-size: 34px;
                                     letter-spacing: 0.34px;
                                     padding: 0 0 0 25px;
@@ -559,7 +559,7 @@
 
                         .card_product-counter {
                             .card_product-price {
-                                span {
+                                .price {
                                     font-size: 44px;
                                     letter-spacing: 0.44px;
                                     padding: 0 0 0 30px;

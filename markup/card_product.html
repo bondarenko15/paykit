@@ -226,6 +226,64 @@
 
 
 
+   <div class="modal_shopping">
+    <div class="wrapper">
+        <form action="" class="form form_equipment form_shopping">
+            <span></span>
+            <h3 class="title title_equipment-modal">Оформити замолення</h3>
+            <p><i>Залиште</i> свої дані для оформлення замовлення і <i>наш менеджер зв’яжеться з вами!</i></p>
+            <div class="product_item">
+                <div class="product_wrapper">
+                    <div class="product">
+                        <img src="img/card_product.png" alt="">
+                        <p class="title">Планшет Samsung Galaxy Tab A9 8.7 LTE 464GB graphite</p>
+                    </div>
+                    <p class="model">Swan 1 Pro (2/64)</p>
+                    <p class="quantity">1</p>
+                    <div class="price">
+                        <span class="item">1 295</span>
+                    </div>
+                </div>  
+                
+            </div>
+            
+            <div class="form_flex">
+                <div>
+                    <label for="name_modal-shopping">Ваше Ім’я</label>
+                    <input type="text" id="name_modal-shopping" placeholder="Ім’я" class="input">
+                    <span class="error_text">Текст ошибки писать здесь</span>
+                </div>
+                <div>
+                    <label for="phone_number_modal-shopping">Номер телефону</label>
+                    <input type="text" id="phone_number_modal-shopping" placeholder="+38 (___) __ __ ___" class="input">
+                    <span class="error_text">Текст ошибки писать здесь</span>
+                </div>
+                <div>
+                    <label for="email_modal-shopping">Ваш емейл</label>
+                    <input type="text" id="email_modal-shopping" placeholder="E-mail" class="input">
+                    <span class="error_text">Текст ошибки писать здесь</span>
+                </div>
+                <div>
+                    <label for="textarea">Коментар</label>
+                    <textarea type="text" id="textarea" placeholder="Залиште коментар" class="textarea"></textarea>
+                </div>
+                <button class="btn btn_form">оформити замолення</button>
+                <div>
+                    <input type="checkbox" class="custom-checkbox" id="checkbox_shopping" name="checkbox_modal" value="yes">
+                    <label class="checkbox_label-modal" for="checkbox_shopping">Я погоджуюсь з умовами <a href="javascript:void(0)">політики конфіденційності</a> і
+                        дозволяю обробляти мої персональні дані</label>
+                </div>
+
+            </div>
+        </form>
+        <div class="modal_thanks">
+            <h4>Дякуємо!</h4>
+            <span>Наш менеджер зв’яжеться з Вами найближчим часом.</span>
+            <a href="javascript:void(0)" class="btn btn_modal">закрити</a>
+        </div>
+    </div>
+
+</div>
    <div class="menu_overlay ">
     <div class="wrapper">
         <div class="menu_overlay-head">
@@ -593,7 +651,7 @@
                             </div>
                         </div>
                         <div class="card_product-price">
-                            <span>1 295</span>
+                            <span class="price">1 295</span>
                             <p>доступно по передзамовленню</p>
                         </div>
 
@@ -601,7 +659,7 @@
 
                 </div>
                 <div class="card_product-btns">
-                    <a href="javascript:void(0)" class="btn btn-card_product modalEquipment">Купити</a>
+                    <a href="javascript:void(0)" class="btn btn-card_product modalShopping">Купити</a>
                     <span></span>
                     <a href="javascript:void(0)" class="btn btn-card_product-opacity modalEquipment">Орендувати</a>
                 </div>
