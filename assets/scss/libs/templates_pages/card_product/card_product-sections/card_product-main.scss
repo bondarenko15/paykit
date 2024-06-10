@@ -603,6 +603,9 @@
                                 background: $Color_orange;
 
                             }
+                            &:last-child {
+                                margin: 0 20px 20px 0;
+                            }
                         }
 
                     }
