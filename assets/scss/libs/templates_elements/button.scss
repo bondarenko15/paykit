@@ -79,13 +79,13 @@
     }
 
     &-card_product {
-        width: 162px;
+        width: 48%;
         margin: 0;
         border: 1px solid transparent;
     }
 
     &-card_product-opacity {
-        width: 162px;
+        width: 48%;
         margin: 0;
         color: $Color_orange;
         background: transparent;
@@ -467,7 +467,9 @@
         &-card_product-opacity {
             margin: 0;
         }
-
+        &_product {
+            margin: 0;
+        }
         &-card_product-slider {
             margin: 0;
         }
@@ -510,10 +512,17 @@
         }
 
         &_form {
-            margin-right: 350px;
+            margin: 0;
             width: 250px;
         }
-
+        &_shopping {
+            width: 258px;
+            margin-top: 40px;
+        }
+        &_equipment {
+            width: 258px;
+            margin-top: 30px;
+        }
         &_modal {
             margin: 30px auto 0;
             width: 174px;

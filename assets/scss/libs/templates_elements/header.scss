@@ -141,14 +141,15 @@
         overflow: visible;
 
         .wrapper {
-            height: 98px;
+            height: 100px;
             padding: 0 50px ;
             align-items: center;
             &::before {
                 background: url('../img/header_desk.png') center center/cover no-repeat;
                 opacity: 0;
                 transition: .5s all ease;
-                height: 98px;
+                height: 110%;
+                
             }
 
             .header_logo {
@@ -607,8 +608,6 @@
             .header_user-account {
                 margin: 0 24px 0 0;
             }
-
-            .header_language {}
         }
     }
     .without_menu {

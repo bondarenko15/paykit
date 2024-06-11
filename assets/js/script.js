@@ -184,10 +184,10 @@ if (modalEquipment) {
 }
 
 const modalShopping = document.querySelector('.modal_shopping') || null;
-if (modalEquipment) {
-  var selectorEquipment = document.getElementById("phone_number_modal-shopping");
-  var imEquipment = new Inputmask("+38 (999)9999999");
-  imEquipment.mask(selectorEquipment);
+if (modalShopping) {
+  var selectorShopping = document.getElementById("phone_number_modal-shopping");
+  var imShopping = new Inputmask("+38 (999)9999999");
+  imShopping.mask(selectorShopping);
 }
 
 

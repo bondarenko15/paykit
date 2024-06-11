@@ -140,7 +140,50 @@
         }
     }
 }
+@media (min-width: 1366px) {
+    .product_main {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .wrapper {
+                width: 60%;
 
+                .product_main-text {
+                    p {
+                        font-size: 20px;
+                        letter-spacing: 0.2px;
+                        width: 503px;
+                    }
+                }
+
+                .product_main-flex {
+                    align-items: stretch;
+                    p {
+                        font-size: 20px;
+                        letter-spacing: 0.2px;
+                    }
+
+                    &__item {
+                        span {
+                            font-size: 18px;
+                            letter-spacing: 0.36px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            letter-spacing: 0.32px;
+                        }
+                    }
+                }
+            }
+
+            .product_main-img {
+                display: block;
+            }
+        }
+    }
+}
 @media (min-width: 1880px) {
     .product_main {
         padding: 230px 0 0;
