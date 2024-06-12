@@ -207,6 +207,38 @@
             }
         }
     }
+    .form_flex {
+        width: 100%;
+        
+        div {
+            max-width: 435px;
+
+            &.terms_line {
+                
+                label {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .input {
+                    width: 100%!important;
+                }
+            }
+        }
+
+        div label:last-child::before {
+            left: 0;
+        }
+
+        div label:last-child {
+            margin-left: 0;
+        }
+
+        div:hover .checkbox_label {
+            color: $Color_white;
+        }
+    }
 }
 
 @media (min-width: 648px) {

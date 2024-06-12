@@ -53,7 +53,8 @@
                         .tabs_subitem {
                             height: 0;
                             visibility: hidden;
-                            transition: .5s all ease;
+                            padding: 15px 20px;
+                            display: none;
                             li {
                                 color: $Text_gray_medium;
                                 font-family: Montserrat;
@@ -82,12 +83,15 @@
                     .tabs_item-active {
                         span {
                             font-weight: 600;
+                            &::after {
+                                transform: translateY(-50%) rotate(270deg);
+                            }
                         }
 
                         .tabs_subitem {
                             height: auto;
                             visibility: visible;
-                            padding: 15px 10px;
+                            display: block;
                         }
                     }
                 }
@@ -208,7 +212,7 @@
 
 @media (min-width: 1880px) {
     .product_capabilities {
-        padding: 200px 0 ;
+        padding: 200px 0;
 
         .container {
             .wrapper {
@@ -216,6 +220,7 @@
                     height: 1165px;
 
                 }
+
                 .product_capabilities-text {
                     .product_capabilities-tabs {
                         .tabs_item {
@@ -229,7 +234,7 @@
                                 li {
                                     font-size: 20px;
                                     letter-spacing: 0.2px;
-                                    
+
                                 }
                             }
                         }

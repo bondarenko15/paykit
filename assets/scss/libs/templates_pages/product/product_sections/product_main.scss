@@ -150,10 +150,11 @@
                 width: 60%;
 
                 .product_main-text {
+                    flex-wrap: wrap;
                     p {
                         font-size: 20px;
                         letter-spacing: 0.2px;
-                        width: 503px;
+                        width: 80%;
                     }
                 }
 

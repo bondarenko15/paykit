@@ -37,9 +37,10 @@
     &_form {
         width: 305px;
         height: 49px;
-        margin: 40px 0 0;
+        margin: 30px 0 0;
         border: none;
         padding: 16x 0;
+        order: 4;
     }
 
     &_modal {
@@ -81,7 +82,7 @@
     &-card_product {
         width: 48%;
         margin: 0;
-        border: 1px solid transparent;
+        outline: 1px solid transparent;
     }
 
     &-card_product-opacity {
@@ -89,7 +90,7 @@
         margin: 0;
         color: $Color_orange;
         background: transparent;
-        border: 1px solid $Color_orange;
+        outline: 1px solid $Color_orange;
     }
 
     &-card_product-slider {
@@ -127,7 +128,7 @@
         background: transparent;
         margin: 15px auto 0;
         height: 40px;
-        padding: 12px 0;
+        padding: 10px 0;
     }
 }
 
@@ -327,7 +328,7 @@
 
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
-                border: 1px solid $Color_orange;
+                outline: 1px solid $Color_orange;
                 color: $Color_orange;
             }
 
@@ -343,6 +344,7 @@
 
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
+                outline: transparent;
             }
 
             &:active {
@@ -468,7 +470,7 @@
             margin: 0;
         }
         &_product {
-            margin: 0;
+            margin: 30px 0 0;
         }
         &-card_product-slider {
             margin: 0;
@@ -532,7 +534,9 @@
             margin: 40px 0 0;
             width: 257px;
         }
-
+        &_product {
+            margin: 0;
+        }
         &_404 {
             margin: 50px 0 0;
             width: 268px;
@@ -551,7 +555,9 @@
             margin: 40px 0 0;
         }
         &-card_equipment {
-            padding: 11px 10px;
+            padding: 10px;
+            width: 185px;
+            height: 42px;
 
         }
     }

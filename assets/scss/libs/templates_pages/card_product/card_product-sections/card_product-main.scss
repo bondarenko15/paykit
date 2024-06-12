@@ -73,13 +73,15 @@
 
                     .swiper-wrapper {
                         .swiper-slide {
+                            height: 335px;
                             display: flex;
-                            justify-content: center;
-
+                            align-items: center;
                             img {
                                 border-radius: 10px;
-                                max-height: 500px;
+                                max-height: 335px;
                                 width: auto;
+                                display: block;
+                                margin: 0 auto;
                             }
                         }
                     }
@@ -441,7 +443,20 @@
             }
 
             .wrapper {
-
+                .slider {
+    
+                    .mySwiper2 {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                height: 500px;
+                                img {
+                                    max-height: 500px;
+                                }
+                            }
+                        }
+    
+                    }
+                }
                 .card_product-text {
                     p {
                         font-size: 18px;
@@ -607,7 +622,7 @@
 
                             }
                             &:last-child {
-                                margin: 0 20px 20px 0;
+                                margin: 0;
                             }
                         }
 
@@ -628,8 +643,18 @@
 
                 .slider {
                     width: 40%;
+                    .mySwiper2 {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                height: 500px;
+                                img {
+                                    max-height: 500px;
+                                }
+                            }
+                        }
+    
+                    }
                 }
-
                 .card_product-text {
                     margin: 0;
                     width: 55%;
@@ -651,14 +676,6 @@
             .wrapper {
                 .slider {
                     width: 45%;
-
-                    .mySwiper2 {
-                        .swiper-wrapper {
-                            img {
-                                max-height: 600px;
-                            }
-                        }
-                    }
                 }
 
                 .card_product-text {

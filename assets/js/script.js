@@ -54,16 +54,15 @@ if (swiperOffers) {
   });
 }
 
-
 const swiperProduct = document.querySelector('.product_slider') || null;
 if (swiperProduct) {
   const slider = new Swiper('.product_slider', {
     slidesPerView: 1,
-    loop: true,
     spaceBetween: 20,
+    loop: true, 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.product_slider .swiper-button-next',
+      prevEl: '.product_slider .swiper-button-prev'
     },
     breakpoints: {
       648: {
@@ -76,6 +75,7 @@ if (swiperProduct) {
     }
   });
 }
+
 
 const mySwiper = document.querySelector('.mySwiper') || null;
 if (mySwiper) {
@@ -91,8 +91,8 @@ if (mySwiper2) {
 var swiper2 = new Swiper(".mySwiper2", {
   spaceBetween: 10,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".mySwiper2 .swiper-button-next",
+    prevEl: ".mySwiper2 .swiper-button-prev",
   },
   thumbs: {
     swiper: swiper,
@@ -388,6 +388,9 @@ function playVideo() {
 // accordion
 
 const accordionBtn = document.querySelectorAll('.tabs_item');
+function handleButtonClick() {
+  
+}
 accordionBtn.forEach((item) => {
   item.addEventListener('click', () => {
     if (item.classList.contains('tabs_item-active')) {
@@ -397,9 +400,8 @@ accordionBtn.forEach((item) => {
         subitem.classList.remove('tabs_item-active');
       })
       item.classList.add('tabs_item-active');
-
+      item.scrollIntoView({ block: "center", behavior: "smooth" });
     }
-
   })
 })
 

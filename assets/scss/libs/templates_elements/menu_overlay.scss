@@ -87,12 +87,12 @@
                     height: 44px;
                     position: relative;
                     border: none;
-
+                    text-align: center;
                     &::before {
                         content: '';
                         position: absolute;
                         top: 16px;
-                        left: 30px;
+                        left: 24px;
                         background: url('../img/user.svg') center center/cover no-repeat;
                         width: 12px;
                         height: 12px;
@@ -102,7 +102,7 @@
                 .menu_overlay-lang {
                     border-radius: 20px;
                     border: 1px solid var(--text-icon-700, #ADAFB8);
-                    min-height: 42px;
+                    min-height: 44 px;
                     display: flex;
                     flex-direction: column;
                     width: 87px;
