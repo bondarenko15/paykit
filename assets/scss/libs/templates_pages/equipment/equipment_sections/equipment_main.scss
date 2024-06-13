@@ -195,10 +195,9 @@
                                 content: "";
                                 position: absolute;
                                 left: 5px;
-                                top: 50%;
+                                top: 5px;
                                 width: 10px;
                                 height: 10px;
-                                transform: translateY(-50%);
                                 background: url('../img/icon_checkbox.svg') center center/cover no-repeat;
                                 opacity: 0;
 
@@ -244,12 +243,19 @@
                         .block_img {
                             position: relative;
                             margin: 0 auto;
-                            display: flex;
-                            justify-content: center;
+                            background: #F9F9FB;
+                            border-radius: 10px;
+                            height: 360px;
+                            padding: 12px;
 
                             img {
-                                width: auto;
-                                max-height: 327px;
+                                width: 100%;
+                                max-height: 100%;
+                                object-fit: contain;
+                            }
+
+                            @media screen and (max-width: 1280px) {
+                                height: 270px;
                             }
 
                             .status {
@@ -267,19 +273,15 @@
                                     width: 12px;
                                     height: 12px;
                                 }
-
                                 .new_arrival {
                                     fill: #A8DA64;
                                 }
-
                                 .sales {
                                     fill: #F41A1A;
                                 }
-
                                 .bestseler {
                                     fill: #F4991A;
                                 }
-
                                 p {
                                     display: block;
                                     margin-left: 5px;
@@ -347,7 +349,6 @@
                                 text-align: center;
                             }
                         }
-
                         .link {
                             position: absolute;
                             inset: 0;
@@ -448,7 +449,7 @@
 
                     .block_main {
                         margin: 0;
-
+                        
 
                         .clear {
                             font-size: 14px;
@@ -460,20 +461,15 @@
                 .equipment_content {
                     .content_wrapper {
                         display: flex;
-                        justify-content: flex-start;
+                        justify-content: space-between;
                         align-items: flex-start;
                         flex-wrap: wrap;
                         margin-top: 40px;
 
                         .equipment_item {
                             margin: 0;
-                            width: 322px;
-                            margin: 0 24px 40px 0;
-
-                            &:nth-child(2n) {
-                                margin: 0 0 40px 0;
-                            }
-
+                            width: 312px;
+                            margin: 0 0 40px 0;
                             .block_text {
                                 .name {
                                     font-size: 18px;
@@ -563,7 +559,6 @@
 
                         .equipment_item {
                             width: 275px;
-                            margin: 0 32px 40px 0;
                         }
                     }
                 }
@@ -608,15 +603,10 @@
 
                 .equipment_content {
                     width: 69%;
-
                     .content_wrapper {
+                        justify-content: flex-start;
                         .equipment_item {
-                            margin: 0 10px 60px 0;
-
-                            &:nth-child(2n) {
-                                margin: 0 10px 60px 0;
-                            }
-
+                            margin: 0 15px 60px 0;
                             &:nth-child(3n) {
                                 margin: 0 0 40px 0;
                             }
@@ -666,21 +656,11 @@
 
                     .content_wrapper {
                         .equipment_item {
-                            width: 368px;
+                            width: 360px;
                             margin: 0 30px 60px 0;
-
-                            &:nth-child(2n) {
-                                margin: 0 11px 60px 0;
-                            }
-
-                            &:nth-child(3n) {
-                                margin: 0 0 40px 0;
-                            }
 
                             .block_img {
                                 .status {
-                                    left: 30px;
-
                                     img {
                                         width: 14px;
                                         height: 14px;
@@ -726,7 +706,6 @@
 
 
                             }
-
                         }
                     }
                 }
@@ -742,18 +721,12 @@
                 .equipment_content {
                     .content_wrapper {
                         .equipment_item {
-                            margin: 0 36px 60px 0;
-
-                            &:nth-child(2n) {
-                                margin: 0 36px 60px 0;
-                            }
-
+                            margin: 0 45px 60px 0;
                             &:nth-child(3n) {
-                                margin: 0 36px 60px 0;
+                                margin: 0 45px 60px 0;
                             }
-
                             &:nth-child(4n) {
-                                margin: 0 0 40px 0;
+                                margin: 0 0 60px 0;
                             }
                         }
                     }

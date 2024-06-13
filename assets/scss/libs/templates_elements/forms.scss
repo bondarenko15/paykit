@@ -22,7 +22,7 @@
         div {
             margin-top: 30px;
             position: relative;
-            width: 305px;
+            width: 100%;
 
             &:last-child {
                 margin-top: 10px;
@@ -47,7 +47,7 @@
                 border-radius: 100px;
                 border: 1px solid $Color_grey_dark;
                 background: $Text_grey_dark;
-                width: 304px;
+                width: 100%;
                 height: 49px;
                 color: $Color_grey_light;
                 font-family: "Exo 2";
@@ -159,7 +159,7 @@
     background: url('../img/modal_bg.png') center center/cover no-repeat;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    padding: 0 20px;
+    padding: 40px 20px;
     width: 350px;
     display: block;
     position: absolute;
@@ -180,7 +180,6 @@
     }
 
     .form_flex {
-        div {}
 
         .error {
             .error_text {
@@ -204,10 +203,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    overflow: auto;
+    max-height: 80vh;
 
     p {
         color: $Text_grey_dark;
+        margin-bottom: 10px;
     }
 
     span {
@@ -336,6 +337,7 @@
         div {
             label {
                 color: $Text_black;
+                margin: 0;
             }
 
             .input,
@@ -360,7 +362,6 @@
                 background: url('../img/checkbox-white.svg') center center/cover no-repeat;
             }
 
-            .custom-checkbox:checked+label::before {}
 
             .custom-checkbox:checked+label::after {
                 content: '';
@@ -387,6 +388,16 @@
 .form_shopping {
     overflow: auto;
     max-height: 80vh;
+    .form_flex {
+        div {
+            .checkbox_label-modal {
+                margin: 0;
+                a {
+                    display: inline;
+                }
+            }
+        }
+    }
 }
 
 .is_hide {
@@ -447,7 +458,7 @@
 
     .form_modal {
         width: 707px;
-        padding: 0 50px 30px;
+        padding: 30px 50px 30px;
 
         .form_flex {
             div {
@@ -497,7 +508,7 @@
 
                 .custom-checkbox:checked+label::after {
 
-                    top: 5px;
+                    top: 11px;
                     left: 3px;
                 }
             }
@@ -512,7 +523,7 @@
             div {
                 .custom-checkbox:checked+label {
                     &::after {
-                        top: 14px;
+                        top: 11px;
                     }
                 }
             }
@@ -537,12 +548,6 @@
 
             div {
                 margin-right: 18px;
-
-                &:last-child {
-                    label {
-                        width: 700px;
-                    }
-                }
 
                 &:hover {
                     .input {
@@ -630,25 +635,21 @@
         }
 
         .form_flex {
+            justify-content: space-between;
             div {
                 width: 31.5%;
+                margin: 0 0 15px 0;
                 &:nth-child(3) {
-                    margin: 0;
+                    margin: 0 0 15px;
                 }
 
                 &:nth-child(4) {
-                    margin: 0;
+                    margin: 0 0 15px;
                 }
-                
+
 
                 .custom-checkbox+label::before {
                     top: 40%;
-                }
-
-                .custom-checkbox:checked+label::after {
-
-                    top: 5px;
-                    left: 3px;
                 }
             }
 
@@ -668,8 +669,9 @@
         .form_flex {
             div {
                 width: 31.5%;
+                margin-bottom: 15px;
                 &:nth-child(3) {
-                    margin: 0;
+                    margin-bottom: 15px;
                 }
 
                 &:nth-child(4) {
@@ -677,7 +679,7 @@
                 }
                 .custom-checkbox:checked+label {
                     &::after {
-                        top: 14px;
+                        top: 10px;
                     }
                 }
             }
@@ -690,15 +692,25 @@
         width: 1180px;
         margin: 0 auto;
 
-        &_flex {
+        .form_flex {
             align-items: flex-end;
             justify-content: space-between;
+            div {
+                width: 435px;
+                .input {
+                    width: 435px;
+                }
+                &:last-child {
+                    order: 5;
+                    width: 508px;
+                }
+            }
         }
     }
 
     .form_modal {
         width: 964px;
-        padding: 0 100px;
+        padding: 50px 100px;
 
         .form_flex {
             flex-direction: column;
@@ -706,13 +718,16 @@
             justify-content: flex-start;
 
             div {
-                margin-bottom: 20px;
-
+                width: 435px;
+                .input {
+                    width: 100%;
+                }
                 .custom-checkbox+label::before {
                     top: 30%;
                 }
 
                 &:last-child {
+                    order: 4;
                     label {
                         width: 556px;
                     }
@@ -732,7 +747,18 @@
     .form_equipment {
         width: 795px;
         .form_flex {
-            margin-top: 40px;
+            margin-top: 0;
+            div {
+                width: 31.5%;
+                .input {
+                    width: 100%;
+                }
+                .custom-checkbox:checked+label {
+                    &::after {
+                        top: 11px;
+                    }
+                }
+            }
             div:has(.custom-checkbox) {
                 width: 70%;
                 margin-top: 20px;
@@ -742,7 +768,18 @@
     .form_shopping {
         width: 795px;
         .form_flex {
-            margin-top: 40px;
+            margin: 0;
+            div {
+                width: 31.5%;
+                .input {
+                    width: 100%;
+                }
+                .custom-checkbox:checked+label {
+                    &::after {
+                        top: 11px;
+                    }
+                }
+            }
             div:has(.custom-checkbox) {
                 width: 70%;
                 margin-top: 20px;
@@ -763,7 +800,7 @@
         .form_flex {
             justify-content: flex-start;
             flex-wrap: wrap;
-            margin-top: 60px;
+            margin-top: 40px;
 
             div {
                 width: 435px;
@@ -815,23 +852,26 @@
     .form_modal {
         width: 964px;
 
-        div {
-            label {
-                &:last-child {
-                    font-size: 16px;
-                    letter-spacing: 0.32px;
-                    margin: 0;
-
-                    &::before {
-                        left: 0;
+        .form_flex {
+            div {
+                margin-bottom: 20px;
+                label {
+                    &:last-child {
+                        font-size: 16px;
+                        letter-spacing: 0.32px;
+                        margin: 0;
+    
+                        &::before {
+                            left: 0;
+                        }
                     }
                 }
+    
+                .custom-checkbox+label::before {
+                    top: 30%;
+                }
+    
             }
-
-            .custom-checkbox+label::before {
-                top: 30%;
-            }
-
         }
     }
 
@@ -842,13 +882,14 @@
         }
         .form_flex {
             margin-top: 40px;
+            justify-content: space-between;
             div {
                 width: 31.4%;
-                margin-right: 20px;
+                margin: 0 0 15px;
                 .input {
                     width: 100%;
                 }
-                
+
                 .custom-checkbox+label::before {
                     top: 40%;
                 }
@@ -867,7 +908,7 @@
             }
             div:has(.custom-checkbox) {
                 width: 100%;
-                margin-top: 20px;
+                margin-top: 0;
             }
         }
     }
@@ -884,6 +925,7 @@
             div {
                 width: 31.4%;
                 margin-right: 20px;
+                margin-bottom: 15px;
             }
             div:has(.textarea) {
                 width: 100%;
@@ -902,26 +944,26 @@
     .form {
 
 
-        div {
-            .input {
-                width: 435px;
-                font-size: 18px;
-                letter-spacing: 0.54px;
-
-            }
-
-            label {
-                font-size: 18px;
-                letter-spacing: 0.54px;
-
-                &:last-child {
-                    font-size: 16px;
-                    letter-spacing: 0.32px;
-                    margin-left: -183px;
-
-                    &::before {
-                        left: -183px;
+        .form_flex {
+            div {
+                .input {
+                    width: 435px;
+                    font-size: 18px;
+                    letter-spacing: 0.54px;
+    
+                }
+    
+                label {
+                    font-size: 18px;
+                    letter-spacing: 0.54px;
+    
+                    &:last-child {
+                        font-size: 16px;
+                        letter-spacing: 0.32px;
                     }
+                }
+                &:last-child {
+                    width: 100%;
                 }
             }
         }
@@ -939,15 +981,36 @@
                     }
                 }
             }
-
+            
         }
     }
 
     .form_equipment {
         width: 795px;
 
-        div label:last-child {
-            margin-left: 0;
+        .form_flex {
+            div {
+                width: 31.5%;
+                .input {
+                    width: 100%;
+                }
+            }
+            div label:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .form_shopping {
+        .form_flex {
+            justify-content: space-between;
+            div {
+                width: 31.5%;
+                margin: 0 0 15px;
+                .input {
+                    width: 100%;
+                }
+            }
+
         }
     }
 }

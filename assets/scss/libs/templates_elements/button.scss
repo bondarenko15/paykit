@@ -13,11 +13,11 @@
     margin: 29px auto 0;
     text-align: center;
     padding: 16px 0;
-
+    border: none;
     &-order_demo {
         margin-top: 30px;
         background: transparent;
-        border: 1px solid $Color_orange;
+        outline: 1px solid $Color_orange;
         color: $Color_orange;
         padding: 16px 25px;
         width: 304px;
@@ -29,18 +29,19 @@
         height: 45px;
         width: 142px;
         color: $Color_orange;
-        border: 1px solid $Color_orange;
+        outline: 1px solid $Color_orange;
         margin: 70px 0 0;
         padding: 16px 0;
     }
 
     &_form {
-        width: 305px;
+        width: 100%;
         height: 49px;
         margin: 30px 0 0;
-        border: none;
-        padding: 16x 0;
+        outline: none;
+        padding: 16px 0;
         order: 4;
+
     }
 
     &_modal {
@@ -54,26 +55,26 @@
         width: 305px;
         margin: 20px auto 0;
         border-radius: 30px;
-        border: 1px solid $Color_orange;
+        outline: 1px solid $Color_orange;
         color: $Color_orange;
     }
 
     &_404 {
-        border: 1px solid transparent;
+        outline: 1px solid transparent;
         width: 305px;
         margin: 30px auto 0;
     }
 
     &_product {
         background: transparent;
-        border: 1px solid $Color_orange;
+        outline: 1px solid $Color_orange;
         color: $Color_orange;
         width: 335px;
     }
 
     &-product_banner {
         background: transparent;
-        border: 1px solid $Color_orange;
+        outline: 1px solid $Color_orange;
         width: 305px;
         color: $Color_orange;
         margin: 20px 0 0;
@@ -94,7 +95,7 @@
     }
 
     &-card_product-slider {
-        border: 1px solid $Text_grey_dark;
+        outline: 1px solid $Text_grey_dark;
         background: transparent;
         margin: 15px auto 0;
     }
@@ -116,7 +117,7 @@
     &_sidebar {
         color: $Color_orange;
         background: transparent;
-        border: none;
+        outline: none;
         text-decoration: underline;
         margin: 0;
         width: auto;
@@ -124,7 +125,7 @@
     }
 
     &-card_equipment {
-        border: 1px solid $Text_grey_dark;
+        outline: 1px solid $Text_grey_dark;
         background: transparent;
         margin: 15px auto 0;
         height: 40px;
@@ -359,7 +360,7 @@
 
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
-                border: 1px solid $Color_orange;
+                outline: 1px solid $Color_orange;
                 color: $Color_orange;
             }
 
@@ -376,7 +377,7 @@
 
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
-                border: 1px solid $Color_orange;
+                outline: 1px solid $Color_orange;
                 color: $Color_orange;
             }
 
@@ -390,21 +391,35 @@
         &-ready_solutions {
             width: 199px;
             margin: 0;
+            &:hover {
+                outline: 3px solid rgba(244, 153, 26, 0.50);
+            }
+
+            &:active {
+                outline: 2px solid rgba(244, 153, 26, 0.70);
+            }
         }
 
         &-ready_solutions-banner {
             width: 231px;
             margin: 30px 0 0;
+            &:hover {
+                outline: 3px solid rgba(244, 153, 26, 0.50);
+            }
+
+            &:active {
+                outline: 2px solid rgba(244, 153, 26, 0.70);
+            }
         }
 
         &_marketing {
             width: 231px;
             margin: 40px 0 0;
-            border: 1px solid transparent;
+            outline: 1px solid transparent;
 
             &:hover {
                 background: rgba(244, 153, 26, 0.20);
-                border: 1px solid $Color_orange;
+                outline: 1px solid $Color_orange;
                 color: $Color_orange;
             }
 
@@ -440,6 +455,7 @@
 
         &_form {
             margin: 20px 50px 0 0;
+            order: 5;
         }
 
         &_offers {
@@ -523,7 +539,7 @@
         }
         &_equipment {
             width: 258px;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         &_modal {
             margin: 30px auto 0;
@@ -534,9 +550,11 @@
             margin: 40px 0 0;
             width: 257px;
         }
+
         &_product {
             margin: 0;
         }
+
         &_404 {
             margin: 50px 0 0;
             width: 268px;
@@ -547,7 +565,7 @@
         &-card_product-slider {
             margin: 0;
             width: 185px;
-            padding: 10 22px;
+            padding: 10px 22px;
         }
 
         &-card_product-banner {

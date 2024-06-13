@@ -109,7 +109,7 @@
         .swiper-button-prev {
             position: absolute;
             top: 50%;
-            left: 0;
+            left: 10px;
             transform: translateY(-50%) rotate(180deg);
             width: 35px;
             height: 35px;
@@ -140,7 +140,7 @@
         .swiper-button-next {
             position: absolute;
             top: 50%;
-            right: 0;
+            right: 10px;
             transform: translateY(-50%);
             width: 35px;
             height: 35px;
@@ -211,8 +211,8 @@
 
             .swiper-button-prev {
                 left: 10px;
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
 
                 &::after {
                     width: 19px;
@@ -222,8 +222,8 @@
 
             .swiper-button-next {
                 right: 10px;
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
 
                 &::after {
                     width: 19px;
@@ -295,12 +295,12 @@
             margin: 40px 0 0 100px;
             .swiper-wrapper {
                 .swiper-slide {
-                    
+
                     .block_img {
-                        max-height: 360px; 
+                        max-height: 360px;
                         img {
                             max-height: 360px;
-                        } 
+                        }
                     }
                 }
             }

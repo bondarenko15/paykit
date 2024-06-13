@@ -3,9 +3,6 @@
 @import 'libs/normalize';
 @import 'libs/swiper';
 
-
-
-
 @import 'libs/templates_elements/subtitle';
 @import 'libs/templates_elements/title';
 @import "libs/templates_elements/button";
@@ -14,14 +11,9 @@
 @import "libs/templates_elements/header";
 @import "libs/templates_elements/footer";
 @import "libs/templates_elements/modal_overlay";
-@import "libs/templates_elements/modal_shopping";
 @import "libs/templates_elements/modal_more";
 @import "libs/templates_elements/order_banner";
-
-
-
-
-
+@import "libs/templates_elements/modal_shopping";
 
 @import "libs/templates_pages/home/home";
 @import "libs/templates_pages/blog/blog";
@@ -36,14 +28,6 @@
 @import "libs/templates_pages/ready_solutions/ready_solutions";
 @import "libs/templates_pages/rates/rates";
 @import "libs/templates_pages/equipment/equipment";
-
-
-
-
-
-
-
-
 
 body {
     min-height: 100vh;

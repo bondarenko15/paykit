@@ -59,7 +59,7 @@
 
                 &__item {
                     position: relative;
-                    padding: 15px 5px;
+                    padding: 15px 10px;
                     margin-bottom: 20px;
                     display: flex;
                     flex-direction: column;
@@ -68,10 +68,17 @@
                         content: '';
                         position: absolute;
                         border-radius: 10px;
-                        background: $Color_grey_light;
+                        background: transparent;
                         padding: 15px 5px;
                         inset: 0;
                         z-index: -1;
+                        transition: all 0.3s;
+                    }
+
+                    &:hover {
+                        &::before {
+                            background: $Color_grey_light;
+                        }
                     }
 
                     .item_img {
@@ -160,6 +167,7 @@
                             font-weight: 300;
                             line-height: 140%;
                             letter-spacing: 0.3px;
+                            cursor: default;
 
                             &::before {
                                 content: '';
@@ -183,6 +191,7 @@
                             font-weight: 300;
                             line-height: 140%;
                             letter-spacing: 0.3px;
+                            cursor: pointer;
 
                             &::before {
                                 content: '';
@@ -210,6 +219,7 @@
                             font-weight: 400;
                             line-height: 140%;
                             letter-spacing: 0.42px;
+                            text-align: center;
                         }
                     }
                 }
@@ -220,6 +230,7 @@
                 align-items: center;
                 justify-content: center;
                 margin: 0 auto;
+                width: 335px;
                 margin-top: 40px;
 
                 .btn-items {
@@ -325,7 +336,7 @@
                     &__item {
                         width: 49%;
                         margin-top: 30px;
-                        padding: 5px 5px 10px 5px;
+                        padding: 10px 20px;
 
                         .item_img {
                             img {
@@ -446,14 +457,14 @@
                                     height: 16px;
                                 }
 
-                                &:hover {
+                                /*&:hover {
                                     color: $Color_orange;
 
                                     &::before {
                                         background: url('../img/calendar_hover.svg') center center/cover no-repeat;
                                         transform: translateY(-50%) scale(1.1);
                                     }
-                                }
+                                }*/
                             }
 
                             &-link {
@@ -517,6 +528,7 @@
                         }
                     }
                 }
+
                 .blog_main-items {
                     &__item {
                         padding: 20px 20px 30px 20px;
@@ -553,13 +565,14 @@
                 .blog_main-items {
                     margin-top: 80px;
                     justify-content: flex-start;
+
                     &__item {
                         width: 32%;
-                        
                         margin: 0 20px 40px 0;
                         &:nth-child(3n) {
                             margin: 0 0 40px;
                         }
+
                         .item_img {
                             img {
                                 height: 300px;

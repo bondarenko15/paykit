@@ -48,6 +48,7 @@
                             font-weight: 300;
                             line-height: 140%;
                             letter-spacing: 0.3px;
+                            cursor: default;
 
                             &::before {
                                 content: '';
@@ -71,6 +72,7 @@
                             font-weight: 300;
                             line-height: 140%;
                             letter-spacing: 0.3px;
+                            cursor: pointer;
 
                             &::before {
                                 content: '';
@@ -311,6 +313,7 @@
                                 font-weight: 300;
                                 line-height: 140%;
                                 letter-spacing: 0.3px;
+                                cursor: default;
 
                                 &::before {
                                     content: '';
@@ -334,6 +337,7 @@
                                 font-weight: 300;
                                 line-height: 140%;
                                 letter-spacing: 0.3px;
+                                cursor: pointer;
 
                                 &::before {
                                     content: '';
@@ -381,7 +385,7 @@
 
                     img {
                         min-height: 413px;
-                        ;
+                    ;
                     }
                 }
 
@@ -531,14 +535,14 @@
                                     left: -5px;
                                 }
 
-                                &:hover {
+                                /*&:hover {
                                     color: $Color_orange;
 
                                     &::before {
                                         background: url('../img/calendar_hover.svg') center center/cover no-repeat;
                                         transform: translateY(-50%) scale(1.1);
                                     }
-                                }
+                                }*/
                             }
 
                             &-link {
@@ -570,7 +574,7 @@
 
                     img {
                         min-height: 570px;
-                        ;
+                    ;
                     }
                 }
 
@@ -644,14 +648,14 @@
                                         left: -5px;
                                     }
 
-                                    &:hover {
+                                    /*&:hover {
                                         color: $Color_orange;
 
                                         &::before {
                                             background: url('../img/calendar_hover.svg') center center/cover no-repeat;
                                             transform: translateY(-50%) scale(1.1);
                                         }
-                                    }
+                                    }*/
 
                                 }
 

@@ -129,7 +129,7 @@
                     width: 70px;
                     height: 70px;
                     left: 15px;
-
+                    top: 73%;
                     &::after {
                         width: 19px;
                         height: 19px;
@@ -140,7 +140,7 @@
                     width: 70px;
                     height: 70px;
                     right: 15px;
-
+                    top: 73%;
                     &::after {
                         width: 19px;
                         height: 19px;
@@ -267,7 +267,7 @@
                 }
 
                 .swiper-button-prev {
-                    top: 70%;
+                    top: 65%;
                     left: 46px;
                     width: 70px;
                     height: 70px;
@@ -277,7 +277,7 @@
                 }
 
                 .swiper-button-next {
-                    top: 70%;
+                    top: 65%;
                     right: 46px;
                     width: 70px;
                     height: 70px;
@@ -296,7 +296,7 @@
         padding: 200px 0 0;
 
         .wrapper {
-            
+
 
             .slider-our_partners {
                 width: 100%;
@@ -317,8 +317,10 @@
                         }
                     }
                 }
+                .swiper-button-next, .swiper-button-prev {
+                    top: 70%;
+                }
 
-                
             }
         }
     }

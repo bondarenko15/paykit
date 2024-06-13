@@ -1,6 +1,50 @@
 .footer {
     padding: 52px 0 20px;
 
+    &_copy {
+        color: $Color_white_light;
+        font-family: "Exo 2";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 118%;
+        letter-spacing: 0.42px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
+
+        &-column {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+
+    .develop {
+        width: 100%;
+        color: $Color_white_light;
+        font-family: "Exo 2";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 118%;
+        letter-spacing: 0.42px;
+        text-align: right;
+        margin-top: 10px;
+
+        a {
+            color: $Color_white_light;
+        }
+    }
+
     .container {
         .footer_wrapper {
             background: url('../img/background_footer-320.png') center center/cover no-repeat;
@@ -11,11 +55,14 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
                 article {
                     position: absolute;
                     top: 0;
-                    left: 0;    
+                    left: 0;
+                    display: none;
                 }
+
                 .footer_logo {
                     width: 85px;
                     height: 21px;
@@ -136,6 +183,7 @@
                                     width: 120px;
                                     height: 40px;
                                     padding: 8px;
+                                    filter: invert(1);
                                 }
                                 .hover {
                                     overflow: hidden;
@@ -143,6 +191,7 @@
                                     opacity: 0;
                                     display: none;
                                     padding: 8px;
+                                    filter: invert(1);
                                 }
                                 
 
@@ -207,22 +256,20 @@
             }
         }
     }
+
+    .form.contactForm {
+        width: 100%!important;
+    }
+
     .form_flex {
         width: 100%;
-        
+
         div {
-            max-width: 435px;
 
             &.terms_line {
-                
+
                 label {
                     width: 100%;
-                }
-            }
-
-            @media screen and (max-width: 768px) {
-                .input {
-                    width: 100%!important;
                 }
             }
         }
@@ -660,7 +707,7 @@
                         }
                     }
                     .footer_navigation {
-                        width: 1050px;
+                        width: 60%;
                         height: 120px;
                         li {
                             display: block;
