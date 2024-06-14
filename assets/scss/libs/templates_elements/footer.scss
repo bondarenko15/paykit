@@ -21,7 +21,20 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             align-items: center;
-
+            .develop {
+                width: 100%;
+                color: $Color_white_light;
+                font-family: "Exo 2";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 118%;
+                letter-spacing: 0.42px;
+                margin-top: 10px;
+                text-align: center;
+                a {
+                    color: $Color_white_light;
+                }
+            }
             @media screen and (max-width: 1024px) {
                 width: 100%;
                 justify-content: center;
@@ -29,21 +42,7 @@
         }
     }
 
-    .develop {
-        width: 100%;
-        color: $Color_white_light;
-        font-family: "Exo 2";
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 118%;
-        letter-spacing: 0.42px;
-        text-align: right;
-        margin-top: 10px;
-
-        a {
-            color: $Color_white_light;
-        }
-    }
+    
 
     .container {
         .footer_wrapper {
@@ -235,7 +234,7 @@
 
                 .footer_navigation {
                     column-count: 2;
-                    height: 175px;
+                    min-height: 50px;
                     margin-top: 30px;
 
                     li {
@@ -408,10 +407,7 @@
                     .footer_navigation {
                         min-height: 150px;
                         margin-top: 40px;
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: wrap;
-
+                        columns: 3;
                         li {
                             width: 114px;
                             margin: 0 45px 17px 0;
@@ -525,8 +521,8 @@
                     }
 
                     .footer_navigation {
-                        height: 60px;
                         min-height: 117px;
+                        columns: 4;
                         li {
                             margin: 0 0px 10px 0;
                             width: 127px;

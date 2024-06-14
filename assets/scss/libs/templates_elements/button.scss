@@ -31,7 +31,7 @@
         color: $Color_orange;
         outline: 1px solid $Color_orange;
         margin: 70px 0 0;
-        padding: 16px 0;
+        padding: 15px 0;
     }
 
     &_form {
@@ -95,9 +95,11 @@
     }
 
     &-card_product-slider {
-        outline: 1px solid $Text_grey_dark;
+        border: 1px solid $Text_grey_dark;
         background: transparent;
         margin: 15px auto 0;
+        padding: 16px 22px;
+        height: 49px;
     }
 
     &-card_product-banner {
@@ -490,6 +492,7 @@
         }
         &-card_product-slider {
             margin: 0;
+            height: 49px;
         }
 
         &-card_product-banner {
@@ -565,7 +568,6 @@
         &-card_product-slider {
             margin: 0;
             width: 185px;
-            padding: 10px 22px;
         }
 
         &-card_product-banner {

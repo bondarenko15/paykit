@@ -53,6 +53,7 @@
                         height: 100%;
                         opacity: 0.4;
                         max-height: 150px;
+
                         img {
                             height: 100%;
                             width: auto;
@@ -69,6 +70,7 @@
                 .mySwiper2 {
                     height: 80%;
                     width: 100%;
+                    position: relative;
 
                     .swiper-wrapper {
                         .swiper-slide {
@@ -86,10 +88,73 @@
                         }
                     }
 
+                    .swiper-button-prev {
+                        position: absolute;
+                        top: 70%;
+                        left: 0;
+                        transform: translateY(-50%) rotate(180deg);
+                        width: 35px;
+                        height: 35px;
 
-                    img {
-                        border-radius: 10px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            background: $Color_white_medium;
+                            opacity: 0.4;
+                            backdrop-filter: blur(2px);
+                            border-radius: 50px;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            font-size: 0;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                            width: 16px;
+                            height: 16px;
+                            z-index: 2;
+                        }
                     }
+
+                    .swiper-button-next {
+                        position: absolute;
+                        top: 70%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        width: 35px;
+                        height: 35px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            background: $Color_white_medium;
+                            opacity: 0.4;
+                            backdrop-filter: blur(2px);
+                            border-radius: 50px;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            font-size: 0;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background: url('../img/chevron_grey.svg') center center/cover no-repeat;
+                            width: 16px;
+                            height: 16px;
+                            z-index: 2;
+                        }
+                    }
+
+                    .swiper-button-disabled {
+                        display: none;
+                    }
+
+
                 }
             }
 
@@ -177,7 +242,7 @@
                         justify-content: center;
                         align-items: center;
                         margin: 0 15px 15px 0;
-
+                        cursor: pointer;
                         h5 {
                             color: $Text_grey_dark;
                             font-family: Montserrat;
@@ -456,12 +521,17 @@
                         .swiper-wrapper {
                             .swiper-slide {
                                 height: 500px;
+
                                 img {
                                     max-height: 500px;
                                 }
                             }
                         }
 
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                            top: 50%;
+                        }
                     }
                 }
 
@@ -651,6 +721,7 @@
                         .swiper-wrapper {
                             .swiper-slide {
                                 height: 500px;
+
                                 img {
                                     max-height: 500px;
                                 }

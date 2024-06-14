@@ -196,7 +196,7 @@ if (modalShopping) {
 
 
 const btnPopUp = document.querySelectorAll('.btn_popUp');
-const closePopUp = document.querySelector('.close_modal');
+const closePopUp = document.querySelector('.close_modal') || document.querySelector('.close_modal_request');
 const popUp = document.querySelector('.modal_overlay');
 const wrapper = document.querySelector('.modal_overlay .wrapper')
 const btnClose = document.querySelector('.btn_modal')
